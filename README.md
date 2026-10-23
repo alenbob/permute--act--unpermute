@@ -8,10 +8,17 @@ Alessandro Summer and François Jamet
 
 [Read on arXiv](https://arxiv.org/abs/2610.03686) · [Paper PDF](https://arxiv.org/pdf/2610.03686)
 
-PAU separates **where** a Hamiltonian term acts from **what** it applies:
-route the selected sites to a fixed target register, apply the local operator,
-then undo the routing. Operators with the same support geometry share the
-permutation network.
+PAU separates **where** a Hamiltonian term acts from **what** it applies.
+A permutation network tailored to the support geometry—such as nearest-neighbour
+bonds or all-to-all pairs—routes the selected sites to a fixed target register.
+For Pauli Hamiltonians, a compact **X/Z mask** specifies which X and Z operations
+to apply on each target qubit, with the required phase tracked separately.
+The inverse permutation then restores the sites.
+
+The support geometry determines the routing network; the operator label
+determines the local mask. Many Pauli terms can therefore share the same
+routing machinery, and families with different geometries can be combined
+in one query.
 
 [![Figure 1: selected sites are routed to a fixed target, acted on locally, and returned.](assets/figure1.png)](https://arxiv.org/abs/2610.03686)
 

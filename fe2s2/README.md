@@ -1,4 +1,14 @@
-# Fe₂S₂ reproduction
+# Fe₂S₂ benchmark
+
+This benchmark applies [Summer–Jamet PAU](https://arxiv.org/abs/2610.03686)
+to the Li–Chan Fe₂S₂ Hamiltonian on 40 system qubits. PAU routes a selected
+term's active modes to a four-mode target, applies its local Pauli action,
+and reverses the routing. Single- and two-family implementations explore
+the tradeoff between Toffoli count and peak logical qubits.
+
+The comparison method is Frame SELECT, studied for the same Fe₂S₂ instance
+in [Gu et al., arXiv:2610.22367](https://arxiv.org/abs/2610.22367).
+This folder contains a subsequent application of the PAU framework.
 
 This snapshot contains the complete gate programs behind **all 24 points in
 the video**, the pinned alias/Pauli reference data, a resource counter and
@@ -69,12 +79,10 @@ difference therefore compares these two SELECT architectures together with
 their associated data-loading and cleanup requirements. Shared implementation
 machinery is credited equally for both wherever it is used.
 
-We acknowledge Summer and Jamet for the PAU framework; Gu, Kemeny, Yelin and
-Lukin for Frame SELECT, the released benchmark, and the reused preprocessing
-and implementation machinery; and Li and Chan for the Hamiltonian integral
-data. The shared alias-sampling, lookup and measurement-based cleanup methods
-retain the references listed in [NOTICE.md](circuits/NOTICE.md). The Fe₂S₂ PAU
-implementations are subsequent applications of the PAU framework.
+We acknowledge Li and Chan for the Hamiltonian integral data, and Gu et al.
+for the released Frame SELECT implementation and shared benchmark code and
+tables. [NOTICE.md](circuits/NOTICE.md) records the specific reuse, licenses
+and references for the shared methods.
 
 The released Frame SELECT reference and paper-method points retain their
 original optimization scope. Comparisons against them also include the

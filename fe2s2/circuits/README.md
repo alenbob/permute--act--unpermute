@@ -1,4 +1,9 @@
-# Fe₂S₂ Figure 1(a): essential circuit code
+# Fe₂S₂ circuits
+
+PAU implementations for the 40-qubit Fe₂S₂ Hamiltonian, with a common
+four-mode action core or two support/action families. The programs cover
+different workspace budgets and include Frame SELECT comparison circuits.
+See the [benchmark overview](../README.md) for the methods and references.
 
 This package contains **31 exact, fully decomposed gate programs**: all 24
 points in the video, including the released reference, plus seven two-family
@@ -49,7 +54,7 @@ the gates, independently of the displayed numbers.
 
 | Video marker | ID prefix | Construction |
 |---|---|---|
-| Salmon cross | `frame_released` | Released Gu et al. implementation |
+| Salmon cross | `frame_released` | Released Frame SELECT implementation |
 | Salmon hollow circles | `frame_paper` | Frame SELECT using the paper's methods |
 | Salmon filled diamonds | `frame_extended` | Frame SELECT with shared optimizations |
 | Yellow hollow squares | `pau_single` | Summer–Jamet PAU with a common routed-action core |
@@ -143,14 +148,7 @@ that the text export preserves the complete gate sequence and register mapping.
 - `conversion_checks.json`: exact gate-sequence preservation checks.
 - `NOTICE.md` and `LICENSES/Apache-2.0.txt`: scientific attribution and upstream licensing.
 
-PAU follows [Summer and Jamet, arXiv:2610.03686](https://arxiv.org/abs/2610.03686).
-Frame SELECT, benchmark preprocessing and reused implementation machinery
-come from [Gu et al., arXiv:2610.22367](https://arxiv.org/abs/2610.22367) and its
-[released code](https://github.com/andigu/uncompute), pinned at commit
-`64b5a13aa249f1360846657392e6c66817b26d0f`. Integral data originate with
-[Li and Chan](https://github.com/zhendongli2008/Active-space-model-for-Iron-Sulfur-Clusters).
-The Fe₂S₂ PAU results are a subsequent application, not results already
-reported in the original PAU paper. See the
+See the
 [acknowledgments and comparison](../README.md#acknowledgments-and-comparison)
-for the shared optimization treatment, and `NOTICE.md` for the method and
-code/data credits.
+for the shared optimization treatment. [NOTICE.md](NOTICE.md) records the
+method references, data sources, specific code reuse and pinned source revision.

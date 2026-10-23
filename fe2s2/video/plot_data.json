@@ -1,0 +1,342 @@
+{
+  "rows": [
+    {
+      "key": "frame_paper_q145_t14479",
+      "series": "Frame SELECT",
+      "q": 145,
+      "toffoli": 14479,
+      "tq": 2099455,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 2.16
+    },
+    {
+      "key": "frame_paper_q208_t14448",
+      "series": "Frame SELECT",
+      "q": 208,
+      "toffoli": 14448,
+      "tq": 3005184,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 2.29
+    },
+    {
+      "key": "frame_extended_q126_t14500",
+      "series": "Frame extension",
+      "q": 126,
+      "toffoli": 14500,
+      "tq": 1827000,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 2.96
+    },
+    {
+      "key": "frame_extended_q148_t10420",
+      "series": "Frame extension",
+      "q": 148,
+      "toffoli": 10420,
+      "tq": 1542160,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 3.2199999999999998
+    },
+    {
+      "key": "frame_extended_q201_t10388",
+      "series": "Frame extension",
+      "q": 201,
+      "toffoli": 10388,
+      "tq": 2087988,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 3.35
+    },
+    {
+      "key": "frame_extended_q205_t7970",
+      "series": "Frame extension",
+      "q": 205,
+      "toffoli": 7970,
+      "tq": 1633850,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 3.48
+    },
+    {
+      "key": "frame_extended_q230_t7067",
+      "series": "Frame extension",
+      "q": 230,
+      "toffoli": 7067,
+      "tq": 1625410,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 3.87
+    },
+    {
+      "key": "frame_extended_q290_t6694",
+      "series": "Frame extension",
+      "q": 290,
+      "toffoli": 6694,
+      "tq": 1941260,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 4.13
+    },
+    {
+      "key": "frame_extended_q300_t4978",
+      "series": "Frame extension",
+      "q": 300,
+      "toffoli": 4978,
+      "tq": 1493400,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 4.390000000000001
+    },
+    {
+      "key": "frame_extended_q338_t4411",
+      "series": "Frame extension",
+      "q": 338,
+      "toffoli": 4411,
+      "tq": 1490918,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 4.65
+    },
+    {
+      "key": "frame_extended_q472_t3807",
+      "series": "Frame extension",
+      "q": 472,
+      "toffoli": 3807,
+      "tq": 1796904,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 4.78
+    },
+    {
+      "key": "frame_extended_q593_t3440",
+      "series": "Frame extension",
+      "q": 593,
+      "toffoli": 3440,
+      "tq": 2039920,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 4.91
+    },
+    {
+      "key": "frame_extended_q817_t3415",
+      "series": "Frame extension",
+      "q": 817,
+      "toffoli": 3415,
+      "tq": 2790055,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 5.04
+    },
+    {
+      "key": "pau_single_q157_t11430",
+      "series": "PAU",
+      "q": 157,
+      "toffoli": 11430,
+      "tq": 1794510,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 5.71
+    },
+    {
+      "key": "pau_single_q185_t10382",
+      "series": "PAU",
+      "q": 185,
+      "toffoli": 10382,
+      "tq": 1920670,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 6.1
+    },
+    {
+      "key": "pau_single_q204_t8796",
+      "series": "PAU",
+      "q": 204,
+      "toffoli": 8796,
+      "tq": 1794384,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 6.36
+    },
+    {
+      "key": "pau_single_q206_t6376",
+      "series": "PAU",
+      "q": 206,
+      "toffoli": 6376,
+      "tq": 1313456,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 6.62
+    },
+    {
+      "key": "pau_single_q210_t5650",
+      "series": "PAU",
+      "q": 210,
+      "toffoli": 5650,
+      "tq": 1186500,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 6.75
+    },
+    {
+      "key": "pau_single_q274_t5253",
+      "series": "PAU",
+      "q": 274,
+      "toffoli": 5253,
+      "tq": 1439322,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 7.01
+    },
+    {
+      "key": "pau_single_q298_t4307",
+      "series": "PAU",
+      "q": 298,
+      "toffoli": 4307,
+      "tq": 1283486,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 7.27
+    },
+    {
+      "key": "pau_single_q338_t3755",
+      "series": "PAU",
+      "q": 338,
+      "toffoli": 3755,
+      "tq": 1269190,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 7.66
+    },
+    {
+      "key": "pau_single_q444_t3524",
+      "series": "PAU",
+      "q": 444,
+      "toffoli": 3524,
+      "tq": 1564656,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 7.92
+    },
+    {
+      "key": "pau_single_q593_t3172",
+      "series": "PAU",
+      "q": 593,
+      "toffoli": 3172,
+      "tq": 1880996,
+      "panels": {
+        "toffoli": true
+      },
+      "onset_seconds": 8.05
+    }
+  ],
+  "baseline": {
+    "key": "frame_released_q126_t14978",
+    "series": "Frame SELECT",
+    "q": 126,
+    "toffoli": 14978,
+    "tq": 1887228,
+    "panels": {
+      "toffoli": true
+    },
+    "onset_seconds": 0.2
+  },
+  "best": {
+    "key": "pau_single_q210_t5650",
+    "series": "PAU",
+    "q": 210,
+    "toffoli": 5650,
+    "tq": 1186500,
+    "panels": {
+      "toffoli": true
+    },
+    "onset_seconds": 6.75
+  },
+  "domains": {
+    "leftX": [
+      0,
+      1250
+    ],
+    "leftY": [
+      0,
+      16500
+    ],
+    "rightX": [
+      112,
+      1250
+    ],
+    "rightY": [
+      1127175,
+      5000000
+    ]
+  },
+  "timing": {
+    "starts": {
+      "released": 0.2,
+      "Frame SELECT": 1.9,
+      "Frame extension": 2.96,
+      "PAU": 5.71
+    },
+    "rectangle_start": 7.13,
+    "finale": 8.77,
+    "total": 10.12,
+    "stages": [
+      [
+        0,
+        "Released frame \u00b7 cross"
+      ],
+      [
+        0.5800000000000001,
+        "Released frame \u00b7 rectangle"
+      ],
+      [
+        1.9,
+        "Frame SELECT [1]"
+      ],
+      [
+        2.96,
+        "Frame SELECT + our optimizations"
+      ],
+      [
+        5.71,
+        "Permute act unpermute [2]"
+      ],
+      [
+        7.13,
+        "Permute act unpermute \u00b7 rectangle"
+      ],
+      [
+        8.77,
+        "Logos and final TQ"
+      ]
+    ]
+  },
+  "display_policy": "The exact PAU rectangle endpoint replaces the nearby overlapping display representative; multiple-family points are omitted from this video.",
+  "boundary": "Pinned 41,052-term alias--SELECT--unlookup; 40 system qubits, 16 row bits, 16 coin bits. Original alias precision, signs and normalization. Initial uniform preparation, reflection, QPE and additional external control excluded.",
+  "validation_scope": "Frozen rows retain their original full/subset scope. Every new row has 82,104 all-row comparator-boundary checks and up to 65,536 unchanged upstream native probes. Full 18,419,296-shot schedules were not rerun for the new rows. No global optimality claim.",
+  "circuit_manifest_sha256": "847dba096d3e0159300813a5775428bfb1d2af002a4b2fb5e22b9d51e0317617"
+}

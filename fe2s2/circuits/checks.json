@@ -1,0 +1,876 @@
+{
+  "status": "PASS",
+  "scope": "Exact exported-program hashes, resource recounts, phase-ledger reconciliation, and 64 sampled basis-input/measurement-record checks for each of 31 circuits. Not a full semantic certificate.",
+  "source_sha256": "137a510f93088953d3a4585df406565f1e6e743cf32da6fbaf9787f2b2a6de2c",
+  "manifest_sha256": "847dba096d3e0159300813a5775428bfb1d2af002a4b2fb5e22b9d51e0317617",
+  "results": [
+    {
+      "resources": {
+        "id": "frame_released_q126_t14978",
+        "toffoli": 14978,
+        "peak_total_qubits": 126,
+        "toffoli_times_peak": 1887228,
+        "clifford": 287994,
+        "operation_count": 473498,
+        "gate_counts": {
+          "X": 1260,
+          "CCX": 14769,
+          "CX": 197556,
+          "HMR": 14629,
+          "CZ": 61169,
+          "R": 14640,
+          "CCZ": 209,
+          "Z": 1457,
+          "OXOR": 167809
+        }
+      },
+      "smoke": {
+        "id": "frame_released_q126_t14978",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "frame_paper_q145_t14479",
+        "toffoli": 14479,
+        "peak_total_qubits": 145,
+        "toffoli_times_peak": 2099455,
+        "clifford": 285679,
+        "operation_count": 469984,
+        "gate_counts": {
+          "X": 1260,
+          "CCX": 14270,
+          "CX": 196738,
+          "HMR": 14130,
+          "CZ": 60670,
+          "R": 14141,
+          "CCZ": 209,
+          "Z": 1457,
+          "OXOR": 167109
+        }
+      },
+      "smoke": {
+        "id": "frame_paper_q145_t14479",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "frame_paper_q208_t14448",
+        "toffoli": 14448,
+        "peak_total_qubits": 208,
+        "toffoli_times_peak": 3005184,
+        "clifford": 285618,
+        "operation_count": 469716,
+        "gate_counts": {
+          "X": 1260,
+          "CCX": 14239,
+          "CX": 196770,
+          "HMR": 14099,
+          "CZ": 60639,
+          "R": 14110,
+          "CCZ": 209,
+          "Z": 1457,
+          "OXOR": 166933
+        }
+      },
+      "smoke": {
+        "id": "frame_paper_q208_t14448",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "pau_two_q215_t5627",
+        "toffoli": 5627,
+        "peak_total_qubits": 215,
+        "toffoli_times_peak": 1209805,
+        "clifford": 227419,
+        "operation_count": 745087,
+        "gate_counts": {
+          "X": 122,
+          "CCX": 5627,
+          "CX": 186001,
+          "HMR": 5670,
+          "CZ": 29750,
+          "R": 5994,
+          "Z": 733,
+          "SWAP": 4,
+          "OXOR": 511186
+        }
+      },
+      "smoke": {
+        "id": "pau_two_q215_t5627",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "pau_single_q338_t3755",
+        "toffoli": 3755,
+        "peak_total_qubits": 338,
+        "toffoli_times_peak": 1269190,
+        "clifford": 215141,
+        "operation_count": 1171038,
+        "gate_counts": {
+          "X": 136,
+          "CCX": 3752,
+          "CX": 179874,
+          "HMR": 3796,
+          "CZ": 27386,
+          "R": 4085,
+          "Z": 383,
+          "CCZ": 3,
+          "OXOR": 951623
+        }
+      },
+      "smoke": {
+        "id": "pau_single_q338_t3755",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "frame_extended_q338_t4411",
+        "toffoli": 4411,
+        "peak_total_qubits": 338,
+        "toffoli_times_peak": 1490918,
+        "clifford": 254474,
+        "operation_count": 1269732,
+        "gate_counts": {
+          "X": 52,
+          "CCX": 4371,
+          "CX": 223127,
+          "HMR": 4472,
+          "CZ": 22368,
+          "R": 4507,
+          "CCZ": 40,
+          "Z": 5,
+          "OXOR": 1010790
+        }
+      },
+      "smoke": {
+        "id": "frame_extended_q338_t4411",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "frame_extended_q148_t10420",
+        "toffoli": 10420,
+        "peak_total_qubits": 148,
+        "toffoli_times_peak": 1542160,
+        "clifford": 242971,
+        "operation_count": 497754,
+        "gate_counts": {
+          "X": 1230,
+          "CCX": 10293,
+          "CX": 164576,
+          "HMR": 10293,
+          "CZ": 57785,
+          "R": 10317,
+          "CCZ": 127,
+          "Z": 1457,
+          "OXOR": 241676
+        }
+      },
+      "smoke": {
+        "id": "frame_extended_q148_t10420",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "pau_single_q444_t3524",
+        "toffoli": 3524,
+        "peak_total_qubits": 444,
+        "toffoli_times_peak": 1564656,
+        "clifford": 215737,
+        "operation_count": 1197150,
+        "gate_counts": {
+          "X": 136,
+          "CCX": 3521,
+          "CX": 180980,
+          "HMR": 3566,
+          "CZ": 27331,
+          "R": 3860,
+          "Z": 201,
+          "CCZ": 3,
+          "OXOR": 977552
+        }
+      },
+      "smoke": {
+        "id": "pau_single_q444_t3524",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "pau_single_q157_t11430",
+        "toffoli": 11430,
+        "peak_total_qubits": 157,
+        "toffoli_times_peak": 1794510,
+        "clifford": 253362,
+        "operation_count": 549804,
+        "gate_counts": {
+          "X": 2732,
+          "CCX": 11426,
+          "CX": 199085,
+          "HMR": 11473,
+          "CZ": 31065,
+          "R": 11739,
+          "CCZ": 4,
+          "Z": 1,
+          "OXOR": 282279
+        }
+      },
+      "smoke": {
+        "id": "pau_single_q157_t11430",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "frame_extended_q472_t3807",
+        "toffoli": 3807,
+        "peak_total_qubits": 472,
+        "toffoli_times_peak": 1796904,
+        "clifford": 254369,
+        "operation_count": 1302183,
+        "gate_counts": {
+          "X": 82,
+          "CCX": 3767,
+          "CX": 224999,
+          "HMR": 3869,
+          "CZ": 21592,
+          "R": 3909,
+          "CCZ": 40,
+          "Z": 5,
+          "OXOR": 1043920
+        }
+      },
+      "smoke": {
+        "id": "frame_extended_q472_t3807",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "frame_extended_q126_t14500",
+        "toffoli": 14500,
+        "peak_total_qubits": 126,
+        "toffoli_times_peak": 1827000,
+        "clifford": 284368,
+        "operation_count": 420791,
+        "gate_counts": {
+          "X": 1260,
+          "CCX": 14373,
+          "CX": 193733,
+          "HMR": 14373,
+          "CZ": 61865,
+          "R": 14397,
+          "CCZ": 127,
+          "Z": 1457,
+          "OXOR": 119206
+        }
+      },
+      "smoke": {
+        "id": "frame_extended_q126_t14500",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "pau_single_q593_t3172",
+        "toffoli": 3172,
+        "peak_total_qubits": 593,
+        "toffoli_times_peak": 1880996,
+        "clifford": 213182,
+        "operation_count": 2002530,
+        "gate_counts": {
+          "X": 136,
+          "CCX": 3169,
+          "CX": 179737,
+          "HMR": 3214,
+          "CZ": 26723,
+          "R": 3508,
+          "Z": 201,
+          "CCZ": 3,
+          "OXOR": 1785839
+        }
+      },
+      "smoke": {
+        "id": "pau_single_q593_t3172",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "frame_extended_q593_t3440",
+        "toffoli": 3440,
+        "peak_total_qubits": 593,
+        "toffoli_times_peak": 2039920,
+        "clifford": 251679,
+        "operation_count": 2107383,
+        "gate_counts": {
+          "X": 52,
+          "CCX": 3400,
+          "CX": 223666,
+          "HMR": 3502,
+          "CZ": 20969,
+          "R": 3542,
+          "CCZ": 40,
+          "Z": 5,
+          "OXOR": 1852207
+        }
+      },
+      "smoke": {
+        "id": "frame_extended_q593_t3440",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "frame_extended_q817_t3415",
+        "toffoli": 3415,
+        "peak_total_qubits": 817,
+        "toffoli_times_peak": 2790055,
+        "clifford": 257899,
+        "operation_count": 2172244,
+        "gate_counts": {
+          "X": 82,
+          "CCX": 3375,
+          "CX": 230298,
+          "HMR": 3478,
+          "CZ": 20600,
+          "R": 3523,
+          "CCZ": 40,
+          "Z": 5,
+          "OXOR": 1910843
+        }
+      },
+      "smoke": {
+        "id": "frame_extended_q817_t3415",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "pau_single_q210_t5650",
+        "toffoli": 5650,
+        "peak_total_qubits": 210,
+        "toffoli_times_peak": 1186500,
+        "clifford": 225611,
+        "operation_count": 743443,
+        "gate_counts": {
+          "X": 258,
+          "CCX": 5647,
+          "HMR": 5690,
+          "CZ": 29361,
+          "R": 5974,
+          "CX": 184586,
+          "Z": 751,
+          "CCZ": 3,
+          "OXOR": 511173
+        }
+      },
+      "smoke": {
+        "id": "pau_single_q210_t5650",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "pau_single_q298_t4307",
+        "toffoli": 4307,
+        "peak_total_qubits": 298,
+        "toffoli_times_peak": 1283486,
+        "clifford": 216926,
+        "operation_count": 1473416,
+        "gate_counts": {
+          "X": 138,
+          "CCX": 4304,
+          "CX": 180027,
+          "HMR": 4348,
+          "CZ": 27914,
+          "R": 4637,
+          "Z": 383,
+          "CCZ": 3,
+          "OXOR": 1251662
+        }
+      },
+      "smoke": {
+        "id": "pau_single_q298_t4307",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "frame_extended_q205_t7970",
+        "toffoli": 7970,
+        "peak_total_qubits": 205,
+        "toffoli_times_peak": 1633850,
+        "clifford": 231431,
+        "operation_count": 837891,
+        "gate_counts": {
+          "X": 2650,
+          "CCX": 7843,
+          "HMR": 7843,
+          "CZ": 55115,
+          "R": 7867,
+          "CX": 160606,
+          "CCZ": 127,
+          "Z": 1457,
+          "OXOR": 594383
+        }
+      },
+      "smoke": {
+        "id": "frame_extended_q205_t7970",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "frame_extended_q300_t4978",
+        "toffoli": 4978,
+        "peak_total_qubits": 300,
+        "toffoli_times_peak": 1493400,
+        "clifford": 256394,
+        "operation_count": 1572290,
+        "gate_counts": {
+          "X": 84,
+          "CCX": 4938,
+          "CX": 223370,
+          "HMR": 5039,
+          "CZ": 22911,
+          "R": 5074,
+          "CCZ": 40,
+          "Z": 5,
+          "OXOR": 1310829
+        }
+      },
+      "smoke": {
+        "id": "frame_extended_q300_t4978",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "pau_single_q185_t10382",
+        "toffoli": 10382,
+        "peak_total_qubits": 185,
+        "toffoli_times_peak": 1920670,
+        "clifford": 257733,
+        "operation_count": 551459,
+        "gate_counts": {
+          "X": 120,
+          "CCX": 10378,
+          "CX": 206579,
+          "HMR": 10432,
+          "CZ": 30012,
+          "R": 10710,
+          "CCZ": 4,
+          "Z": 1,
+          "OXOR": 283223
+        }
+      },
+      "smoke": {
+        "id": "pau_single_q185_t10382",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "pau_single_q204_t8796",
+        "toffoli": 8796,
+        "peak_total_qubits": 204,
+        "toffoli_times_peak": 1794384,
+        "clifford": 238625,
+        "operation_count": 540938,
+        "gate_counts": {
+          "X": 156,
+          "CCX": 8793,
+          "CX": 188002,
+          "HMR": 8836,
+          "CZ": 32667,
+          "R": 9120,
+          "Z": 751,
+          "CCZ": 3,
+          "OXOR": 292610
+        }
+      },
+      "smoke": {
+        "id": "pau_single_q204_t8796",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "pau_single_q206_t6376",
+        "toffoli": 6376,
+        "peak_total_qubits": 206,
+        "toffoli_times_peak": 1313456,
+        "clifford": 227069,
+        "operation_count": 881085,
+        "gate_counts": {
+          "X": 1572,
+          "CCX": 6373,
+          "HMR": 6416,
+          "CZ": 30027,
+          "R": 6700,
+          "CX": 183926,
+          "Z": 751,
+          "CCZ": 3,
+          "OXOR": 645317
+        }
+      },
+      "smoke": {
+        "id": "pau_single_q206_t6376",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "pau_single_q274_t5253",
+        "toffoli": 5253,
+        "peak_total_qubits": 274,
+        "toffoli_times_peak": 1439322,
+        "clifford": 221186,
+        "operation_count": 1331190,
+        "gate_counts": {
+          "X": 138,
+          "CCX": 5250,
+          "CX": 181544,
+          "HMR": 5293,
+          "CZ": 28772,
+          "R": 5577,
+          "Z": 751,
+          "CCZ": 3,
+          "OXOR": 1103862
+        }
+      },
+      "smoke": {
+        "id": "pau_single_q274_t5253",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "pau_two_q204_t8813",
+        "toffoli": 8813,
+        "peak_total_qubits": 204,
+        "toffoli_times_peak": 1797852,
+        "clifford": 240541,
+        "operation_count": 542852,
+        "gate_counts": {
+          "X": 142,
+          "CCX": 8813,
+          "CX": 189405,
+          "HMR": 8856,
+          "CZ": 33096,
+          "R": 9180,
+          "Z": 733,
+          "SWAP": 4,
+          "OXOR": 292623
+        }
+      },
+      "smoke": {
+        "id": "pau_two_q204_t8813",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "pau_two_q206_t6393",
+        "toffoli": 6393,
+        "peak_total_qubits": 206,
+        "toffoli_times_peak": 1316958,
+        "clifford": 228985,
+        "operation_count": 882999,
+        "gate_counts": {
+          "X": 1558,
+          "CCX": 6393,
+          "HMR": 6436,
+          "CZ": 30456,
+          "R": 6760,
+          "CX": 185329,
+          "Z": 733,
+          "SWAP": 4,
+          "OXOR": 645330
+        }
+      },
+      "smoke": {
+        "id": "pau_two_q206_t6393",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "pau_two_q274_t5270",
+        "toffoli": 5270,
+        "peak_total_qubits": 274,
+        "toffoli_times_peak": 1443980,
+        "clifford": 223102,
+        "operation_count": 1333104,
+        "gate_counts": {
+          "X": 124,
+          "CCX": 5270,
+          "CX": 182947,
+          "HMR": 5313,
+          "CZ": 29201,
+          "R": 5637,
+          "Z": 733,
+          "SWAP": 4,
+          "OXOR": 1103875
+        }
+      },
+      "smoke": {
+        "id": "pau_two_q274_t5270",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "pau_two_q298_t4324",
+        "toffoli": 4324,
+        "peak_total_qubits": 298,
+        "toffoli_times_peak": 1288552,
+        "clifford": 217926,
+        "operation_count": 1474102,
+        "gate_counts": {
+          "X": 124,
+          "CCX": 4324,
+          "CX": 180516,
+          "HMR": 4368,
+          "CZ": 28341,
+          "R": 4697,
+          "Z": 378,
+          "SWAP": 4,
+          "OXOR": 1251350
+        }
+      },
+      "smoke": {
+        "id": "pau_two_q298_t4324",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "pau_two_q338_t3772",
+        "toffoli": 3772,
+        "peak_total_qubits": 338,
+        "toffoli_times_peak": 1274936,
+        "clifford": 216141,
+        "operation_count": 1171724,
+        "gate_counts": {
+          "X": 122,
+          "CCX": 3772,
+          "CX": 180363,
+          "HMR": 3816,
+          "CZ": 27813,
+          "R": 4145,
+          "Z": 378,
+          "SWAP": 4,
+          "OXOR": 951311
+        }
+      },
+      "smoke": {
+        "id": "pau_two_q338_t3772",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "pau_two_q593_t3420",
+        "toffoli": 3420,
+        "peak_total_qubits": 593,
+        "toffoli_times_peak": 2028060,
+        "clifford": 213586,
+        "operation_count": 1977104,
+        "gate_counts": {
+          "X": 122,
+          "CCX": 3420,
+          "CX": 179120,
+          "HMR": 3464,
+          "CZ": 27205,
+          "R": 3793,
+          "Z": 378,
+          "SWAP": 4,
+          "OXOR": 1759598
+        }
+      },
+      "smoke": {
+        "id": "pau_two_q593_t3420",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "frame_extended_q201_t10388",
+        "toffoli": 10388,
+        "peak_total_qubits": 201,
+        "toffoli_times_peak": 2087988,
+        "clifford": 242969,
+        "operation_count": 497720,
+        "gate_counts": {
+          "X": 1230,
+          "CCX": 10261,
+          "CX": 164670,
+          "HMR": 10261,
+          "CZ": 57753,
+          "R": 10285,
+          "CCZ": 127,
+          "Z": 1457,
+          "OXOR": 241676
+        }
+      },
+      "smoke": {
+        "id": "frame_extended_q201_t10388",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "frame_extended_q230_t7067",
+        "toffoli": 7067,
+        "peak_total_qubits": 230,
+        "toffoli_times_peak": 1625410,
+        "clifford": 273762,
+        "operation_count": 823593,
+        "gate_counts": {
+          "X": 52,
+          "CCX": 7027,
+          "CX": 234145,
+          "HMR": 7127,
+          "CZ": 25333,
+          "R": 7157,
+          "CCZ": 40,
+          "Z": 5,
+          "OXOR": 542707
+        }
+      },
+      "smoke": {
+        "id": "frame_extended_q230_t7067",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    },
+    {
+      "resources": {
+        "id": "frame_extended_q290_t6694",
+        "toffoli": 6694,
+        "peak_total_qubits": 290,
+        "toffoli_times_peak": 1941260,
+        "clifford": 269462,
+        "operation_count": 1356889,
+        "gate_counts": {
+          "X": 54,
+          "CCX": 6654,
+          "CX": 231140,
+          "HMR": 6754,
+          "CZ": 24784,
+          "R": 6784,
+          "CCZ": 40,
+          "Z": 5,
+          "OXOR": 1080674
+        }
+      },
+      "smoke": {
+        "id": "frame_extended_q290_t6694",
+        "shots": 64,
+        "seed": 20261023,
+        "status": "PASS",
+        "scope": "Sampled basis inputs and measurement records; not a full certificate."
+      }
+    }
+  ]
+}

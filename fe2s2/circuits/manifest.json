@@ -1,0 +1,4752 @@
+{
+  "format_version": 1,
+  "snapshot_date": "2026-10-23",
+  "description": "Frozen gate-level programs for the 31 points of Fe2S2 Figure 1(a), including the released reference.",
+  "boundary": "Pinned 41052-term alias decision, SELECT and unlookup; 40 system, 16 index and 16 coin qubits. Uniform state preparation, reflection, QPE and an additional external control are excluded.",
+  "resource_convention": "CCX + CCZ count as native Toffoli equivalents. Outcome-conditioned Clifford gates remain Clifford. Space includes all 40 system qubits. Product = Toffoli count times peak total logical qubits, not depth or runtime.",
+  "snapshot_catalog_sha256": "3e19c045f5504ad9be950bb0421af25a16c301804f7b8e592e410278ea2be701",
+  "figure_point_selection_sha256": "6955a660721bb802b36c83998a6cde325c693f057e6a90e0cff350e59a547286",
+  "upstream_commit": "64b5a13aa249f1360846657392e6c66817b26d0f",
+  "upstream_repository": "https://github.com/andigu/uncompute",
+  "reference_data": {
+    "file": "data/reference.json.xz",
+    "file_sha256": "3d793a344e4d68067ffcd1d8279d2f6e7ee9e2b6290bcbfa9eec111ec9367f4a",
+    "words_sha256": "1fd83441ba295e3dace47ee25224bfb84a539d1c63c14e0a1ce02c2fb8c03e45",
+    "masks_sha256": "b970bec6c3689c53de7738c7f6a7454cdf07e641e27e4b048fc1b5eb52a02751",
+    "normalization": "133.4649959457009",
+    "coefficient_threshold": "0.0001",
+    "alias_precision_bits": 16
+  },
+  "circuits": [
+    {
+      "id": "frame_released_q126_t14978",
+      "series": "frame_paper",
+      "color": "blue",
+      "marker": "cross",
+      "file": "circuits/frame_released_q126_t14978.gates.xz",
+      "file_sha256": "da22c7913eae918f5ad7a56c4152b5c552930819fa8d5675b2805bfffa20ba5b",
+      "original_gate_stream_sha256": "e9beaf77e50e8f15f54f30aff7dcc7c9321cc35e206bbdab60a33a6fd3eb6b06",
+      "text_sha256": "be539b15c1667f81301e37ad70160904996817a3376c63001b2fa4f07ad76736",
+      "operation_count": 473498,
+      "toffoli": 14978,
+      "peak_total_qubits": 126,
+      "clifford": 287994,
+      "gate_counts": {
+        "X": 1260,
+        "Z": 1457,
+        "NEG": 0,
+        "CX": 197556,
+        "CZ": 61169,
+        "SWAP": 0,
+        "CCX": 14769,
+        "CCZ": 209,
+        "R": 14640,
+        "HMR": 14629,
+        "OXOR": 167809
+      },
+      "toffoli_times_peak": 1887228,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 18419191,
+        "native_full_suite": true,
+        "all_row_status": null,
+        "all_row_samples": null,
+        "all_row_scope": null
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 104
+        },
+        {
+          "name": "lookup",
+          "toffoli": 10271,
+          "clifford": 205988,
+          "peak": 119
+        },
+        {
+          "name": "cmp",
+          "toffoli": 16,
+          "clifford": 146,
+          "peak": 122
+        },
+        {
+          "name": "cmp/select",
+          "toffoli": 16,
+          "clifford": 32,
+          "peak": 105
+        },
+        {
+          "name": "select-blk",
+          "toffoli": 136,
+          "clifford": 431,
+          "peak": 126
+        },
+        {
+          "name": "select-conj",
+          "toffoli": 131,
+          "clifford": 2486,
+          "peak": 112
+        },
+        {
+          "name": "select-pauli",
+          "toffoli": 3327,
+          "clifford": 60823,
+          "peak": 124
+        },
+        {
+          "name": "select-unconj",
+          "toffoli": 131,
+          "clifford": 2486,
+          "peak": 112
+        },
+        {
+          "name": "select-unblk",
+          "toffoli": 136,
+          "clifford": 438,
+          "peak": 126
+        },
+        {
+          "name": "cmp/unselect",
+          "toffoli": 16,
+          "clifford": 32,
+          "peak": 105
+        },
+        {
+          "name": "cmp/rev",
+          "toffoli": 16,
+          "clifford": 147,
+          "peak": 122
+        },
+        {
+          "name": "unlookup/measure-keep",
+          "toffoli": 0,
+          "clifford": 32,
+          "peak": 104
+        },
+        {
+          "name": "unlookup/measure-alt",
+          "toffoli": 0,
+          "clifford": 32,
+          "peak": 88
+        },
+        {
+          "name": "unlookup/window:prep",
+          "toffoli": 15,
+          "clifford": 30,
+          "peak": 88
+        },
+        {
+          "name": "unlookup/window:fixup",
+          "toffoli": 767,
+          "clifford": 14830,
+          "peak": 99
+        },
+        {
+          "name": "unlookup/window:unprep",
+          "toffoli": 0,
+          "clifford": 61,
+          "peak": 88
+        }
+      ]
+    },
+    {
+      "id": "frame_paper_q145_t14479",
+      "series": "frame_paper",
+      "color": "blue",
+      "marker": "circle",
+      "file": "circuits/frame_paper_q145_t14479.gates.xz",
+      "file_sha256": "174045aa1c9a042b3690043d1e80495c845987dccb3ffec4e1b26b2048579fea",
+      "original_gate_stream_sha256": "775f18011ecd106eb51f64f3e271dc0ba13ee4ce11b34ebe033fcc4e66eb8ad1",
+      "text_sha256": "9df677da49238e29f5b60ff22d819829bb70b109094d23c091c8eb5cbd8b3fa2",
+      "operation_count": 469984,
+      "toffoli": 14479,
+      "peak_total_qubits": 145,
+      "clifford": 285679,
+      "gate_counts": {
+        "X": 1260,
+        "Z": 1457,
+        "NEG": 0,
+        "CX": 196738,
+        "CZ": 60670,
+        "SWAP": 0,
+        "CCX": 14270,
+        "CCZ": 209,
+        "R": 14141,
+        "HMR": 14130,
+        "OXOR": 167109
+      },
+      "toffoli_times_peak": 2099455,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 18419196,
+        "native_full_suite": true,
+        "all_row_status": null,
+        "all_row_samples": null,
+        "all_row_scope": null
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 104
+        },
+        {
+          "name": "lookup",
+          "toffoli": 10271,
+          "clifford": 205988,
+          "peak": 119
+        },
+        {
+          "name": "cmp",
+          "toffoli": 16,
+          "clifford": 146,
+          "peak": 122
+        },
+        {
+          "name": "cmp/select",
+          "toffoli": 16,
+          "clifford": 32,
+          "peak": 105
+        },
+        {
+          "name": "select-blk",
+          "toffoli": 136,
+          "clifford": 431,
+          "peak": 126
+        },
+        {
+          "name": "select-conj",
+          "toffoli": 131,
+          "clifford": 2486,
+          "peak": 112
+        },
+        {
+          "name": "select-pauli",
+          "toffoli": 3327,
+          "clifford": 60823,
+          "peak": 124
+        },
+        {
+          "name": "select-unconj",
+          "toffoli": 131,
+          "clifford": 2486,
+          "peak": 112
+        },
+        {
+          "name": "select-unblk",
+          "toffoli": 136,
+          "clifford": 438,
+          "peak": 126
+        },
+        {
+          "name": "cmp/unselect",
+          "toffoli": 16,
+          "clifford": 32,
+          "peak": 105
+        },
+        {
+          "name": "cmp/rev",
+          "toffoli": 16,
+          "clifford": 147,
+          "peak": 122
+        },
+        {
+          "name": "unlookup/measure-keep",
+          "toffoli": 0,
+          "clifford": 32,
+          "peak": 104
+        },
+        {
+          "name": "unlookup/measure-alt",
+          "toffoli": 0,
+          "clifford": 32,
+          "peak": 88
+        },
+        {
+          "name": "unlookup/window:prep",
+          "toffoli": 63,
+          "clifford": 126,
+          "peak": 136
+        },
+        {
+          "name": "unlookup/window:fixup",
+          "toffoli": 220,
+          "clifford": 12227,
+          "peak": 145
+        },
+        {
+          "name": "unlookup/window:unprep",
+          "toffoli": 0,
+          "clifford": 253,
+          "peak": 136
+        }
+      ]
+    },
+    {
+      "id": "frame_paper_q208_t14448",
+      "series": "frame_paper",
+      "color": "blue",
+      "marker": "circle",
+      "file": "circuits/frame_paper_q208_t14448.gates.xz",
+      "file_sha256": "fa4720ba1b560ca8d2bce7d842f13d35ee0cc1b443a7648747beef1e413eba36",
+      "original_gate_stream_sha256": "5c094e32807ccdb002c4b0776c18427e8694a9829fa6b3e1c692779daa168ffa",
+      "text_sha256": "b7c284571af93a09e121895643dd5600e422c34b5c5fd4f5a60c00b85ae8a087",
+      "operation_count": 469716,
+      "toffoli": 14448,
+      "peak_total_qubits": 208,
+      "clifford": 285618,
+      "gate_counts": {
+        "X": 1260,
+        "Z": 1457,
+        "NEG": 0,
+        "CX": 196770,
+        "CZ": 60639,
+        "SWAP": 0,
+        "CCX": 14239,
+        "CCZ": 209,
+        "R": 14110,
+        "HMR": 14099,
+        "OXOR": 166933
+      },
+      "toffoli_times_peak": 3005184,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 18419204,
+        "native_full_suite": true,
+        "all_row_status": null,
+        "all_row_samples": null,
+        "all_row_scope": null
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 104
+        },
+        {
+          "name": "lookup",
+          "toffoli": 10271,
+          "clifford": 205988,
+          "peak": 119
+        },
+        {
+          "name": "cmp",
+          "toffoli": 16,
+          "clifford": 146,
+          "peak": 122
+        },
+        {
+          "name": "cmp/select",
+          "toffoli": 16,
+          "clifford": 32,
+          "peak": 105
+        },
+        {
+          "name": "select-blk",
+          "toffoli": 136,
+          "clifford": 431,
+          "peak": 126
+        },
+        {
+          "name": "select-conj",
+          "toffoli": 131,
+          "clifford": 2486,
+          "peak": 112
+        },
+        {
+          "name": "select-pauli",
+          "toffoli": 3327,
+          "clifford": 60823,
+          "peak": 124
+        },
+        {
+          "name": "select-unconj",
+          "toffoli": 131,
+          "clifford": 2486,
+          "peak": 112
+        },
+        {
+          "name": "select-unblk",
+          "toffoli": 136,
+          "clifford": 438,
+          "peak": 126
+        },
+        {
+          "name": "cmp/unselect",
+          "toffoli": 16,
+          "clifford": 32,
+          "peak": 105
+        },
+        {
+          "name": "cmp/rev",
+          "toffoli": 16,
+          "clifford": 147,
+          "peak": 122
+        },
+        {
+          "name": "unlookup/measure-keep",
+          "toffoli": 0,
+          "clifford": 32,
+          "peak": 104
+        },
+        {
+          "name": "unlookup/measure-alt",
+          "toffoli": 0,
+          "clifford": 32,
+          "peak": 88
+        },
+        {
+          "name": "unlookup/window:prep",
+          "toffoli": 127,
+          "clifford": 254,
+          "peak": 200
+        },
+        {
+          "name": "unlookup/window:fixup",
+          "toffoli": 125,
+          "clifford": 11782,
+          "peak": 208
+        },
+        {
+          "name": "unlookup/window:unprep",
+          "toffoli": 0,
+          "clifford": 509,
+          "peak": 200
+        }
+      ]
+    },
+    {
+      "id": "pau_two_q215_t5627",
+      "series": "pau_two",
+      "color": "red",
+      "marker": "triangle",
+      "file": "circuits/pau_two_q215_t5627.gates.xz",
+      "file_sha256": "4ab164d2bb25d7b09bd0b9636180e85fc439b3e8f0d95899b8864944897b5715",
+      "original_gate_stream_sha256": "ba2f098b6ce3d0b0a1d6b6e4ff922a211163a297641dc7206eebfc021ef5a49a",
+      "text_sha256": "858efe6d12da6beea3f53fe953f65aaaef42def4f7ec0f7f6ce589e4afd41a94",
+      "operation_count": 745087,
+      "toffoli": 5627,
+      "peak_total_qubits": 215,
+      "clifford": 227419,
+      "gate_counts": {
+        "X": 122,
+        "Z": 733,
+        "NEG": 0,
+        "CX": 186001,
+        "CZ": 29750,
+        "SWAP": 4,
+        "CCX": 5627,
+        "CCZ": 0,
+        "R": 5994,
+        "HMR": 5670,
+        "OXOR": 511186
+      },
+      "toffoli_times_peak": 1209805,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9217,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 2431,
+          "clifford": 126823,
+          "peak": 211
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 542,
+          "clifford": 16230,
+          "peak": 213
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "family-label/lookup-0",
+          "toffoli": 1627,
+          "clifford": 49146,
+          "peak": 215
+        },
+        {
+          "name": "family-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 198
+        },
+        {
+          "name": "family-label/combine-0",
+          "toffoli": 28,
+          "clifford": 0,
+          "peak": 184
+        },
+        {
+          "name": "family-pau/gauges",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "family-pau/merged-prefix-in",
+          "toffoli": 82,
+          "clifford": 1724,
+          "peak": 180
+        },
+        {
+          "name": "family-pau/mixed_or_small",
+          "toffoli": 64,
+          "clifford": 1434,
+          "peak": 208
+        },
+        {
+          "name": "family-pau/same_spin",
+          "toffoli": 50,
+          "clifford": 1118,
+          "peak": 212
+        },
+        {
+          "name": "family-pau/common-pair-out",
+          "toffoli": 78,
+          "clifford": 1716,
+          "peak": 203
+        },
+        {
+          "name": "family-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "pau_single_q338_t3755",
+      "series": "pau_single",
+      "color": "red",
+      "marker": "diamond",
+      "file": "circuits/pau_single_q338_t3755.gates.xz",
+      "file_sha256": "4c8ac390dc421b551773f27ed15130865fe117fb4b8d3929f8da480e5db95842",
+      "original_gate_stream_sha256": "c9525132e4c063e6645451b772fc0d77c7764d9b679fb6650315279b711c5a33",
+      "text_sha256": "26ac960b694ef272210a3b4a8a2e8ec818fce87541b02389f37295d36944e214",
+      "operation_count": 1171038,
+      "toffoli": 3755,
+      "peak_total_qubits": 338,
+      "clifford": 215141,
+      "gate_counts": {
+        "X": 136,
+        "Z": 383,
+        "NEG": 0,
+        "CX": 179874,
+        "CZ": 27386,
+        "SWAP": 0,
+        "CCX": 3752,
+        "CCZ": 3,
+        "R": 4085,
+        "HMR": 3796,
+        "OXOR": 951623
+      },
+      "toffoli_times_peak": 1269190,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9611,
+          "peak": 328
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 1251,
+          "clifford": 118977,
+          "peak": 338
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 228,
+          "clifford": 12,
+          "peak": 330
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 448,
+          "peak": 328
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "phase-label/lookup",
+          "toffoli": 850,
+          "clifford": 43551,
+          "peak": 291
+        },
+        {
+          "name": "phase-label/flags",
+          "toffoli": 22,
+          "clifford": 174,
+          "peak": 255
+        },
+        {
+          "name": "phase-label/combine",
+          "toffoli": 85,
+          "clifford": 3,
+          "peak": 242
+        },
+        {
+          "name": "phase-pau/core",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 166
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 168
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 3,
+          "clifford": 14,
+          "peak": 166
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 168
+        },
+        {
+          "name": "phase-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "frame_extended_q338_t4411",
+      "series": "frame_extended",
+      "color": "blue",
+      "marker": "square",
+      "file": "circuits/frame_extended_q338_t4411.gates.xz",
+      "file_sha256": "52ad1c851cdc136de3966f347cde43c1d3f2c68a3e612f2f28fa57eb222713cd",
+      "original_gate_stream_sha256": "5291d140507652295f24f69c786c23ff27aaefe1617852a0bb53582de42f0c41",
+      "text_sha256": "9d36c4bfcaf470ccd266b0646d4365a78d8bea68ab24c838c9b12517a0a1454c",
+      "operation_count": 1269732,
+      "toffoli": 4411,
+      "peak_total_qubits": 338,
+      "clifford": 254474,
+      "gate_counts": {
+        "X": 52,
+        "Z": 5,
+        "NEG": 0,
+        "CX": 223127,
+        "CZ": 22368,
+        "SWAP": 0,
+        "CCX": 4371,
+        "CCZ": 40,
+        "R": 4507,
+        "HMR": 4472,
+        "OXOR": 1010790
+      },
+      "toffoli_times_peak": 1490918,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 8876,
+          "peak": 328
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 1251,
+          "clifford": 118977,
+          "peak": 338
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 228,
+          "clifford": 12,
+          "peak": 330
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 448,
+          "peak": 328
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 1612,
+          "clifford": 84454,
+          "peak": 315
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 314
+        },
+        {
+          "name": "current-label/metadata-measure",
+          "toffoli": 0,
+          "clifford": 24,
+          "peak": 312
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 86,
+          "clifford": 0,
+          "peak": 300
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 172,
+          "peak": 300
+        },
+        {
+          "name": "current-frame/open",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 216
+        },
+        {
+          "name": "current-frame/action",
+          "toffoli": 4,
+          "clifford": 928,
+          "peak": 218
+        },
+        {
+          "name": "current-frame/close",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 216
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 218,
+          "clifford": 6780,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "frame_extended_q148_t10420",
+      "series": "frame_extended",
+      "color": "blue",
+      "marker": "square",
+      "file": "circuits/frame_extended_q148_t10420.gates.xz",
+      "file_sha256": "b9e1381462ee35aaac70843374ac917554352bd68cc3b3307ee75bc7f6ccd462",
+      "original_gate_stream_sha256": "60683de98c1d49226f598498f1770b201903ec24cae4d086bf933ca3bb4558b4",
+      "text_sha256": "4ff866068edb5ac0d1d21926ff6f33fe95040b149a305b8c8990ca99351adabf",
+      "operation_count": 497754,
+      "toffoli": 10420,
+      "peak_total_qubits": 148,
+      "clifford": 242971,
+      "gate_counts": {
+        "X": 1230,
+        "Z": 1457,
+        "NEG": 0,
+        "CX": 164576,
+        "CZ": 57785,
+        "SWAP": 0,
+        "CCX": 10293,
+        "CCZ": 127,
+        "R": 10317,
+        "HMR": 10293,
+        "OXOR": 241676
+      },
+      "toffoli_times_peak": 1542160,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/base-lookup",
+          "toffoli": 4719,
+          "clifford": 146205,
+          "peak": 148
+        },
+        {
+          "name": "sparse-alias/base-combine",
+          "toffoli": 32,
+          "clifford": 0,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/corrections",
+          "toffoli": 1591,
+          "clifford": 18821,
+          "peak": 119
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "select-blk",
+          "toffoli": 136,
+          "clifford": 431,
+          "peak": 141
+        },
+        {
+          "name": "select-conj",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 129
+        },
+        {
+          "name": "select-pauli",
+          "toffoli": 3327,
+          "clifford": 60823,
+          "peak": 139
+        },
+        {
+          "name": "select-unconj",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 129
+        },
+        {
+          "name": "select-unblk",
+          "toffoli": 136,
+          "clifford": 438,
+          "peak": 141
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 277,
+          "clifford": 12639,
+          "peak": 139
+        }
+      ]
+    },
+    {
+      "id": "pau_single_q444_t3524",
+      "series": "pau_single",
+      "color": "red",
+      "marker": "diamond",
+      "file": "circuits/pau_single_q444_t3524.gates.xz",
+      "file_sha256": "79e00057a411f4c312f4a23161d4fd2be66b4641a34e969c967dfc27a0465f55",
+      "original_gate_stream_sha256": "18cdca8f74d312ef26ebac34b6d7070e5b646906cf497f4fd52f69998a52376a",
+      "text_sha256": "e143c84583c117c97c70022223d399ef6db752c113908459a97b422b1910031a",
+      "operation_count": 1197150,
+      "toffoli": 3524,
+      "peak_total_qubits": 444,
+      "clifford": 215737,
+      "gate_counts": {
+        "X": 136,
+        "Z": 201,
+        "NEG": 0,
+        "CX": 180980,
+        "CZ": 27331,
+        "SWAP": 0,
+        "CCX": 3521,
+        "CCZ": 3,
+        "R": 3860,
+        "HMR": 3566,
+        "OXOR": 977552
+      },
+      "toffoli_times_peak": 1564656,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9837,
+          "peak": 366
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 1251,
+          "clifford": 118977,
+          "peak": 338
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 228,
+          "clifford": 12,
+          "peak": 330
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 448,
+          "peak": 328
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "phase-label/lookup",
+          "toffoli": 499,
+          "clifford": 43867,
+          "peak": 444
+        },
+        {
+          "name": "phase-label/flags",
+          "toffoli": 27,
+          "clifford": 219,
+          "peak": 368
+        },
+        {
+          "name": "phase-label/combine",
+          "toffoli": 200,
+          "clifford": 12,
+          "peak": 356
+        },
+        {
+          "name": "phase-pau/core",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 167
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 169
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 3,
+          "clifford": 14,
+          "peak": 167
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 169
+        },
+        {
+          "name": "phase-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "pau_single_q157_t11430",
+      "series": "pau_single",
+      "color": "red",
+      "marker": "diamond",
+      "file": "circuits/pau_single_q157_t11430.gates.xz",
+      "file_sha256": "c8eac036754fa6570c219b7e15f17fe048dd49dc67328423c99d7249647ab611",
+      "original_gate_stream_sha256": "7dde650c01ac6e58a37e9483de68f0db8a392d000d9e9a46cd0c5aaf2c217634",
+      "text_sha256": "3156db96b60c625eb88df348567b25e0426fc1ae901b82efd0bb74af510eed4e",
+      "operation_count": 549804,
+      "toffoli": 11430,
+      "peak_total_qubits": 157,
+      "clifford": 253362,
+      "gate_counts": {
+        "X": 2732,
+        "Z": 1,
+        "NEG": 0,
+        "CX": 199085,
+        "CZ": 31065,
+        "SWAP": 0,
+        "CCX": 11426,
+        "CCZ": 4,
+        "R": 11739,
+        "HMR": 11473,
+        "OXOR": 282279
+      },
+      "toffoli_times_peak": 1794510,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 705,
+          "peak": 152
+        },
+        {
+          "name": "sparse-alias/base-lookup",
+          "toffoli": 4719,
+          "clifford": 146205,
+          "peak": 148
+        },
+        {
+          "name": "sparse-alias/base-combine",
+          "toffoli": 32,
+          "clifford": 0,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/corrections",
+          "toffoli": 1591,
+          "clifford": 18821,
+          "peak": 119
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 173,
+          "peak": 121
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 136,
+          "clifford": 431,
+          "peak": 126
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 4067,
+          "clifford": 62070,
+          "peak": 157
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "current-label/residual-sign",
+          "toffoli": 4,
+          "clifford": 19,
+          "peak": 156
+        },
+        {
+          "name": "current-label/sign-measure",
+          "toffoli": 0,
+          "clifford": 14,
+          "peak": 152
+        },
+        {
+          "name": "spin/control-products-and-close",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 153
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 155
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 5,
+          "clifford": 21,
+          "peak": 154
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 155
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 282,
+          "clifford": 6720,
+          "peak": 140
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 31,
+          "clifford": 176,
+          "peak": 121
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 277,
+          "clifford": 12639,
+          "peak": 139
+        }
+      ]
+    },
+    {
+      "id": "frame_extended_q472_t3807",
+      "series": "frame_extended",
+      "color": "blue",
+      "marker": "square",
+      "file": "circuits/frame_extended_q472_t3807.gates.xz",
+      "file_sha256": "5b6f6cfef60c3f7d7b95f582a762370d7a3e8de5de54a57a9ddd991fac98814b",
+      "original_gate_stream_sha256": "45e3df54a57e0d3d285969e20b7860e4282198beb68c1966cd8494f5810d3e84",
+      "text_sha256": "b20f62f6a0caa05281c5036888cb6de6b77cf75db878e2fc52f3ec0e57b5577c",
+      "operation_count": 1302183,
+      "toffoli": 3807,
+      "peak_total_qubits": 472,
+      "clifford": 254369,
+      "gate_counts": {
+        "X": 82,
+        "Z": 5,
+        "NEG": 0,
+        "CX": 224999,
+        "CZ": 21592,
+        "SWAP": 0,
+        "CCX": 3767,
+        "CCZ": 40,
+        "R": 3909,
+        "HMR": 3869,
+        "OXOR": 1043920
+      },
+      "toffoli_times_peak": 1796904,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65534,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 8878,
+          "peak": 470
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 1251,
+          "clifford": 118977,
+          "peak": 338
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 228,
+          "clifford": 12,
+          "peak": 330
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 448,
+          "peak": 328
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 173,
+          "peak": 121
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 815,
+          "clifford": 83818,
+          "peak": 472
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 22,
+          "clifford": 174,
+          "peak": 472
+        },
+        {
+          "name": "current-label/metadata-measure",
+          "toffoli": 0,
+          "clifford": 24,
+          "peak": 470
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 259,
+          "clifford": 3,
+          "peak": 459
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 516,
+          "peak": 458
+        },
+        {
+          "name": "current-frame/open",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 202
+        },
+        {
+          "name": "current-frame/action",
+          "toffoli": 4,
+          "clifford": 928,
+          "peak": 204
+        },
+        {
+          "name": "current-frame/close",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 202
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 218,
+          "clifford": 6780,
+          "peak": 170
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 31,
+          "clifford": 176,
+          "peak": 121
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "frame_extended_q126_t14500",
+      "series": "frame_extended",
+      "color": "blue",
+      "marker": "square",
+      "file": "circuits/frame_extended_q126_t14500.gates.xz",
+      "file_sha256": "bebfcd3def5eb9cc4f5c83a17a286d5bb6c39c5afe73b8fbe77295de7f347f8c",
+      "original_gate_stream_sha256": "51d26aff84980ecb0818487babca0e85987a6c17ff311111291969fe58ffdc3f",
+      "text_sha256": "4e501b5146c3edc7c8068e0e3790545fa243751d6a9f8069a10764cd6a88db5a",
+      "operation_count": 420791,
+      "toffoli": 14500,
+      "peak_total_qubits": 126,
+      "clifford": 284368,
+      "gate_counts": {
+        "X": 1260,
+        "Z": 1457,
+        "NEG": 0,
+        "CX": 193733,
+        "CZ": 61865,
+        "SWAP": 0,
+        "CCX": 14373,
+        "CCZ": 127,
+        "R": 14397,
+        "HMR": 14373,
+        "OXOR": 119206
+      },
+      "toffoli_times_peak": 1827000,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 104
+        },
+        {
+          "name": "ordered-alias/lookup",
+          "toffoli": 10257,
+          "clifford": 205742,
+          "peak": 119
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 173,
+          "peak": 121
+        },
+        {
+          "name": "select-blk",
+          "toffoli": 136,
+          "clifford": 431,
+          "peak": 126
+        },
+        {
+          "name": "select-conj",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 114
+        },
+        {
+          "name": "select-pauli",
+          "toffoli": 3327,
+          "clifford": 60823,
+          "peak": 124
+        },
+        {
+          "name": "select-unconj",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 114
+        },
+        {
+          "name": "select-unblk",
+          "toffoli": 136,
+          "clifford": 438,
+          "peak": 126
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 31,
+          "clifford": 176,
+          "peak": 121
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 427,
+          "clifford": 13249,
+          "peak": 109
+        }
+      ]
+    },
+    {
+      "id": "pau_single_q593_t3172",
+      "series": "pau_single",
+      "color": "red",
+      "marker": "diamond",
+      "file": "circuits/pau_single_q593_t3172.gates.xz",
+      "file_sha256": "e7aec0fcff84a1c7c6712523524e84d1efa2982cce6777e597036cc69a8ee32b",
+      "original_gate_stream_sha256": "cd575bac2ffd43923e6f36e3eb49489bffb864d8a60480662fbc424ce301f24d",
+      "text_sha256": "1d0f4ab203f145f0334ac766d8bf1bf41bb361854ddeca1befbfc94422180fd2",
+      "operation_count": 2002530,
+      "toffoli": 3172,
+      "peak_total_qubits": 593,
+      "clifford": 213182,
+      "gate_counts": {
+        "X": 136,
+        "Z": 201,
+        "NEG": 0,
+        "CX": 179737,
+        "CZ": 26723,
+        "SWAP": 0,
+        "CCX": 3169,
+        "CCZ": 3,
+        "R": 3508,
+        "HMR": 3214,
+        "OXOR": 1785839
+      },
+      "toffoli_times_peak": 1880996,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9837,
+          "peak": 584
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 636,
+          "clifford": 115889,
+          "peak": 593
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 491,
+          "clifford": 33,
+          "peak": 587
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 960,
+          "peak": 584
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "phase-label/lookup",
+          "toffoli": 499,
+          "clifford": 43867,
+          "peak": 444
+        },
+        {
+          "name": "phase-label/flags",
+          "toffoli": 27,
+          "clifford": 219,
+          "peak": 368
+        },
+        {
+          "name": "phase-label/combine",
+          "toffoli": 200,
+          "clifford": 12,
+          "peak": 356
+        },
+        {
+          "name": "phase-pau/core",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 167
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 169
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 3,
+          "clifford": 14,
+          "peak": 167
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 169
+        },
+        {
+          "name": "phase-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "frame_extended_q593_t3440",
+      "series": "frame_extended",
+      "color": "blue",
+      "marker": "square",
+      "file": "circuits/frame_extended_q593_t3440.gates.xz",
+      "file_sha256": "2835218eaef157320c251369d4be053215f4899ecb883231b80655eb6a597d75",
+      "original_gate_stream_sha256": "09f221bd39ffb9d03b8341fdf25fcbb0e16ae8180b686ef6e53ed67608b4dfcc",
+      "text_sha256": "a0ad6bc8431801eb4dd1abb3365cddb9f3fe045d1c3f7e7abd2f7e8681e69f1d",
+      "operation_count": 2107383,
+      "toffoli": 3440,
+      "peak_total_qubits": 593,
+      "clifford": 251679,
+      "gate_counts": {
+        "X": 52,
+        "Z": 5,
+        "NEG": 0,
+        "CX": 223666,
+        "CZ": 20969,
+        "SWAP": 0,
+        "CCX": 3400,
+        "CCZ": 40,
+        "R": 3542,
+        "HMR": 3502,
+        "OXOR": 1852207
+      },
+      "toffoli_times_peak": 2039920,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 8878,
+          "peak": 584
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 636,
+          "clifford": 115889,
+          "peak": 593
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 491,
+          "clifford": 33,
+          "peak": 587
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 960,
+          "peak": 584
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 815,
+          "clifford": 83818,
+          "peak": 487
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 22,
+          "clifford": 174,
+          "peak": 487
+        },
+        {
+          "name": "current-label/metadata-measure",
+          "toffoli": 0,
+          "clifford": 24,
+          "peak": 485
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 259,
+          "clifford": 3,
+          "peak": 474
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 516,
+          "peak": 473
+        },
+        {
+          "name": "current-frame/open",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 217
+        },
+        {
+          "name": "current-frame/action",
+          "toffoli": 4,
+          "clifford": 928,
+          "peak": 219
+        },
+        {
+          "name": "current-frame/close",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 217
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 218,
+          "clifford": 6780,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "frame_extended_q817_t3415",
+      "series": "frame_extended",
+      "color": "blue",
+      "marker": "square",
+      "file": "circuits/frame_extended_q817_t3415.gates.xz",
+      "file_sha256": "64f437d01ba26f9543d3f29cf0071c9138449efc4f98b268473edf4d9a223b28",
+      "original_gate_stream_sha256": "13c5a0ca03fa4669d2fcd98a4e97fcaf3a1ce4d880ef2859af390611458454db",
+      "text_sha256": "36fada537091a889e5186bb9d56280146fd041d279f97da31aca1adee4696d3e",
+      "operation_count": 2172244,
+      "toffoli": 3415,
+      "peak_total_qubits": 817,
+      "clifford": 257899,
+      "gate_counts": {
+        "X": 82,
+        "Z": 5,
+        "NEG": 0,
+        "CX": 230298,
+        "CZ": 20600,
+        "SWAP": 0,
+        "CCX": 3375,
+        "CCZ": 40,
+        "R": 3523,
+        "HMR": 3478,
+        "OXOR": 1910843
+      },
+      "toffoli_times_peak": 2790055,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 8880,
+          "peak": 815
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 636,
+          "clifford": 115889,
+          "peak": 593
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 491,
+          "clifford": 33,
+          "peak": 587
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 960,
+          "peak": 584
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 173,
+          "peak": 121
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 423,
+          "clifford": 89159,
+          "peak": 817
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 27,
+          "clifford": 219,
+          "peak": 817
+        },
+        {
+          "name": "current-label/metadata-measure",
+          "toffoli": 0,
+          "clifford": 24,
+          "peak": 815
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 606,
+          "clifford": 12,
+          "peak": 805
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 1204,
+          "peak": 803
+        },
+        {
+          "name": "current-frame/open",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 203
+        },
+        {
+          "name": "current-frame/action",
+          "toffoli": 4,
+          "clifford": 928,
+          "peak": 205
+        },
+        {
+          "name": "current-frame/close",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 203
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 218,
+          "clifford": 6780,
+          "peak": 170
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 31,
+          "clifford": 176,
+          "peak": 121
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "pau_single_q210_t5650",
+      "series": "pau_single",
+      "color": "red",
+      "marker": "diamond",
+      "file": "circuits/pau_single_q210_t5650.gates.xz",
+      "file_sha256": "4a6df14d339bb27075784953989cf9b6f839dbf8f4a9e0270908fa794b2a57be",
+      "original_gate_stream_sha256": "4a990bcbfe1b1564f42bd72a54742e7974b519b62c40e52e5ff7db3502f9d253",
+      "text_sha256": "ecbc4919ca4a67b9b3a004c355c1fb51594cf4ee71f14510fa56114138a517be",
+      "operation_count": 743443,
+      "toffoli": 5650,
+      "peak_total_qubits": 210,
+      "clifford": 225611,
+      "gate_counts": {
+        "X": 258,
+        "Z": 751,
+        "NEG": 0,
+        "CX": 184586,
+        "CZ": 29361,
+        "SWAP": 0,
+        "CCX": 5647,
+        "CCZ": 3,
+        "R": 5974,
+        "HMR": 5690,
+        "OXOR": 511173
+      },
+      "toffoli_times_peak": 1186500,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9497,
+          "peak": 200
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 2440,
+          "clifford": 126844,
+          "peak": 210
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 568,
+          "clifford": 16272,
+          "peak": 210
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 113,
+          "peak": 121
+        },
+        {
+          "name": "phase-label/lookup",
+          "toffoli": 1627,
+          "clifford": 47624,
+          "peak": 210
+        },
+        {
+          "name": "phase-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 193
+        },
+        {
+          "name": "phase-label/combine",
+          "toffoli": 28,
+          "clifford": 0,
+          "peak": 179
+        },
+        {
+          "name": "phase-pau/core",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 160
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 162
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 3,
+          "clifford": 14,
+          "peak": 160
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 162
+        },
+        {
+          "name": "phase-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 180
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 21,
+          "clifford": 146,
+          "peak": 115
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "pau_single_q298_t4307",
+      "series": "pau_single",
+      "color": "red",
+      "marker": "diamond",
+      "file": "circuits/pau_single_q298_t4307.gates.xz",
+      "file_sha256": "fe59fd728277c9f7a92cf0a88108054bb6bb58e809dd52e1a165eafd5ebf85a3",
+      "original_gate_stream_sha256": "080c19e89ea728bb9501ea1fd8e4e49a1ad068ab4a2f2171fbfdbee0249258d4",
+      "text_sha256": "331a3962350e9520cc9067d6f411ec825a74b16cfc0b8aa45201374748d2c2e1",
+      "operation_count": 1473416,
+      "toffoli": 4307,
+      "peak_total_qubits": 298,
+      "clifford": 216926,
+      "gate_counts": {
+        "X": 138,
+        "Z": 383,
+        "NEG": 0,
+        "CX": 180027,
+        "CZ": 27914,
+        "SWAP": 0,
+        "CCX": 4304,
+        "CCZ": 3,
+        "R": 4637,
+        "HMR": 4348,
+        "OXOR": 1251662
+      },
+      "toffoli_times_peak": 1283486,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9611,
+          "peak": 288
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 1251,
+          "clifford": 106423,
+          "peak": 298
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 193,
+          "clifford": 12,
+          "peak": 290
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 378,
+          "peak": 288
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 314,
+          "clifford": 15144,
+          "peak": 267
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 181,
+          "clifford": 78,
+          "peak": 263
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 310,
+          "peak": 259
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 543,
+          "clifford": 16235,
+          "peak": 213
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "phase-label/lookup",
+          "toffoli": 850,
+          "clifford": 43551,
+          "peak": 291
+        },
+        {
+          "name": "phase-label/flags",
+          "toffoli": 22,
+          "clifford": 174,
+          "peak": 255
+        },
+        {
+          "name": "phase-label/combine",
+          "toffoli": 85,
+          "clifford": 3,
+          "peak": 242
+        },
+        {
+          "name": "phase-pau/core",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 166
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 168
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 3,
+          "clifford": 14,
+          "peak": 166
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 168
+        },
+        {
+          "name": "phase-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "frame_extended_q205_t7970",
+      "series": "frame_extended",
+      "color": "blue",
+      "marker": "square",
+      "file": "circuits/frame_extended_q205_t7970.gates.xz",
+      "file_sha256": "c2180e96642b752bb842e3e54092f8b7d1d3ae45476e11d229c93db527078728",
+      "original_gate_stream_sha256": "9825495fb464ff9d7e178deed363cf232a0403c863059b017fddb7af0c90ad7d",
+      "text_sha256": "c5d9cf17823240791cec83b215c9a7ee57be4fd46156f927fd6a091fdc38c671",
+      "operation_count": 837891,
+      "toffoli": 7970,
+      "peak_total_qubits": 205,
+      "clifford": 231431,
+      "gate_counts": {
+        "X": 2650,
+        "Z": 1457,
+        "NEG": 0,
+        "CX": 160606,
+        "CZ": 55115,
+        "SWAP": 0,
+        "CCX": 7843,
+        "CCZ": 127,
+        "R": 7867,
+        "HMR": 7843,
+        "OXOR": 594383
+      },
+      "toffoli_times_peak": 1633850,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 8688,
+          "peak": 200
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 2477,
+          "clifford": 123996,
+          "peak": 205
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 94,
+          "clifford": 3,
+          "peak": 197
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 186,
+          "peak": 196
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 123,
+          "clifford": 2974,
+          "peak": 174
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 120,
+          "clifford": 171,
+          "peak": 172
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 126,
+          "peak": 167
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 1013,
+          "clifford": 17277,
+          "peak": 205
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "select-blk",
+          "toffoli": 136,
+          "clifford": 431,
+          "peak": 141
+        },
+        {
+          "name": "select-conj",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 129
+        },
+        {
+          "name": "select-pauli",
+          "toffoli": 3327,
+          "clifford": 60823,
+          "peak": 139
+        },
+        {
+          "name": "select-unconj",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 129
+        },
+        {
+          "name": "select-unblk",
+          "toffoli": 136,
+          "clifford": 438,
+          "peak": 141
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "frame_extended_q300_t4978",
+      "series": "frame_extended",
+      "color": "blue",
+      "marker": "square",
+      "file": "circuits/frame_extended_q300_t4978.gates.xz",
+      "file_sha256": "1f4b63bfe7de75efaf71edf0a0a5944d5f6c8bf90de4a02e6023e8d1f93f9407",
+      "original_gate_stream_sha256": "b523df478a30cf8ea4eca8a9c52b0a3662768b7f43f7ac05408767cb44bc3e09",
+      "text_sha256": "a7f0325085ef9eb9f904fedcdb2c3e29944883d92c37ad9461199fa41d1d55be",
+      "operation_count": 1572290,
+      "toffoli": 4978,
+      "peak_total_qubits": 300,
+      "clifford": 256394,
+      "gate_counts": {
+        "X": 84,
+        "Z": 5,
+        "NEG": 0,
+        "CX": 223370,
+        "CZ": 22911,
+        "SWAP": 0,
+        "CCX": 4938,
+        "CCZ": 40,
+        "R": 5074,
+        "HMR": 5039,
+        "OXOR": 1310829
+      },
+      "toffoli_times_peak": 1493400,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 8876,
+          "peak": 297
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 1251,
+          "clifford": 106423,
+          "peak": 298
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 193,
+          "clifford": 12,
+          "peak": 290
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 378,
+          "peak": 288
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 314,
+          "clifford": 15144,
+          "peak": 267
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 181,
+          "clifford": 78,
+          "peak": 263
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 310,
+          "peak": 259
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 543,
+          "clifford": 16235,
+          "peak": 213
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 173,
+          "peak": 121
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 1612,
+          "clifford": 84454,
+          "peak": 300
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 299
+        },
+        {
+          "name": "current-label/metadata-measure",
+          "toffoli": 0,
+          "clifford": 24,
+          "peak": 297
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 86,
+          "clifford": 0,
+          "peak": 285
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 172,
+          "peak": 285
+        },
+        {
+          "name": "current-frame/open",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 201
+        },
+        {
+          "name": "current-frame/action",
+          "toffoli": 4,
+          "clifford": 928,
+          "peak": 203
+        },
+        {
+          "name": "current-frame/close",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 201
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 218,
+          "clifford": 6780,
+          "peak": 170
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 31,
+          "clifford": 176,
+          "peak": 121
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "pau_single_q185_t10382",
+      "series": "pau_single",
+      "color": "red",
+      "marker": "diamond",
+      "file": "circuits/pau_single_q185_t10382.gates.xz",
+      "file_sha256": "34ad5b21defa808399d7a8e974a24c807f1a69507789a21aaa3a2e3b2d9cc34f",
+      "original_gate_stream_sha256": "3acfded123094f8a1440780d153e5cb9b0d6b262b15f1a8bf2259422fde511b2",
+      "text_sha256": "b40013a4844c61701af59272e9f2818cef39670235db39e6a95b799a4c90106f",
+      "operation_count": 551459,
+      "toffoli": 10382,
+      "peak_total_qubits": 185,
+      "clifford": 257733,
+      "gate_counts": {
+        "X": 120,
+        "Z": 1,
+        "NEG": 0,
+        "CX": 206579,
+        "CZ": 30012,
+        "SWAP": 0,
+        "CCX": 10378,
+        "CCZ": 4,
+        "R": 10710,
+        "HMR": 10432,
+        "OXOR": 283223
+      },
+      "toffoli_times_peak": 1920670,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65535,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 705,
+          "peak": 178
+        },
+        {
+          "name": "sparse-alias/base-lookup",
+          "toffoli": 4719,
+          "clifford": 146205,
+          "peak": 148
+        },
+        {
+          "name": "sparse-alias/base-combine",
+          "toffoli": 32,
+          "clifford": 0,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/corrections",
+          "toffoli": 1591,
+          "clifford": 18821,
+          "peak": 119
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 3219,
+          "clifford": 66982,
+          "peak": 183
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 12,
+          "clifford": 78,
+          "peak": 180
+        },
+        {
+          "name": "current-label/metadata-measure",
+          "toffoli": 0,
+          "clifford": 24,
+          "peak": 178
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "current-label/residual-sign",
+          "toffoli": 4,
+          "clifford": 19,
+          "peak": 171
+        },
+        {
+          "name": "current-label/sign-measure",
+          "toffoli": 0,
+          "clifford": 14,
+          "peak": 167
+        },
+        {
+          "name": "spin/control-products-and-close",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 168
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 170
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 5,
+          "clifford": 21,
+          "peak": 169
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 170
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 277,
+          "clifford": 12639,
+          "peak": 139
+        }
+      ]
+    },
+    {
+      "id": "pau_single_q204_t8796",
+      "series": "pau_single",
+      "color": "red",
+      "marker": "diamond",
+      "file": "circuits/pau_single_q204_t8796.gates.xz",
+      "file_sha256": "62cf1fdcaf208cfde9f4402a833903960db1946813be4c8ae7ed98e7761d501f",
+      "original_gate_stream_sha256": "dcd52c90685330ede593f66029d0cb7b8e2e8fd51dcb59d3c8e4fbfe3b5ac8f3",
+      "text_sha256": "636b06f2eccfa89a1d6cb494476c01c01d957497122114f9e191afd036b9fe6b",
+      "operation_count": 540938,
+      "toffoli": 8796,
+      "peak_total_qubits": 204,
+      "clifford": 238625,
+      "gate_counts": {
+        "X": 156,
+        "Z": 751,
+        "NEG": 0,
+        "CX": 188002,
+        "CZ": 32667,
+        "SWAP": 0,
+        "CCX": 8793,
+        "CCZ": 3,
+        "R": 9120,
+        "HMR": 8836,
+        "OXOR": 292610
+      },
+      "toffoli_times_peak": 1794384,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 873,
+          "peak": 185
+        },
+        {
+          "name": "sparse-alias/base-lookup",
+          "toffoli": 4719,
+          "clifford": 146205,
+          "peak": 148
+        },
+        {
+          "name": "sparse-alias/base-combine",
+          "toffoli": 32,
+          "clifford": 0,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/corrections",
+          "toffoli": 1591,
+          "clifford": 18821,
+          "peak": 119
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 149,
+          "peak": 121
+        },
+        {
+          "name": "phase-label/lookup",
+          "toffoli": 1627,
+          "clifford": 47624,
+          "peak": 204
+        },
+        {
+          "name": "phase-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 187
+        },
+        {
+          "name": "phase-label/combine",
+          "toffoli": 28,
+          "clifford": 0,
+          "peak": 173
+        },
+        {
+          "name": "phase-pau/core",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 154
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 156
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 3,
+          "clifford": 14,
+          "peak": 154
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 156
+        },
+        {
+          "name": "phase-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 174
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 27,
+          "clifford": 164,
+          "peak": 117
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "pau_single_q206_t6376",
+      "series": "pau_single",
+      "color": "red",
+      "marker": "diamond",
+      "file": "circuits/pau_single_q206_t6376.gates.xz",
+      "file_sha256": "1ae219ab1839b9baf1e70e8d4d2bb00face6ad7ce91de93f52268b32745e9a5b",
+      "original_gate_stream_sha256": "8e59871f23e3df47fd85d3026f5da6ea4aa62a2b74df707c8fe0b91f7915748b",
+      "text_sha256": "0dab5f8be92a46fa7fb961980f55bd4ada01e4ab6587ca8fa4eeb7ca62b1b9e3",
+      "operation_count": 881085,
+      "toffoli": 6376,
+      "peak_total_qubits": 206,
+      "clifford": 227069,
+      "gate_counts": {
+        "X": 1572,
+        "Z": 751,
+        "NEG": 0,
+        "CX": 183926,
+        "CZ": 30027,
+        "SWAP": 0,
+        "CCX": 6373,
+        "CCZ": 3,
+        "R": 6700,
+        "HMR": 6416,
+        "OXOR": 645317
+      },
+      "toffoli_times_peak": 1313456,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9497,
+          "peak": 200
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 2477,
+          "clifford": 123996,
+          "peak": 205
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 94,
+          "clifford": 3,
+          "peak": 197
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 186,
+          "peak": 196
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 123,
+          "clifford": 2974,
+          "peak": 174
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 120,
+          "clifford": 171,
+          "peak": 172
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 126,
+          "peak": 167
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 1013,
+          "clifford": 17277,
+          "peak": 205
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 137,
+          "peak": 121
+        },
+        {
+          "name": "phase-label/lookup",
+          "toffoli": 1627,
+          "clifford": 47624,
+          "peak": 206
+        },
+        {
+          "name": "phase-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 189
+        },
+        {
+          "name": "phase-label/combine",
+          "toffoli": 28,
+          "clifford": 0,
+          "peak": 175
+        },
+        {
+          "name": "phase-pau/core",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 156
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 158
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 3,
+          "clifford": 14,
+          "peak": 156
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 158
+        },
+        {
+          "name": "phase-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 176
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 25,
+          "clifford": 158,
+          "peak": 115
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "pau_single_q274_t5253",
+      "series": "pau_single",
+      "color": "red",
+      "marker": "diamond",
+      "file": "circuits/pau_single_q274_t5253.gates.xz",
+      "file_sha256": "71aa2a1b1f385e83aafd2d6fd3bb55c9c4f3384e2ad6d80e605812ddaa8b3e27",
+      "original_gate_stream_sha256": "ed21775c84c7eb8721b09f54cef42e138aba1e92c81eaa3cea01959bbb9c7bb4",
+      "text_sha256": "7c28b39f455d9098a6876aa3f2ff03234f39dd6b2f59c51e206799193e9f072f",
+      "operation_count": 1331190,
+      "toffoli": 5253,
+      "peak_total_qubits": 274,
+      "clifford": 221186,
+      "gate_counts": {
+        "X": 138,
+        "Z": 751,
+        "NEG": 0,
+        "CX": 181544,
+        "CZ": 28772,
+        "SWAP": 0,
+        "CCX": 5250,
+        "CCZ": 3,
+        "R": 5577,
+        "HMR": 5293,
+        "OXOR": 1103862
+      },
+      "toffoli_times_peak": 1439322,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9497,
+          "peak": 264
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 1251,
+          "clifford": 95595,
+          "peak": 274
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 172,
+          "clifford": 12,
+          "peak": 266
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 336,
+          "peak": 264
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 616,
+          "clifford": 26480,
+          "peak": 233
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 131,
+          "clifford": 33,
+          "peak": 227
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 240,
+          "peak": 224
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 543,
+          "clifford": 16235,
+          "peak": 213
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "phase-label/lookup",
+          "toffoli": 1627,
+          "clifford": 47624,
+          "peak": 215
+        },
+        {
+          "name": "phase-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 198
+        },
+        {
+          "name": "phase-label/combine",
+          "toffoli": 28,
+          "clifford": 0,
+          "peak": 184
+        },
+        {
+          "name": "phase-pau/core",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 165
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 167
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 3,
+          "clifford": 14,
+          "peak": 165
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 167
+        },
+        {
+          "name": "phase-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "pau_two_q204_t8813",
+      "series": "pau_two",
+      "color": "red",
+      "marker": "triangle",
+      "file": "circuits/pau_two_q204_t8813.gates.xz",
+      "file_sha256": "793e305ac0934f3db49abf02da6d794bf8bc086b1505ed27c0354ac68f8f37ce",
+      "original_gate_stream_sha256": "bde154c2a545bbaa822d5331c38696842223a97e696dc83d9382b619cfe65fae",
+      "text_sha256": "383cd87770ee8caf6030d159a78038a9def69f62292ab527549e83d24219fbe4",
+      "operation_count": 542852,
+      "toffoli": 8813,
+      "peak_total_qubits": 204,
+      "clifford": 240541,
+      "gate_counts": {
+        "X": 142,
+        "Z": 733,
+        "NEG": 0,
+        "CX": 189405,
+        "CZ": 33096,
+        "SWAP": 4,
+        "CCX": 8813,
+        "CCZ": 0,
+        "R": 9180,
+        "HMR": 8856,
+        "OXOR": 292623
+      },
+      "toffoli_times_peak": 1797852,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 593,
+          "peak": 190
+        },
+        {
+          "name": "sparse-alias/base-lookup",
+          "toffoli": 4719,
+          "clifford": 146205,
+          "peak": 148
+        },
+        {
+          "name": "sparse-alias/base-combine",
+          "toffoli": 32,
+          "clifford": 0,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/corrections",
+          "toffoli": 1591,
+          "clifford": 18821,
+          "peak": 119
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 149,
+          "peak": 121
+        },
+        {
+          "name": "family-label/lookup-0",
+          "toffoli": 1627,
+          "clifford": 49146,
+          "peak": 204
+        },
+        {
+          "name": "family-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 187
+        },
+        {
+          "name": "family-label/combine-0",
+          "toffoli": 28,
+          "clifford": 0,
+          "peak": 173
+        },
+        {
+          "name": "family-pau/gauges",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "family-pau/merged-prefix-in",
+          "toffoli": 82,
+          "clifford": 1724,
+          "peak": 169
+        },
+        {
+          "name": "family-pau/mixed_or_small",
+          "toffoli": 64,
+          "clifford": 1434,
+          "peak": 197
+        },
+        {
+          "name": "family-pau/same_spin",
+          "toffoli": 50,
+          "clifford": 1118,
+          "peak": 201
+        },
+        {
+          "name": "family-pau/common-pair-out",
+          "toffoli": 78,
+          "clifford": 1716,
+          "peak": 192
+        },
+        {
+          "name": "family-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 174
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 27,
+          "clifford": 164,
+          "peak": 117
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "pau_two_q206_t6393",
+      "series": "pau_two",
+      "color": "red",
+      "marker": "triangle",
+      "file": "circuits/pau_two_q206_t6393.gates.xz",
+      "file_sha256": "75e8705786d6529845243ba1cb18d050dc969f319f9f5371c5be64b8f3255e95",
+      "original_gate_stream_sha256": "a1555b1c060f53c0f135f4721e43cac9104f77b4798e98b26aa1c2e354a6f47e",
+      "text_sha256": "0e59840bace0ad30db5dbc6c6a1fde8787d52e1859c9f32ede040019392cfb3e",
+      "operation_count": 882999,
+      "toffoli": 6393,
+      "peak_total_qubits": 206,
+      "clifford": 228985,
+      "gate_counts": {
+        "X": 1558,
+        "Z": 733,
+        "NEG": 0,
+        "CX": 185329,
+        "CZ": 30456,
+        "SWAP": 4,
+        "CCX": 6393,
+        "CCZ": 0,
+        "R": 6760,
+        "HMR": 6436,
+        "OXOR": 645330
+      },
+      "toffoli_times_peak": 1316958,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9217,
+          "peak": 200
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 2477,
+          "clifford": 123996,
+          "peak": 205
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 94,
+          "clifford": 3,
+          "peak": 197
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 186,
+          "peak": 196
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 123,
+          "clifford": 2974,
+          "peak": 174
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 120,
+          "clifford": 171,
+          "peak": 172
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 126,
+          "peak": 167
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 1013,
+          "clifford": 17277,
+          "peak": 205
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 137,
+          "peak": 121
+        },
+        {
+          "name": "family-label/lookup-0",
+          "toffoli": 1627,
+          "clifford": 49146,
+          "peak": 206
+        },
+        {
+          "name": "family-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 189
+        },
+        {
+          "name": "family-label/combine-0",
+          "toffoli": 28,
+          "clifford": 0,
+          "peak": 175
+        },
+        {
+          "name": "family-pau/gauges",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "family-pau/merged-prefix-in",
+          "toffoli": 82,
+          "clifford": 1724,
+          "peak": 171
+        },
+        {
+          "name": "family-pau/mixed_or_small",
+          "toffoli": 64,
+          "clifford": 1434,
+          "peak": 199
+        },
+        {
+          "name": "family-pau/same_spin",
+          "toffoli": 50,
+          "clifford": 1118,
+          "peak": 203
+        },
+        {
+          "name": "family-pau/common-pair-out",
+          "toffoli": 78,
+          "clifford": 1716,
+          "peak": 194
+        },
+        {
+          "name": "family-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 176
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 25,
+          "clifford": 158,
+          "peak": 115
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "pau_two_q274_t5270",
+      "series": "pau_two",
+      "color": "red",
+      "marker": "triangle",
+      "file": "circuits/pau_two_q274_t5270.gates.xz",
+      "file_sha256": "07d46e195cfbf4cf1d68b83b35c0e24e117111527f769f12f80c4f240e3310af",
+      "original_gate_stream_sha256": "90f922c9edcb589246663ba297fd3b7688247cc1687dd984c23642744023c1bf",
+      "text_sha256": "1798b557bd31dec58b41ed0404b6d06b9407ad57ae7e512f25337224828309ea",
+      "operation_count": 1333104,
+      "toffoli": 5270,
+      "peak_total_qubits": 274,
+      "clifford": 223102,
+      "gate_counts": {
+        "X": 124,
+        "Z": 733,
+        "NEG": 0,
+        "CX": 182947,
+        "CZ": 29201,
+        "SWAP": 4,
+        "CCX": 5270,
+        "CCZ": 0,
+        "R": 5637,
+        "HMR": 5313,
+        "OXOR": 1103875
+      },
+      "toffoli_times_peak": 1443980,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9217,
+          "peak": 264
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 1251,
+          "clifford": 95595,
+          "peak": 274
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 172,
+          "clifford": 12,
+          "peak": 266
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 336,
+          "peak": 264
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 616,
+          "clifford": 26480,
+          "peak": 233
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 131,
+          "clifford": 33,
+          "peak": 227
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 240,
+          "peak": 224
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 543,
+          "clifford": 16235,
+          "peak": 213
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "family-label/lookup-0",
+          "toffoli": 1627,
+          "clifford": 49146,
+          "peak": 215
+        },
+        {
+          "name": "family-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 198
+        },
+        {
+          "name": "family-label/combine-0",
+          "toffoli": 28,
+          "clifford": 0,
+          "peak": 184
+        },
+        {
+          "name": "family-pau/gauges",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "family-pau/merged-prefix-in",
+          "toffoli": 82,
+          "clifford": 1724,
+          "peak": 180
+        },
+        {
+          "name": "family-pau/mixed_or_small",
+          "toffoli": 64,
+          "clifford": 1434,
+          "peak": 208
+        },
+        {
+          "name": "family-pau/same_spin",
+          "toffoli": 50,
+          "clifford": 1118,
+          "peak": 212
+        },
+        {
+          "name": "family-pau/common-pair-out",
+          "toffoli": 78,
+          "clifford": 1716,
+          "peak": 203
+        },
+        {
+          "name": "family-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "pau_two_q298_t4324",
+      "series": "pau_two",
+      "color": "red",
+      "marker": "triangle",
+      "file": "circuits/pau_two_q298_t4324.gates.xz",
+      "file_sha256": "7c2748175f373668f910504ad161619a982211c6fcf5f8e3fde6f8cf420673f1",
+      "original_gate_stream_sha256": "68ba6dd3c957fdb5cde15c267f105b1aed259b378163e412e84aaa596b4ec027",
+      "text_sha256": "39fc6f333ad9ae560ddd1104b53c81b367b853b96e59575943c2372669302d9e",
+      "operation_count": 1474102,
+      "toffoli": 4324,
+      "peak_total_qubits": 298,
+      "clifford": 217926,
+      "gate_counts": {
+        "X": 124,
+        "Z": 378,
+        "NEG": 0,
+        "CX": 180516,
+        "CZ": 28341,
+        "SWAP": 4,
+        "CCX": 4324,
+        "CCZ": 0,
+        "R": 4697,
+        "HMR": 4368,
+        "OXOR": 1251350
+      },
+      "toffoli_times_peak": 1288552,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9331,
+          "peak": 288
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 1251,
+          "clifford": 106423,
+          "peak": 298
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 193,
+          "clifford": 12,
+          "peak": 290
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 378,
+          "peak": 288
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 314,
+          "clifford": 15144,
+          "peak": 267
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 181,
+          "clifford": 78,
+          "peak": 263
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 310,
+          "peak": 259
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 543,
+          "clifford": 16235,
+          "peak": 213
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "family-label/lookup-0",
+          "toffoli": 850,
+          "clifford": 44157,
+          "peak": 291
+        },
+        {
+          "name": "family-label/flags",
+          "toffoli": 22,
+          "clifford": 174,
+          "peak": 255
+        },
+        {
+          "name": "family-label/combine-0",
+          "toffoli": 85,
+          "clifford": 3,
+          "peak": 242
+        },
+        {
+          "name": "family-pau/gauges",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "family-pau/merged-prefix-in",
+          "toffoli": 82,
+          "clifford": 1724,
+          "peak": 181
+        },
+        {
+          "name": "family-pau/mixed_or_small",
+          "toffoli": 64,
+          "clifford": 1434,
+          "peak": 209
+        },
+        {
+          "name": "family-pau/same_spin",
+          "toffoli": 50,
+          "clifford": 1118,
+          "peak": 213
+        },
+        {
+          "name": "family-pau/common-pair-out",
+          "toffoli": 78,
+          "clifford": 1716,
+          "peak": 204
+        },
+        {
+          "name": "family-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "pau_two_q338_t3772",
+      "series": "pau_two",
+      "color": "red",
+      "marker": "triangle",
+      "file": "circuits/pau_two_q338_t3772.gates.xz",
+      "file_sha256": "85dd0dbcf1eb698feb7416236609fdc9574bf9debe0f6bf9ece8d8cdbbb4ce0a",
+      "original_gate_stream_sha256": "89d0407b30b6b47df663699cdda8584c1d15b30be0eb671d38e563c83d329305",
+      "text_sha256": "1a7bc1c49b47777edef61b728e86918212b46d725c46a126cf150d45de33cc30",
+      "operation_count": 1171724,
+      "toffoli": 3772,
+      "peak_total_qubits": 338,
+      "clifford": 216141,
+      "gate_counts": {
+        "X": 122,
+        "Z": 378,
+        "NEG": 0,
+        "CX": 180363,
+        "CZ": 27813,
+        "SWAP": 4,
+        "CCX": 3772,
+        "CCZ": 0,
+        "R": 4145,
+        "HMR": 3816,
+        "OXOR": 951311
+      },
+      "toffoli_times_peak": 1274936,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9331,
+          "peak": 328
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 1251,
+          "clifford": 118977,
+          "peak": 338
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 228,
+          "clifford": 12,
+          "peak": 330
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 448,
+          "peak": 328
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "family-label/lookup-0",
+          "toffoli": 850,
+          "clifford": 44157,
+          "peak": 291
+        },
+        {
+          "name": "family-label/flags",
+          "toffoli": 22,
+          "clifford": 174,
+          "peak": 255
+        },
+        {
+          "name": "family-label/combine-0",
+          "toffoli": 85,
+          "clifford": 3,
+          "peak": 242
+        },
+        {
+          "name": "family-pau/gauges",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "family-pau/merged-prefix-in",
+          "toffoli": 82,
+          "clifford": 1724,
+          "peak": 181
+        },
+        {
+          "name": "family-pau/mixed_or_small",
+          "toffoli": 64,
+          "clifford": 1434,
+          "peak": 209
+        },
+        {
+          "name": "family-pau/same_spin",
+          "toffoli": 50,
+          "clifford": 1118,
+          "peak": 213
+        },
+        {
+          "name": "family-pau/common-pair-out",
+          "toffoli": 78,
+          "clifford": 1716,
+          "peak": 204
+        },
+        {
+          "name": "family-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "pau_two_q593_t3420",
+      "series": "pau_two",
+      "color": "red",
+      "marker": "triangle",
+      "file": "circuits/pau_two_q593_t3420.gates.xz",
+      "file_sha256": "6f33b9629302e4dac8c50d0b4ae376273716330c4fee2a97fbce8ceadd69e5cd",
+      "original_gate_stream_sha256": "feb3352d79c3d83045d51c6d6645739a96be088eae334096939f9c1132db1920",
+      "text_sha256": "96d1ea0993cd5451812be514fd645117c13ab6b0f7a694cfc9499f59a8030a70",
+      "operation_count": 1977104,
+      "toffoli": 3420,
+      "peak_total_qubits": 593,
+      "clifford": 213586,
+      "gate_counts": {
+        "X": 122,
+        "Z": 378,
+        "NEG": 0,
+        "CX": 179120,
+        "CZ": 27205,
+        "SWAP": 4,
+        "CCX": 3420,
+        "CCZ": 0,
+        "R": 3793,
+        "HMR": 3464,
+        "OXOR": 1759598
+      },
+      "toffoli_times_peak": 2028060,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9331,
+          "peak": 584
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 636,
+          "clifford": 115889,
+          "peak": 593
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 491,
+          "clifford": 33,
+          "peak": 587
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 960,
+          "peak": 584
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "family-label/lookup-0",
+          "toffoli": 850,
+          "clifford": 44157,
+          "peak": 291
+        },
+        {
+          "name": "family-label/flags",
+          "toffoli": 22,
+          "clifford": 174,
+          "peak": 255
+        },
+        {
+          "name": "family-label/combine-0",
+          "toffoli": 85,
+          "clifford": 3,
+          "peak": 242
+        },
+        {
+          "name": "family-pau/gauges",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "family-pau/merged-prefix-in",
+          "toffoli": 82,
+          "clifford": 1724,
+          "peak": 181
+        },
+        {
+          "name": "family-pau/mixed_or_small",
+          "toffoli": 64,
+          "clifford": 1434,
+          "peak": 209
+        },
+        {
+          "name": "family-pau/same_spin",
+          "toffoli": 50,
+          "clifford": 1118,
+          "peak": 213
+        },
+        {
+          "name": "family-pau/common-pair-out",
+          "toffoli": 78,
+          "clifford": 1716,
+          "peak": 204
+        },
+        {
+          "name": "family-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "frame_extended_q201_t10388",
+      "series": "frame_extended",
+      "color": "blue",
+      "marker": "square",
+      "file": "circuits/frame_extended_q201_t10388.gates.xz",
+      "file_sha256": "ed70c6b90c01ab74309523b19bb5eb45600267d67fc68bc2959deea3f9e5f57a",
+      "original_gate_stream_sha256": "10c77122caa7452a3546f711fdea48a62deee7e0f8e6d8866d37852956c49a06",
+      "text_sha256": "93c5fc037f3e9a25254d4ab9228046f128876309a41d61bd8eb5e326f5dc20cc",
+      "operation_count": 497720,
+      "toffoli": 10388,
+      "peak_total_qubits": 201,
+      "clifford": 242969,
+      "gate_counts": {
+        "X": 1230,
+        "Z": 1457,
+        "NEG": 0,
+        "CX": 164670,
+        "CZ": 57753,
+        "SWAP": 0,
+        "CCX": 10261,
+        "CCZ": 127,
+        "R": 10285,
+        "HMR": 10261,
+        "OXOR": 241676
+      },
+      "toffoli_times_peak": 2087988,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/base-lookup",
+          "toffoli": 4719,
+          "clifford": 146205,
+          "peak": 148
+        },
+        {
+          "name": "sparse-alias/base-combine",
+          "toffoli": 32,
+          "clifford": 0,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/corrections",
+          "toffoli": 1591,
+          "clifford": 18821,
+          "peak": 119
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "select-blk",
+          "toffoli": 136,
+          "clifford": 431,
+          "peak": 141
+        },
+        {
+          "name": "select-conj",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 129
+        },
+        {
+          "name": "select-pauli",
+          "toffoli": 3327,
+          "clifford": 60823,
+          "peak": 139
+        },
+        {
+          "name": "select-unconj",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 129
+        },
+        {
+          "name": "select-unblk",
+          "toffoli": 136,
+          "clifford": 438,
+          "peak": 141
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "frame_extended_q230_t7067",
+      "series": "frame_extended",
+      "color": "blue",
+      "marker": "square",
+      "file": "circuits/frame_extended_q230_t7067.gates.xz",
+      "file_sha256": "f0af218d2e32a011c7ad4759f30cd0d01dc11b11bbdef9a3438f2e835d11251a",
+      "original_gate_stream_sha256": "0545ec20576eb0c2335b4ff99c9b5e5b24b21b8903009e0ebf449f2b56e688a2",
+      "text_sha256": "18c66d4e5ac62f721f811d8cf708f2d60d6c32c248c0d3d100cf73ad8bb4ae38",
+      "operation_count": 823593,
+      "toffoli": 7067,
+      "peak_total_qubits": 230,
+      "clifford": 273762,
+      "gate_counts": {
+        "X": 52,
+        "Z": 5,
+        "NEG": 0,
+        "CX": 234145,
+        "CZ": 25333,
+        "SWAP": 0,
+        "CCX": 7027,
+        "CCZ": 40,
+        "R": 7157,
+        "HMR": 7127,
+        "OXOR": 542707
+      },
+      "toffoli_times_peak": 1625410,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 8874,
+          "peak": 225
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 2431,
+          "clifford": 126823,
+          "peak": 211
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 542,
+          "clifford": 16230,
+          "peak": 213
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 3219,
+          "clifford": 97513,
+          "peak": 230
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 12,
+          "clifford": 78,
+          "peak": 227
+        },
+        {
+          "name": "current-label/metadata-measure",
+          "toffoli": 0,
+          "clifford": 24,
+          "peak": 225
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "current-frame/open",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 215
+        },
+        {
+          "name": "current-frame/action",
+          "toffoli": 4,
+          "clifford": 928,
+          "peak": 217
+        },
+        {
+          "name": "current-frame/close",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 215
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 218,
+          "clifford": 6779,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    },
+    {
+      "id": "frame_extended_q290_t6694",
+      "series": "frame_extended",
+      "color": "blue",
+      "marker": "square",
+      "file": "circuits/frame_extended_q290_t6694.gates.xz",
+      "file_sha256": "d9376b4f9ceac3d7a2aa7b0039354d8f879e23e32d1a7dc81929a0831e2011f2",
+      "original_gate_stream_sha256": "cfb7e6f30da1618729712910b96d265b128b59a3d0f964d7a02f2e45a745ed60",
+      "text_sha256": "b77176a44580c7a9e40deaf8257a6dca09a2f9064ff076aa84ecf576b5b893b3",
+      "operation_count": 1356889,
+      "toffoli": 6694,
+      "peak_total_qubits": 290,
+      "clifford": 269462,
+      "gate_counts": {
+        "X": 54,
+        "Z": 5,
+        "NEG": 0,
+        "CX": 231140,
+        "CZ": 24784,
+        "SWAP": 0,
+        "CCX": 6654,
+        "CCZ": 40,
+        "R": 6784,
+        "HMR": 6754,
+        "OXOR": 1080674
+      },
+      "toffoli_times_peak": 1941260,
+      "recorded_validation": {
+        "native_verdict": "OK",
+        "native_shots": 65536,
+        "native_full_suite": false,
+        "all_row_status": "PASS",
+        "all_row_samples": 82104,
+        "all_row_scope": "Two Fock-state samples per row; complete circuit uses keep-1 and keep alias boundary inputs (keep=0 uses 0 twice)."
+      },
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 8874,
+          "peak": 280
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 1251,
+          "clifford": 102918,
+          "peak": 290
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 186,
+          "clifford": 12,
+          "peak": 282
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 364,
+          "peak": 280
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 616,
+          "clifford": 19206,
+          "peak": 203
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 101,
+          "clifford": 33,
+          "peak": 197
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 180,
+          "peak": 194
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 543,
+          "clifford": 16235,
+          "peak": 213
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 3219,
+          "clifford": 97513,
+          "peak": 230
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 12,
+          "clifford": 78,
+          "peak": 227
+        },
+        {
+          "name": "current-label/metadata-measure",
+          "toffoli": 0,
+          "clifford": 24,
+          "peak": 225
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "current-frame/open",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 215
+        },
+        {
+          "name": "current-frame/action",
+          "toffoli": 4,
+          "clifford": 928,
+          "peak": 217
+        },
+        {
+          "name": "current-frame/close",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 215
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 218,
+          "clifford": 6779,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ]
+    }
+  ]
+}

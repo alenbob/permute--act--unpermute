@@ -1,0 +1,195 @@
+{
+  "status": "PASS",
+  "scope": "Every normalized gate and boundary register compared in order with the independently parsed original operation stream for all 31 circuits.",
+  "source_parser": "uncompute.evalcore.compact_reader",
+  "source_parser_sha256": "ba4e531c7c7ff4dc55166107fadb6c7947ff439c98028d71973dc405397b5520",
+  "manifest_sha256": "847dba096d3e0159300813a5775428bfb1d2af002a4b2fb5e22b9d51e0317617",
+  "results": [
+    {
+      "id": "frame_released_q126_t14978",
+      "operation_count": 473498,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "frame_paper_q145_t14479",
+      "operation_count": 469984,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "frame_paper_q208_t14448",
+      "operation_count": 469716,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "pau_two_q215_t5627",
+      "operation_count": 745087,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "pau_single_q338_t3755",
+      "operation_count": 1171038,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "frame_extended_q338_t4411",
+      "operation_count": 1269732,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "frame_extended_q148_t10420",
+      "operation_count": 497754,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "pau_single_q444_t3524",
+      "operation_count": 1197150,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "pau_single_q157_t11430",
+      "operation_count": 549804,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "frame_extended_q472_t3807",
+      "operation_count": 1302183,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "frame_extended_q126_t14500",
+      "operation_count": 420791,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "pau_single_q593_t3172",
+      "operation_count": 2002530,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "frame_extended_q593_t3440",
+      "operation_count": 2107383,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "frame_extended_q817_t3415",
+      "operation_count": 2172244,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "pau_single_q210_t5650",
+      "operation_count": 743443,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "pau_single_q298_t4307",
+      "operation_count": 1473416,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "frame_extended_q205_t7970",
+      "operation_count": 837891,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "frame_extended_q300_t4978",
+      "operation_count": 1572290,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "pau_single_q185_t10382",
+      "operation_count": 551459,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "pau_single_q204_t8796",
+      "operation_count": 540938,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "pau_single_q206_t6376",
+      "operation_count": 881085,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "pau_single_q274_t5253",
+      "operation_count": 1331190,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "pau_two_q204_t8813",
+      "operation_count": 542852,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "pau_two_q206_t6393",
+      "operation_count": 882999,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "pau_two_q274_t5270",
+      "operation_count": 1333104,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "pau_two_q298_t4324",
+      "operation_count": 1474102,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "pau_two_q338_t3772",
+      "operation_count": 1171724,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "pau_two_q593_t3420",
+      "operation_count": 1977104,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "frame_extended_q201_t10388",
+      "operation_count": 497720,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "frame_extended_q230_t7067",
+      "operation_count": 823593,
+      "registers_match": true,
+      "all_operations_match": true
+    },
+    {
+      "id": "frame_extended_q290_t6694",
+      "operation_count": 1356889,
+      "registers_match": true,
+      "all_operations_match": true
+    }
+  ]
+}

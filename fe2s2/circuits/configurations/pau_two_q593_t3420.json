@@ -1,0 +1,116 @@
+{
+  "engine": "composed",
+  "alias": {
+    "family": "frame",
+    "alias_mode": "shared",
+    "log_alias": 4,
+    "log_correction": 1,
+    "alias_hold": 14,
+    "select_mode": "banked",
+    "flag_mode": "shared",
+    "log_label": 2,
+    "label_hold": 14,
+    "label_low": 6,
+    "label_window": 6,
+    "label_repair_hold": 7,
+    "alias_low": 2,
+    "alias_window": 7,
+    "alias_repair_hold": 8,
+    "padding": "high",
+    "partition": 0,
+    "lookup_plan": {
+      "base": {
+        "order": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          1,
+          0
+        ],
+        "hold": 9
+      },
+      "correction": {
+        "order": [
+          9,
+          11,
+          8,
+          10,
+          7,
+          12,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "hold": 12
+      },
+      "label": {
+        "order": [
+          0,
+          1,
+          9,
+          10,
+          11,
+          12,
+          15,
+          14,
+          13,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2
+        ],
+        "hold": 11
+      }
+    }
+  },
+  "selector": {
+    "engine": "branch_pau",
+    "configuration": {
+      "scheme": "spin_split",
+      "shared_pair": true,
+      "decode_mode": "joint",
+      "padding": "high",
+      "partition": 0,
+      "log_label": 2,
+      "label_hold": 14,
+      "label_low": 6,
+      "label_window": 6,
+      "label_repair_hold": 7,
+      "pooled_actions": true,
+      "action_basis": true
+    },
+    "interface": "family"
+  },
+  "retained_borrows": 16,
+  "lookup_holds": {},
+  "alias_repair": {
+    "low": 2,
+    "window": 7,
+    "hold": 8
+  },
+  "select_repair": {
+    "low": 6,
+    "window": 6,
+    "hold": 7
+  },
+  "cost_tree": false,
+  "id": "pau_two_q593_t3420",
+  "expected": {
+    "toffoli": 3420,
+    "peak_total_qubits": 593,
+    "text_sha256": "96d1ea0993cd5451812be514fd645117c13ab6b0f7a694cfc9499f59a8030a70",
+    "operation_count": 1977104
+  }
+}

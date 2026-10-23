@@ -1,0 +1,115 @@
+{
+  "engine": "composed",
+  "alias": {
+    "family": "pau",
+    "alias_mode": "shared",
+    "log_alias": 3,
+    "log_correction": 1,
+    "alias_hold": 14,
+    "select_mode": "banked",
+    "flag_mode": "shared",
+    "log_label": 2,
+    "label_hold": 14,
+    "label_low": 6,
+    "label_window": 6,
+    "label_repair_hold": 7,
+    "alias_low": 2,
+    "alias_window": 7,
+    "alias_repair_hold": 8,
+    "padding": "high",
+    "partition": 0,
+    "lookup_plan": {
+      "base": {
+        "order": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          2,
+          1,
+          0
+        ],
+        "hold": 10
+      },
+      "correction": {
+        "order": [
+          9,
+          11,
+          8,
+          10,
+          7,
+          12,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "hold": 12
+      },
+      "label": {
+        "order": [
+          0,
+          1,
+          9,
+          10,
+          11,
+          12,
+          15,
+          14,
+          13,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2
+        ],
+        "hold": 11
+      }
+    }
+  },
+  "selector": {
+    "engine": "phase_pau",
+    "configuration": {
+      "scheme": "common_phase",
+      "shared_pair": false,
+      "decode_mode": "joint",
+      "padding": "high",
+      "partition": 0,
+      "log_label": 3,
+      "label_hold": 14,
+      "label_low": 6,
+      "label_window": 6,
+      "label_repair_hold": 7
+    },
+    "interface": "family"
+  },
+  "lookup_holds": {},
+  "cost_tree": false,
+  "retained_borrows": 16,
+  "alias_repair": {
+    "low": 2,
+    "window": 7,
+    "hold": 8
+  },
+  "select_repair": {
+    "low": 6,
+    "window": 6,
+    "hold": 7
+  },
+  "id": "pau_single_q444_t3524",
+  "expected": {
+    "toffoli": 3524,
+    "peak_total_qubits": 444,
+    "text_sha256": "e143c84583c117c97c70022223d399ef6db752c113908459a97b422b1910031a",
+    "operation_count": 1197150
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "engine": "composed",
+  "alias": {
+    "base_slices": [
+      {
+        "offset": 0,
+        "width": 31,
+        "log_bank": 2,
+        "hold": 14,
+        "order": [
+          11,
+          10,
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "offset": 31,
+        "width": 1,
+        "log_bank": 6,
+        "hold": 14,
+        "order": [
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      }
+    ],
+    "family": "frame",
+    "alias_mode": "shared",
+    "log_alias": 2,
+    "log_correction": 0,
+    "alias_hold": 14,
+    "select_mode": "released",
+    "flag_mode": "shared",
+    "log_label": 3,
+    "label_hold": 14,
+    "label_low": 6,
+    "label_window": 6,
+    "label_repair_hold": 14,
+    "alias_low": 2,
+    "alias_window": 7,
+    "alias_repair_hold": 7,
+    "padding": "high",
+    "partition": 0,
+    "lookup_plan": {
+      "base": {
+        "order": [
+          5,
+          4,
+          10,
+          11,
+          7,
+          6,
+          9,
+          8,
+          3,
+          2,
+          1,
+          0
+        ],
+        "hold": 7
+      },
+      "correction": {
+        "order": [
+          9,
+          10,
+          13,
+          12,
+          11,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          0,
+          1
+        ],
+        "hold": 7
+      }
+    }
+  },
+  "selector": {
+    "engine": "segmented_query",
+    "configuration": {
+      "base_slices": [
+        {
+          "offset": 0,
+          "width": 31,
+          "log_bank": 2,
+          "hold": 14,
+          "order": [
+            11,
+            10,
+            9,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "offset": 31,
+          "width": 1,
+          "log_bank": 6,
+          "hold": 14,
+          "order": [
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0
+          ]
+        }
+      ],
+      "family": "frame",
+      "alias_mode": "shared",
+      "log_alias": 2,
+      "log_correction": 0,
+      "alias_hold": 14,
+      "select_mode": "released",
+      "flag_mode": "shared",
+      "log_label": 3,
+      "label_hold": 14,
+      "label_low": 6,
+      "label_window": 6,
+      "label_repair_hold": 14,
+      "alias_low": 2,
+      "alias_window": 7,
+      "alias_repair_hold": 7,
+      "padding": "high",
+      "partition": 0,
+      "lookup_plan": {
+        "base": {
+          "order": [
+            5,
+            4,
+            10,
+            11,
+            7,
+            6,
+            9,
+            8,
+            3,
+            2,
+            1,
+            0
+          ],
+          "hold": 7
+        },
+        "correction": {
+          "order": [
+            9,
+            10,
+            13,
+            12,
+            11,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            0,
+            1
+          ],
+          "hold": 7
+        }
+      }
+    },
+    "interface": "legacy",
+    "multiframe": true
+  },
+  "lookup_holds": {
+    "segmented-alias/base-0-lookup": 9,
+    "segmented-alias/base-1-lookup": 7,
+    "recycle-alias/correction-lookup": 5
+  },
+  "cost_tree": true,
+  "retained_borrows": 16,
+  "alias_repair": {
+    "low": 2,
+    "window": 7,
+    "hold": 8
+  },
+  "select_repair": null,
+  "id": "frame_extended_q205_t7970",
+  "expected": {
+    "toffoli": 7970,
+    "peak_total_qubits": 205,
+    "text_sha256": "c5d9cf17823240791cec83b215c9a7ee57be4fd46156f927fd6a091fdc38c671",
+    "operation_count": 837891
+  }
+}

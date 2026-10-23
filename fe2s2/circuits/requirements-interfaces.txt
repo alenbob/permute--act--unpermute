@@ -1,0 +1,7 @@
+-r requirements-build.txt
+qualtran==0.7.0
+cirq-core==1.7.0
+sympy==1.14.0
+attrs==26.1.0
+openqasm3[parser]==1.0.1
+antlr4-python3-runtime==4.13.2

@@ -5,7 +5,7 @@
   "sampled_inputs_per_circuit": 256,
   "seed": 20261023,
   "scope": "Exact gate hashes and resource recounts, phase-ledger checks, point-data and recorded full-suite report linkage, and sampled basis-state/measurement-record checks. Not an exhaustive semantic certificate or a proof of minimal space.",
-  "checked_release_files": 50,
+  "checked_release_files": 197,
   "recorded_full_suite": {
     "status": "PASS",
     "scope": "Recorded full-suite report/hash linkage; no new full-suite run.",

@@ -1,0 +1,141 @@
+{
+  "engine": "composed",
+  "alias": {
+    "base_slices": [
+      {
+        "offset": 0,
+        "width": 31,
+        "log_bank": 2,
+        "hold": 14,
+        "order": [
+          11,
+          10,
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "offset": 31,
+        "width": 1,
+        "log_bank": 6,
+        "hold": 14,
+        "order": [
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      }
+    ],
+    "family": "frame",
+    "alias_mode": "shared",
+    "log_alias": 2,
+    "log_correction": 0,
+    "alias_hold": 14,
+    "select_mode": "released",
+    "flag_mode": "shared",
+    "log_label": 3,
+    "label_hold": 14,
+    "label_low": 6,
+    "label_window": 6,
+    "label_repair_hold": 14,
+    "alias_low": 2,
+    "alias_window": 7,
+    "alias_repair_hold": 7,
+    "padding": "high",
+    "partition": 0,
+    "lookup_plan": {
+      "base": {
+        "order": [
+          5,
+          4,
+          10,
+          11,
+          7,
+          6,
+          9,
+          8,
+          3,
+          2,
+          1,
+          0
+        ],
+        "hold": 7
+      },
+      "correction": {
+        "order": [
+          9,
+          10,
+          13,
+          12,
+          11,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          0,
+          1
+        ],
+        "hold": 7
+      }
+    }
+  },
+  "selector": {
+    "engine": "branch_pau",
+    "configuration": {
+      "scheme": "spin_split",
+      "shared_pair": true,
+      "decode_mode": "joint",
+      "padding": "high",
+      "partition": 0,
+      "log_label": 1,
+      "label_hold": 14,
+      "label_low": 6,
+      "label_window": 6,
+      "label_repair_hold": 7,
+      "pooled_actions": true,
+      "action_basis": true
+    },
+    "interface": "family"
+  },
+  "retained_borrows": 7,
+  "lookup_holds": {
+    "segmented-alias/base-0-lookup": 9,
+    "segmented-alias/base-1-lookup": 7,
+    "recycle-alias/correction-lookup": 5,
+    "family-label/lookup-0": 12
+  },
+  "alias_repair": {
+    "low": 2,
+    "window": 7,
+    "hold": 8
+  },
+  "select_repair": {
+    "low": 6,
+    "window": 6,
+    "hold": 7
+  },
+  "cost_tree": true,
+  "id": "pau_two_q206_t6393",
+  "expected": {
+    "toffoli": 6393,
+    "peak_total_qubits": 206,
+    "text_sha256": "0e59840bace0ad30db5dbc6c6a1fde8787d52e1859c9f32ede040019392cfb3e",
+    "operation_count": 882999
+  }
+}

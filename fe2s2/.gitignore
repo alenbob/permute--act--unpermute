@@ -1,2 +1,7 @@
 __pycache__/
 *.pyc
+circuits/output/
+video/output/
+circuits/.venv/
+*.so
+*.dylib

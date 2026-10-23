@@ -1,10 +1,12 @@
 # Fe₂S₂ circuits
 
-**31 fully decomposed gate programs** for the 40-qubit Fe₂S₂ benchmark:
-single- and two-family PAU, plus Frame SELECT comparisons. Each includes
-alias sampling, SELECT, measurement feed-forward and cleanup.
-The compressed plain-text programs are frozen exports; high-level generators
-and optimization-search history are not included.
+Executable single- and two-family PAU implementations for the 40-qubit Fe₂S₂
+benchmark, with Frame SELECT comparison circuits. The collection contains
+**31 fully decomposed gate programs**, each including alias sampling, SELECT,
+measurement feed-forward and cleanup.
+The compressed plain-text programs are frozen exports. Modular Python
+generators and explicit point configurations reproduce them exactly; the
+optimization-search history is not included.
 
 ## Run
 
@@ -37,6 +39,27 @@ outputs, signs and clean ancillas with sampled measurement records.
 | `frame_paper` | Frame SELECT tuned within the paper's methods |
 | `frame_extended` | Optimized Frame SELECT |
 
+## Rebuild and use other interfaces
+
+See [REPRODUCE.md](REPRODUCE.md) for the commands and pinned dependencies.
+
+| Directory | Purpose |
+|---|---|
+| [configurations](configurations/) | One complete recipe per published point |
+| [shared](shared/) | Alias, lookup, routing, action and cleanup emitters |
+| [pau_single](pau_single/) / [pau_multiple](pau_multiple/) | PAU construction guides |
+| [frame_released](frame_released/) / [frame_paper](frame_paper/) / [frame_optimized](frame_optimized/) | Frame SELECT construction guides |
+| [upstream](upstream/README.release.md) | Pinned native builder, simulator and evaluator |
+| [interfaces](interfaces/) | Qualtran cores, Cirq dynamic queries and OpenQASM 3 |
+| [verification](verification/) | Independent checks and source-linked reports |
+
+`generate.py` emits both readable and upstream-native streams, an allocation
+trace and a report. It checks the regenerated gate sequence against the frozen
+hash without using the frozen program to synthesize the circuit. OpenQASM 3
+exports preserve measurement and classical feed-forward. Qualtran provides
+connected decompositions of the three SELECT cores; complete dynamic queries
+are exposed as Cirq operation streams rather than unitary Qualtran bloqs.
+
 ## Circuit contract
 
 ```text
@@ -61,12 +84,20 @@ into separate support cases with the same external contract.
 
 Resources use CCX + CCZ Toffoli equivalents and total peak qubits, including
 the 40-qubit system. Measurement-conditioned Clifford corrections remain
-Clifford. The exported occupied-wire range matches the emitter's recorded
-peak, but allocation/free events are not retained, so this does not independently
-prove a minimal lifetime schedule. Phase costs may aggregate repeated visits;
+Clifford. The frozen export's occupied-wire range matches the recorded
+peak. Regeneration also emits and independently replays allocation/free events,
+checking the peak and final live boundary. This does not prove a minimal
+lifetime schedule. Phase costs may aggregate repeated visits;
 phase peaks cannot be added. See the [resource boundary](../README.md#resource-boundary).
 
 ## Verification
+
+The [fresh release report](verification/release_verification.json) records
+exact regeneration and native parser/semantic checks for all 31 circuits,
+all-row checks of the three actual Qualtran core decompositions, and official
+OpenQASM-parser checks of three complete representative queries. The
+[verification guide](verification/README.md) states the precise coverage and
+limits; these checks do not replace the historical full-suite reports below.
 
 The following exact source streams passed the full upstream test suite:
 

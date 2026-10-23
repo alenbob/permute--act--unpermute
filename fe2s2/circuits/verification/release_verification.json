@@ -1,0 +1,4653 @@
+{
+  "status": "PASS",
+  "assembled_at_utc": "2026-10-23T17:13:39.371669+00:00",
+  "evidence_origin": "Completed checks collected from output/. Collection rechecks generator source/configuration and artifact hashes, not the semantic tests themselves.",
+  "scope": "Fresh exact regeneration and allocation replay for all 31 points; 256 native strict-ledger basis inputs per query; every valid row with two system inputs for each core and its Qualtran decomposition; three complete QASM parser/operation checks. No full-state simulation of a complete query, new FCIDUMP derivation, global-optimality proof, or new full upstream grader run.",
+  "environment": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "click": "8.4.2",
+    "qualtran": "0.7.0",
+    "cirq-core": "1.7.0",
+    "sympy": "1.14.0",
+    "attrs": "26.1.0",
+    "openqasm3": "1.0.1",
+    "antlr4-python3-runtime": "4.13.2"
+  },
+  "reference": {
+    "status": "PASS",
+    "rows": 41052,
+    "alias_precision": 16,
+    "normalization": 133.4649959457009,
+    "exact_integer_mass": 2690383872,
+    "probability_l1_error": 3.839748970234934e-06,
+    "scope": "Every stored Pauli, sign, alias mass and largest-remainder weight; FCIDUMP-to-Pauli derivation is a separate upstream check.",
+    "table_sha256": "697c26ee8d452daed7ba299936d981c35362c9232334b49c1c30765951b14d3b"
+  },
+  "primitives": {
+    "status": "PASS",
+    "signed_basis_branches": 5616,
+    "system_sizes": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "both_measurement_outcomes": true,
+    "negative_mutation_detected": true,
+    "scope": "For each transposition, both Kraus branches equal the signed fermionic swap times 1/sqrt(2), on every basis column. This establishes the coherent primitive channel, not the full query."
+  },
+  "instrument": {
+    "status": "PASS",
+    "coherent_inputs": 8,
+    "explicit_global_phase_preserved": true,
+    "scope": "Small channel test of actual QueryInstrument lowering, including fresh outcome XOR, measurement and conditional CZ. Whole 40-qubit queries are not densely simulated."
+  },
+  "rebuilds": [
+    {
+      "id": "frame_released_q126_t14978",
+      "status": "PASS",
+      "text_sha256": "be539b15c1667f81301e37ad70160904996817a3376c63001b2fa4f07ad76736",
+      "toffoli": 14978,
+      "peak_total_qubits": 126,
+      "allocation_events": 51803,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 104
+        },
+        {
+          "name": "lookup",
+          "toffoli": 10271,
+          "clifford": 205988,
+          "peak": 119
+        },
+        {
+          "name": "cmp",
+          "toffoli": 16,
+          "clifford": 146,
+          "peak": 122
+        },
+        {
+          "name": "cmp/select",
+          "toffoli": 16,
+          "clifford": 32,
+          "peak": 105
+        },
+        {
+          "name": "select-blk",
+          "toffoli": 136,
+          "clifford": 431,
+          "peak": 126
+        },
+        {
+          "name": "select-conj",
+          "toffoli": 131,
+          "clifford": 2486,
+          "peak": 112
+        },
+        {
+          "name": "select-pauli",
+          "toffoli": 3327,
+          "clifford": 60823,
+          "peak": 124
+        },
+        {
+          "name": "select-unconj",
+          "toffoli": 131,
+          "clifford": 2486,
+          "peak": 112
+        },
+        {
+          "name": "select-unblk",
+          "toffoli": 136,
+          "clifford": 438,
+          "peak": 126
+        },
+        {
+          "name": "cmp/unselect",
+          "toffoli": 16,
+          "clifford": 32,
+          "peak": 105
+        },
+        {
+          "name": "cmp/rev",
+          "toffoli": 16,
+          "clifford": 147,
+          "peak": 122
+        },
+        {
+          "name": "unlookup/measure-keep",
+          "toffoli": 0,
+          "clifford": 32,
+          "peak": 104
+        },
+        {
+          "name": "unlookup/measure-alt",
+          "toffoli": 0,
+          "clifford": 32,
+          "peak": 88
+        },
+        {
+          "name": "unlookup/window:prep",
+          "toffoli": 15,
+          "clifford": 30,
+          "peak": 88
+        },
+        {
+          "name": "unlookup/window:fixup",
+          "toffoli": 767,
+          "clifford": 14830,
+          "peak": 99
+        },
+        {
+          "name": "unlookup/window:unprep",
+          "toffoli": 0,
+          "clifford": 61,
+          "peak": 88
+        }
+      ],
+      "configuration_sha256": "e65a1205fdd4d5ae4152c8a389ba7f6fef63833b00016a97cb683b2920576c1a",
+      "generated_artifact_sha256": {
+        ".gates.xz": "da22c7913eae918f5ad7a56c4152b5c552930819fa8d5675b2805bfffa20ba5b",
+        ".ops.xz": "04af3ab376b5f7428ed89fa2cf34ae0c86190cb2eddb503f0540925e52940ae7",
+        ".liveness.json.xz": "ef2141469b754f3175dd9d957a4fc259ce3e783b91522aa200372ab29f7717d4"
+      }
+    },
+    {
+      "id": "frame_paper_q145_t14479",
+      "status": "PASS",
+      "text_sha256": "9df677da49238e29f5b60ff22d819829bb70b109094d23c091c8eb5cbd8b3fa2",
+      "toffoli": 14479,
+      "peak_total_qubits": 145,
+      "allocation_events": 49891,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 104
+        },
+        {
+          "name": "lookup",
+          "toffoli": 10271,
+          "clifford": 205988,
+          "peak": 119
+        },
+        {
+          "name": "cmp",
+          "toffoli": 16,
+          "clifford": 146,
+          "peak": 122
+        },
+        {
+          "name": "cmp/select",
+          "toffoli": 16,
+          "clifford": 32,
+          "peak": 105
+        },
+        {
+          "name": "select-blk",
+          "toffoli": 136,
+          "clifford": 431,
+          "peak": 126
+        },
+        {
+          "name": "select-conj",
+          "toffoli": 131,
+          "clifford": 2486,
+          "peak": 112
+        },
+        {
+          "name": "select-pauli",
+          "toffoli": 3327,
+          "clifford": 60823,
+          "peak": 124
+        },
+        {
+          "name": "select-unconj",
+          "toffoli": 131,
+          "clifford": 2486,
+          "peak": 112
+        },
+        {
+          "name": "select-unblk",
+          "toffoli": 136,
+          "clifford": 438,
+          "peak": 126
+        },
+        {
+          "name": "cmp/unselect",
+          "toffoli": 16,
+          "clifford": 32,
+          "peak": 105
+        },
+        {
+          "name": "cmp/rev",
+          "toffoli": 16,
+          "clifford": 147,
+          "peak": 122
+        },
+        {
+          "name": "unlookup/measure-keep",
+          "toffoli": 0,
+          "clifford": 32,
+          "peak": 104
+        },
+        {
+          "name": "unlookup/measure-alt",
+          "toffoli": 0,
+          "clifford": 32,
+          "peak": 88
+        },
+        {
+          "name": "unlookup/window:prep",
+          "toffoli": 63,
+          "clifford": 126,
+          "peak": 136
+        },
+        {
+          "name": "unlookup/window:fixup",
+          "toffoli": 220,
+          "clifford": 12227,
+          "peak": 145
+        },
+        {
+          "name": "unlookup/window:unprep",
+          "toffoli": 0,
+          "clifford": 253,
+          "peak": 136
+        }
+      ],
+      "configuration_sha256": "77c8cc965fa534800d22b053c2c2676af1243d6b5cf4599be3589a713ccb0169",
+      "generated_artifact_sha256": {
+        ".gates.xz": "174045aa1c9a042b3690043d1e80495c845987dccb3ffec4e1b26b2048579fea",
+        ".ops.xz": "4b22caa72001dcae608e92c9978a802436b1444a0a97196486dead58eb1321d1",
+        ".liveness.json.xz": "413723e304c3942cc6a5e6a4174aa8710d58a9d1a8008d03f562dcffe9b0e5c5"
+      }
+    },
+    {
+      "id": "frame_paper_q208_t14448",
+      "status": "PASS",
+      "text_sha256": "b7c284571af93a09e121895643dd5600e422c34b5c5fd4f5a60c00b85ae8a087",
+      "toffoli": 14448,
+      "peak_total_qubits": 208,
+      "allocation_events": 49733,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 104
+        },
+        {
+          "name": "lookup",
+          "toffoli": 10271,
+          "clifford": 205988,
+          "peak": 119
+        },
+        {
+          "name": "cmp",
+          "toffoli": 16,
+          "clifford": 146,
+          "peak": 122
+        },
+        {
+          "name": "cmp/select",
+          "toffoli": 16,
+          "clifford": 32,
+          "peak": 105
+        },
+        {
+          "name": "select-blk",
+          "toffoli": 136,
+          "clifford": 431,
+          "peak": 126
+        },
+        {
+          "name": "select-conj",
+          "toffoli": 131,
+          "clifford": 2486,
+          "peak": 112
+        },
+        {
+          "name": "select-pauli",
+          "toffoli": 3327,
+          "clifford": 60823,
+          "peak": 124
+        },
+        {
+          "name": "select-unconj",
+          "toffoli": 131,
+          "clifford": 2486,
+          "peak": 112
+        },
+        {
+          "name": "select-unblk",
+          "toffoli": 136,
+          "clifford": 438,
+          "peak": 126
+        },
+        {
+          "name": "cmp/unselect",
+          "toffoli": 16,
+          "clifford": 32,
+          "peak": 105
+        },
+        {
+          "name": "cmp/rev",
+          "toffoli": 16,
+          "clifford": 147,
+          "peak": 122
+        },
+        {
+          "name": "unlookup/measure-keep",
+          "toffoli": 0,
+          "clifford": 32,
+          "peak": 104
+        },
+        {
+          "name": "unlookup/measure-alt",
+          "toffoli": 0,
+          "clifford": 32,
+          "peak": 88
+        },
+        {
+          "name": "unlookup/window:prep",
+          "toffoli": 127,
+          "clifford": 254,
+          "peak": 200
+        },
+        {
+          "name": "unlookup/window:fixup",
+          "toffoli": 125,
+          "clifford": 11782,
+          "peak": 208
+        },
+        {
+          "name": "unlookup/window:unprep",
+          "toffoli": 0,
+          "clifford": 509,
+          "peak": 200
+        }
+      ],
+      "configuration_sha256": "6246acdf6376b4adef810fa7921105aa7673ff974ee0d4eea93040d098ef496f",
+      "generated_artifact_sha256": {
+        ".gates.xz": "fa4720ba1b560ca8d2bce7d842f13d35ee0cc1b443a7648747beef1e413eba36",
+        ".ops.xz": "64b634160407b555083a03ebcefb1a068e4e27002de7b1b4ab96d9a8f0760ffb",
+        ".liveness.json.xz": "6f57c9c61c2223620dc9c921926969adf24245848b89648ca65bd3754916d14d"
+      }
+    },
+    {
+      "id": "pau_two_q215_t5627",
+      "status": "PASS",
+      "text_sha256": "858efe6d12da6beea3f53fe953f65aaaef42def4f7ec0f7f6ce589e4afd41a94",
+      "toffoli": 5627,
+      "peak_total_qubits": 215,
+      "allocation_events": 21445,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9217,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 2431,
+          "clifford": 126823,
+          "peak": 211
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 542,
+          "clifford": 16230,
+          "peak": 213
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "family-label/lookup-0",
+          "toffoli": 1627,
+          "clifford": 49146,
+          "peak": 215
+        },
+        {
+          "name": "family-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 198
+        },
+        {
+          "name": "family-label/combine-0",
+          "toffoli": 28,
+          "clifford": 0,
+          "peak": 184
+        },
+        {
+          "name": "family-pau/gauges",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "family-pau/merged-prefix-in",
+          "toffoli": 82,
+          "clifford": 1724,
+          "peak": 180
+        },
+        {
+          "name": "family-pau/mixed_or_small",
+          "toffoli": 64,
+          "clifford": 1434,
+          "peak": 208
+        },
+        {
+          "name": "family-pau/same_spin",
+          "toffoli": 50,
+          "clifford": 1118,
+          "peak": 212
+        },
+        {
+          "name": "family-pau/common-pair-out",
+          "toffoli": 78,
+          "clifford": 1716,
+          "peak": 203
+        },
+        {
+          "name": "family-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "3d2a67c6fdec2537948f313fcf80722ab0aa81bcdd7d26e2beab469d2a19cba4",
+      "generated_artifact_sha256": {
+        ".gates.xz": "4ab164d2bb25d7b09bd0b9636180e85fc439b3e8f0d95899b8864944897b5715",
+        ".ops.xz": "702308ca8f2b86c771b29eaa59143a0941adcc50dc231ba045703ced93b5397d",
+        ".liveness.json.xz": "cf694725cfa7e96284dce5dc87381262965bacb5e0cdb7042d00ea0c7cdcadd7"
+      }
+    },
+    {
+      "id": "pau_single_q338_t3755",
+      "status": "PASS",
+      "text_sha256": "26ac960b694ef272210a3b4a8a2e8ec818fce87541b02389f37295d36944e214",
+      "toffoli": 3755,
+      "peak_total_qubits": 338,
+      "allocation_events": 13297,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9611,
+          "peak": 328
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 1251,
+          "clifford": 118977,
+          "peak": 338
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 228,
+          "clifford": 12,
+          "peak": 330
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 448,
+          "peak": 328
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "phase-label/lookup",
+          "toffoli": 850,
+          "clifford": 43551,
+          "peak": 291
+        },
+        {
+          "name": "phase-label/flags",
+          "toffoli": 22,
+          "clifford": 174,
+          "peak": 255
+        },
+        {
+          "name": "phase-label/combine",
+          "toffoli": 85,
+          "clifford": 3,
+          "peak": 242
+        },
+        {
+          "name": "phase-pau/core",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 166
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 168
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 3,
+          "clifford": 14,
+          "peak": 166
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 168
+        },
+        {
+          "name": "phase-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "0b9844df1d9fd9e910231ec41f4783dbd3e4867244957e5fe1f095970f3dbb43",
+      "generated_artifact_sha256": {
+        ".gates.xz": "4c8ac390dc421b551773f27ed15130865fe117fb4b8d3929f8da480e5db95842",
+        ".ops.xz": "228a6dd415e2832121dc350507358505ad470d903db5e04e92617a83c0e215b5",
+        ".liveness.json.xz": "c881ddc82eb8d14a193079ba5eec230d1c92810cdc3bbd62a467fc7098adf1b3"
+      }
+    },
+    {
+      "id": "frame_extended_q338_t4411",
+      "status": "PASS",
+      "text_sha256": "9d36c4bfcaf470ccd266b0646d4365a78d8bea68ab24c838c9b12517a0a1454c",
+      "toffoli": 4411,
+      "peak_total_qubits": 338,
+      "allocation_events": 15737,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 8876,
+          "peak": 328
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 1251,
+          "clifford": 118977,
+          "peak": 338
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 228,
+          "clifford": 12,
+          "peak": 330
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 448,
+          "peak": 328
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 1612,
+          "clifford": 84454,
+          "peak": 315
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 314
+        },
+        {
+          "name": "current-label/metadata-measure",
+          "toffoli": 0,
+          "clifford": 24,
+          "peak": 312
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 86,
+          "clifford": 0,
+          "peak": 300
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 172,
+          "peak": 300
+        },
+        {
+          "name": "current-frame/open",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 216
+        },
+        {
+          "name": "current-frame/action",
+          "toffoli": 4,
+          "clifford": 928,
+          "peak": 218
+        },
+        {
+          "name": "current-frame/close",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 216
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 218,
+          "clifford": 6780,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "c86efe4e3ba61d4fead6bcba57e9abc349874bdb5314701ca4eca9b6fb7a64c2",
+      "generated_artifact_sha256": {
+        ".gates.xz": "52ad1c851cdc136de3966f347cde43c1d3f2c68a3e612f2f28fa57eb222713cd",
+        ".ops.xz": "540f69bbc2b49ac740d5affd2b6020ee0e715a099981429878420ce1778fa064",
+        ".liveness.json.xz": "41ad709f2a43218b8a3400f82287485ca8eebe218fe6a63d9e589d3c08ce4c2d"
+      }
+    },
+    {
+      "id": "frame_extended_q148_t10420",
+      "status": "PASS",
+      "text_sha256": "4ff866068edb5ac0d1d21926ff6f33fe95040b149a305b8c8990ca99351adabf",
+      "toffoli": 10420,
+      "peak_total_qubits": 148,
+      "allocation_events": 30989,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/base-lookup",
+          "toffoli": 4719,
+          "clifford": 146205,
+          "peak": 148
+        },
+        {
+          "name": "sparse-alias/base-combine",
+          "toffoli": 32,
+          "clifford": 0,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/corrections",
+          "toffoli": 1591,
+          "clifford": 18821,
+          "peak": 119
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "select-blk",
+          "toffoli": 136,
+          "clifford": 431,
+          "peak": 141
+        },
+        {
+          "name": "select-conj",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 129
+        },
+        {
+          "name": "select-pauli",
+          "toffoli": 3327,
+          "clifford": 60823,
+          "peak": 139
+        },
+        {
+          "name": "select-unconj",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 129
+        },
+        {
+          "name": "select-unblk",
+          "toffoli": 136,
+          "clifford": 438,
+          "peak": 141
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 277,
+          "clifford": 12639,
+          "peak": 139
+        }
+      ],
+      "configuration_sha256": "4a634b62e7866820f6408fb5eaf3742fdfedff788c0dcc6b8dfacf9052c80013",
+      "generated_artifact_sha256": {
+        ".gates.xz": "b9e1381462ee35aaac70843374ac917554352bd68cc3b3307ee75bc7f6ccd462",
+        ".ops.xz": "a4c4cb88572cf7952e7eadf5aef098dfcedb844f1a55fe2fb0e110acb18c805f",
+        ".liveness.json.xz": "57ffb39b2c4da7df3c6c95464c8d5a92657ffce22869a376de5aa986ab101454"
+      }
+    },
+    {
+      "id": "pau_single_q444_t3524",
+      "status": "PASS",
+      "text_sha256": "e143c84583c117c97c70022223d399ef6db752c113908459a97b422b1910031a",
+      "toffoli": 3524,
+      "peak_total_qubits": 444,
+      "allocation_events": 12063,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9837,
+          "peak": 366
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 1251,
+          "clifford": 118977,
+          "peak": 338
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 228,
+          "clifford": 12,
+          "peak": 330
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 448,
+          "peak": 328
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "phase-label/lookup",
+          "toffoli": 499,
+          "clifford": 43867,
+          "peak": 444
+        },
+        {
+          "name": "phase-label/flags",
+          "toffoli": 27,
+          "clifford": 219,
+          "peak": 368
+        },
+        {
+          "name": "phase-label/combine",
+          "toffoli": 200,
+          "clifford": 12,
+          "peak": 356
+        },
+        {
+          "name": "phase-pau/core",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 167
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 169
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 3,
+          "clifford": 14,
+          "peak": 167
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 169
+        },
+        {
+          "name": "phase-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "e68efb5740b4a84f40c343357781ded9bfcc3ba0a87b944d40ce4a8e3e692139",
+      "generated_artifact_sha256": {
+        ".gates.xz": "79e00057a411f4c312f4a23161d4fd2be66b4641a34e969c967dfc27a0465f55",
+        ".ops.xz": "0b474a8cb7bc74e229aff64635832756ea4325d4452d644fa2388a954108c763",
+        ".liveness.json.xz": "a4e1446f71b261843a6fcc62559c766cf0f2366df6d0be7db25ab55445c7755a"
+      }
+    },
+    {
+      "id": "pau_single_q157_t11430",
+      "status": "PASS",
+      "text_sha256": "3156db96b60c625eb88df348567b25e0426fc1ae901b82efd0bb74af510eed4e",
+      "toffoli": 11430,
+      "peak_total_qubits": 157,
+      "allocation_events": 40674,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 705,
+          "peak": 152
+        },
+        {
+          "name": "sparse-alias/base-lookup",
+          "toffoli": 4719,
+          "clifford": 146205,
+          "peak": 148
+        },
+        {
+          "name": "sparse-alias/base-combine",
+          "toffoli": 32,
+          "clifford": 0,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/corrections",
+          "toffoli": 1591,
+          "clifford": 18821,
+          "peak": 119
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 173,
+          "peak": 121
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 136,
+          "clifford": 431,
+          "peak": 126
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 4067,
+          "clifford": 62070,
+          "peak": 157
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "current-label/residual-sign",
+          "toffoli": 4,
+          "clifford": 19,
+          "peak": 156
+        },
+        {
+          "name": "current-label/sign-measure",
+          "toffoli": 0,
+          "clifford": 14,
+          "peak": 152
+        },
+        {
+          "name": "spin/control-products-and-close",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 153
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 155
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 5,
+          "clifford": 21,
+          "peak": 154
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 155
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 282,
+          "clifford": 6720,
+          "peak": 140
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 31,
+          "clifford": 176,
+          "peak": 121
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 277,
+          "clifford": 12639,
+          "peak": 139
+        }
+      ],
+      "configuration_sha256": "3e096e33c8c4ad0f406c9156081c2427cc3dca511eac963dde2b43f4aa3423a0",
+      "generated_artifact_sha256": {
+        ".gates.xz": "c8eac036754fa6570c219b7e15f17fe048dd49dc67328423c99d7249647ab611",
+        ".ops.xz": "b8c65d85275e6fe78eed39cad57998d9fcf56021c5238f887f5896f693970cde",
+        ".liveness.json.xz": "5a5a6213e5f9d39b3b88f6b700388b6236757d23fcbffc1fcec7ea901f11b7dd"
+      }
+    },
+    {
+      "id": "frame_extended_q472_t3807",
+      "status": "PASS",
+      "text_sha256": "b20f62f6a0caa05281c5036888cb6de6b77cf75db878e2fc52f3ec0e57b5577c",
+      "toffoli": 3807,
+      "peak_total_qubits": 472,
+      "allocation_events": 12947,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 8878,
+          "peak": 470
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 1251,
+          "clifford": 118977,
+          "peak": 338
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 228,
+          "clifford": 12,
+          "peak": 330
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 448,
+          "peak": 328
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 173,
+          "peak": 121
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 815,
+          "clifford": 83818,
+          "peak": 472
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 22,
+          "clifford": 174,
+          "peak": 472
+        },
+        {
+          "name": "current-label/metadata-measure",
+          "toffoli": 0,
+          "clifford": 24,
+          "peak": 470
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 259,
+          "clifford": 3,
+          "peak": 459
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 516,
+          "peak": 458
+        },
+        {
+          "name": "current-frame/open",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 202
+        },
+        {
+          "name": "current-frame/action",
+          "toffoli": 4,
+          "clifford": 928,
+          "peak": 204
+        },
+        {
+          "name": "current-frame/close",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 202
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 218,
+          "clifford": 6780,
+          "peak": 170
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 31,
+          "clifford": 176,
+          "peak": 121
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "4bcc21f3d40a3ddad0f954e717bd3c2b4300846a642e57d65e1e6c6f4e28692d",
+      "generated_artifact_sha256": {
+        ".gates.xz": "5b6f6cfef60c3f7d7b95f582a762370d7a3e8de5de54a57a9ddd991fac98814b",
+        ".ops.xz": "7bde6b39e4d38132e946ef607506c8b96e57af4add39490f7b77ebdd43fa43c0",
+        ".liveness.json.xz": "af3ccd55ef5e98c66ce23b9db23aa7c34a788e3eca4a9a1a1fa5f320dbd89e06"
+      }
+    },
+    {
+      "id": "frame_extended_q126_t14500",
+      "status": "PASS",
+      "text_sha256": "4e501b5146c3edc7c8068e0e3790545fa243751d6a9f8069a10764cd6a88db5a",
+      "toffoli": 14500,
+      "peak_total_qubits": 126,
+      "allocation_events": 30023,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 104
+        },
+        {
+          "name": "ordered-alias/lookup",
+          "toffoli": 10257,
+          "clifford": 205742,
+          "peak": 119
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 173,
+          "peak": 121
+        },
+        {
+          "name": "select-blk",
+          "toffoli": 136,
+          "clifford": 431,
+          "peak": 126
+        },
+        {
+          "name": "select-conj",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 114
+        },
+        {
+          "name": "select-pauli",
+          "toffoli": 3327,
+          "clifford": 60823,
+          "peak": 124
+        },
+        {
+          "name": "select-unconj",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 114
+        },
+        {
+          "name": "select-unblk",
+          "toffoli": 136,
+          "clifford": 438,
+          "peak": 126
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 31,
+          "clifford": 176,
+          "peak": 121
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 427,
+          "clifford": 13249,
+          "peak": 109
+        }
+      ],
+      "configuration_sha256": "9fe0ba5e737cbb022f0f21c5d1943cf00b3e1f73c39bc55890515e2a282bf27f",
+      "generated_artifact_sha256": {
+        ".gates.xz": "bebfcd3def5eb9cc4f5c83a17a286d5bb6c39c5afe73b8fbe77295de7f347f8c",
+        ".ops.xz": "41ffad48ea0411882064e005e90d076861e276e88d042e914210c49344b45e3a",
+        ".liveness.json.xz": "59ed53d11da0ab5901b99bef050f428616b1b18da0700e945b831d502bd0a669"
+      }
+    },
+    {
+      "id": "pau_single_q593_t3172",
+      "status": "PASS",
+      "text_sha256": "1d0f4ab203f145f0334ac766d8bf1bf41bb361854ddeca1befbfc94422180fd2",
+      "toffoli": 3172,
+      "peak_total_qubits": 593,
+      "allocation_events": 10129,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9837,
+          "peak": 584
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 636,
+          "clifford": 115889,
+          "peak": 593
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 491,
+          "clifford": 33,
+          "peak": 587
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 960,
+          "peak": 584
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "phase-label/lookup",
+          "toffoli": 499,
+          "clifford": 43867,
+          "peak": 444
+        },
+        {
+          "name": "phase-label/flags",
+          "toffoli": 27,
+          "clifford": 219,
+          "peak": 368
+        },
+        {
+          "name": "phase-label/combine",
+          "toffoli": 200,
+          "clifford": 12,
+          "peak": 356
+        },
+        {
+          "name": "phase-pau/core",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 167
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 169
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 3,
+          "clifford": 14,
+          "peak": 167
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 169
+        },
+        {
+          "name": "phase-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "85add13898cfc9d41d810ef777f8ae27d835e41673a554671c303ae103042553",
+      "generated_artifact_sha256": {
+        ".gates.xz": "e7aec0fcff84a1c7c6712523524e84d1efa2982cce6777e597036cc69a8ee32b",
+        ".ops.xz": "6bfe367a008ff521e00ecbdb19ea638d386fe6169256f5ff48ad91196ba3df8c",
+        ".liveness.json.xz": "a5fc65bf833c09ac0f8d999b5cb8fb58a10880dbd5a03c5876ce7828f577ee00"
+      }
+    },
+    {
+      "id": "frame_extended_q593_t3440",
+      "status": "PASS",
+      "text_sha256": "a0ad6bc8431801eb4dd1abb3365cddb9f3fe045d1c3f7e7abd2f7e8681e69f1d",
+      "toffoli": 3440,
+      "peak_total_qubits": 593,
+      "allocation_events": 10983,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 8878,
+          "peak": 584
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 636,
+          "clifford": 115889,
+          "peak": 593
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 491,
+          "clifford": 33,
+          "peak": 587
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 960,
+          "peak": 584
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 815,
+          "clifford": 83818,
+          "peak": 487
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 22,
+          "clifford": 174,
+          "peak": 487
+        },
+        {
+          "name": "current-label/metadata-measure",
+          "toffoli": 0,
+          "clifford": 24,
+          "peak": 485
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 259,
+          "clifford": 3,
+          "peak": 474
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 516,
+          "peak": 473
+        },
+        {
+          "name": "current-frame/open",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 217
+        },
+        {
+          "name": "current-frame/action",
+          "toffoli": 4,
+          "clifford": 928,
+          "peak": 219
+        },
+        {
+          "name": "current-frame/close",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 217
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 218,
+          "clifford": 6780,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "60b0a92132a5adbed76417d3a519079ed74fd4fd34223115117dfa7e2a87bfc9",
+      "generated_artifact_sha256": {
+        ".gates.xz": "2835218eaef157320c251369d4be053215f4899ecb883231b80655eb6a597d75",
+        ".ops.xz": "016c7660b59ec55ebacee7da191436f1cc420300ec3c14f2326784466f0cb63a",
+        ".liveness.json.xz": "5b7628075e5558b3b62b0791af5be79fe40c71c6a3b9ace7cb855caf4f065d56"
+      }
+    },
+    {
+      "id": "frame_extended_q817_t3415",
+      "status": "PASS",
+      "text_sha256": "36fada537091a889e5186bb9d56280146fd041d279f97da31aca1adee4696d3e",
+      "toffoli": 3415,
+      "peak_total_qubits": 817,
+      "allocation_events": 10161,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 8880,
+          "peak": 815
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 636,
+          "clifford": 115889,
+          "peak": 593
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 491,
+          "clifford": 33,
+          "peak": 587
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 960,
+          "peak": 584
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 173,
+          "peak": 121
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 423,
+          "clifford": 89159,
+          "peak": 817
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 27,
+          "clifford": 219,
+          "peak": 817
+        },
+        {
+          "name": "current-label/metadata-measure",
+          "toffoli": 0,
+          "clifford": 24,
+          "peak": 815
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 606,
+          "clifford": 12,
+          "peak": 805
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 1204,
+          "peak": 803
+        },
+        {
+          "name": "current-frame/open",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 203
+        },
+        {
+          "name": "current-frame/action",
+          "toffoli": 4,
+          "clifford": 928,
+          "peak": 205
+        },
+        {
+          "name": "current-frame/close",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 203
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 218,
+          "clifford": 6780,
+          "peak": 170
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 31,
+          "clifford": 176,
+          "peak": 121
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "ec8beb5fd0f85e5d6290cc2d3fbaabbcf0e1ca2038c7f13271a299b3b5611457",
+      "generated_artifact_sha256": {
+        ".gates.xz": "64f437d01ba26f9543d3f29cf0071c9138449efc4f98b268473edf4d9a223b28",
+        ".ops.xz": "59117e4a4375a12652e1f11f1c86dcd23e9c9cea8102beaaead28385ebf2321e",
+        ".liveness.json.xz": "0fdd09f0c40367850a5669e698e2b8b35e4c5d319309113e9ec4a3a232fae102"
+      }
+    },
+    {
+      "id": "pau_single_q210_t5650",
+      "status": "PASS",
+      "text_sha256": "ecbc4919ca4a67b9b3a004c355c1fb51594cf4ee71f14510fa56114138a517be",
+      "toffoli": 5650,
+      "peak_total_qubits": 210,
+      "allocation_events": 21429,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9497,
+          "peak": 200
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 2440,
+          "clifford": 126844,
+          "peak": 210
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 568,
+          "clifford": 16272,
+          "peak": 210
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 113,
+          "peak": 121
+        },
+        {
+          "name": "phase-label/lookup",
+          "toffoli": 1627,
+          "clifford": 47624,
+          "peak": 210
+        },
+        {
+          "name": "phase-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 193
+        },
+        {
+          "name": "phase-label/combine",
+          "toffoli": 28,
+          "clifford": 0,
+          "peak": 179
+        },
+        {
+          "name": "phase-pau/core",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 160
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 162
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 3,
+          "clifford": 14,
+          "peak": 160
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 162
+        },
+        {
+          "name": "phase-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 180
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 21,
+          "clifford": 146,
+          "peak": 115
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "9d47d02f4d144474bcd97024cbea208d59c9cbbaa52d8b1db85d750271775eca",
+      "generated_artifact_sha256": {
+        ".gates.xz": "4a6df14d339bb27075784953989cf9b6f839dbf8f4a9e0270908fa794b2a57be",
+        ".ops.xz": "eab129f3f1869479487508f84cf80f0ae49d4ae14944280e62965f8cea68df60",
+        ".liveness.json.xz": "dd87a3dbb08a6ff6e818021f983e649973a922144a5f56e5eb4776536aea4e0f"
+      }
+    },
+    {
+      "id": "pau_single_q298_t4307",
+      "status": "PASS",
+      "text_sha256": "331a3962350e9520cc9067d6f411ec825a74b16cfc0b8aa45201374748d2c2e1",
+      "toffoli": 4307,
+      "peak_total_qubits": 298,
+      "allocation_events": 15411,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9611,
+          "peak": 288
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 1251,
+          "clifford": 106423,
+          "peak": 298
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 193,
+          "clifford": 12,
+          "peak": 290
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 378,
+          "peak": 288
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 314,
+          "clifford": 15144,
+          "peak": 267
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 181,
+          "clifford": 78,
+          "peak": 263
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 310,
+          "peak": 259
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 543,
+          "clifford": 16235,
+          "peak": 213
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "phase-label/lookup",
+          "toffoli": 850,
+          "clifford": 43551,
+          "peak": 291
+        },
+        {
+          "name": "phase-label/flags",
+          "toffoli": 22,
+          "clifford": 174,
+          "peak": 255
+        },
+        {
+          "name": "phase-label/combine",
+          "toffoli": 85,
+          "clifford": 3,
+          "peak": 242
+        },
+        {
+          "name": "phase-pau/core",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 166
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 168
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 3,
+          "clifford": 14,
+          "peak": 166
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 168
+        },
+        {
+          "name": "phase-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "3975fbe4f982f02df5603a308086ed8e695e23e5a4a556b3e2172f1d9c35e9a1",
+      "generated_artifact_sha256": {
+        ".gates.xz": "fe59fd728277c9f7a92cf0a88108054bb6bb58e809dd52e1a165eafd5ebf85a3",
+        ".ops.xz": "837e9670432abd67f87d4353cc4ed4733d21023134a0c4fa55b31b6a2d9e201d",
+        ".liveness.json.xz": "3e61389dc0f56004dc8e2d1346b8466629470ae9b42c7fed6f091ebe399dedce"
+      }
+    },
+    {
+      "id": "frame_extended_q205_t7970",
+      "status": "PASS",
+      "text_sha256": "c5d9cf17823240791cec83b215c9a7ee57be4fd46156f927fd6a091fdc38c671",
+      "toffoli": 7970,
+      "peak_total_qubits": 205,
+      "allocation_events": 23040,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 8688,
+          "peak": 200
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 2477,
+          "clifford": 123996,
+          "peak": 205
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 94,
+          "clifford": 3,
+          "peak": 197
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 186,
+          "peak": 196
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 123,
+          "clifford": 2974,
+          "peak": 174
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 120,
+          "clifford": 171,
+          "peak": 172
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 126,
+          "peak": 167
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 1013,
+          "clifford": 17277,
+          "peak": 205
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "select-blk",
+          "toffoli": 136,
+          "clifford": 431,
+          "peak": 141
+        },
+        {
+          "name": "select-conj",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 129
+        },
+        {
+          "name": "select-pauli",
+          "toffoli": 3327,
+          "clifford": 60823,
+          "peak": 139
+        },
+        {
+          "name": "select-unconj",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 129
+        },
+        {
+          "name": "select-unblk",
+          "toffoli": 136,
+          "clifford": 438,
+          "peak": 141
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "dcecfb88478dfd5eed6c88202957fe45a2a056068cfdfaf52c902d1263dc9f10",
+      "generated_artifact_sha256": {
+        ".gates.xz": "c2180e96642b752bb842e3e54092f8b7d1d3ae45476e11d229c93db527078728",
+        ".ops.xz": "00d7c42339fad8143b775b81595fc4dd1e3ec08e363dd8e4b7ccf650e6b359ba",
+        ".liveness.json.xz": "6a3b55e99231cfaae5da8e2d27f7a33943f895895706b35fd404d8f88fe498db"
+      }
+    },
+    {
+      "id": "frame_extended_q300_t4978",
+      "status": "PASS",
+      "text_sha256": "a7f0325085ef9eb9f904fedcdb2c3e29944883d92c37ad9461199fa41d1d55be",
+      "toffoli": 4978,
+      "peak_total_qubits": 300,
+      "allocation_events": 17881,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 8876,
+          "peak": 297
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 1251,
+          "clifford": 106423,
+          "peak": 298
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 193,
+          "clifford": 12,
+          "peak": 290
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 378,
+          "peak": 288
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 314,
+          "clifford": 15144,
+          "peak": 267
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 181,
+          "clifford": 78,
+          "peak": 263
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 310,
+          "peak": 259
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 543,
+          "clifford": 16235,
+          "peak": 213
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 173,
+          "peak": 121
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 1612,
+          "clifford": 84454,
+          "peak": 300
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 299
+        },
+        {
+          "name": "current-label/metadata-measure",
+          "toffoli": 0,
+          "clifford": 24,
+          "peak": 297
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 86,
+          "clifford": 0,
+          "peak": 285
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 172,
+          "peak": 285
+        },
+        {
+          "name": "current-frame/open",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 201
+        },
+        {
+          "name": "current-frame/action",
+          "toffoli": 4,
+          "clifford": 928,
+          "peak": 203
+        },
+        {
+          "name": "current-frame/close",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 201
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 218,
+          "clifford": 6780,
+          "peak": 170
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 31,
+          "clifford": 176,
+          "peak": 121
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "408774d3a6d6c348cb8b8a07aab7ac18734e2340896df5611f74e0f8f460635a",
+      "generated_artifact_sha256": {
+        ".gates.xz": "1f4b63bfe7de75efaf71edf0a0a5944d5f6c8bf90de4a02e6023e8d1f93f9407",
+        ".ops.xz": "d4e6a50d1528f0a0920823dbb6444f7609c57d08dbec23a984a708433e1c2bc9",
+        ".liveness.json.xz": "263d587fc979259ea0ca74d39340bcf769b986ae36d25f1dd1beed220546baca"
+      }
+    },
+    {
+      "id": "pau_single_q185_t10382",
+      "status": "PASS",
+      "text_sha256": "b40013a4844c61701af59272e9f2818cef39670235db39e6a95b799a4c90106f",
+      "toffoli": 10382,
+      "peak_total_qubits": 185,
+      "allocation_events": 37743,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 705,
+          "peak": 178
+        },
+        {
+          "name": "sparse-alias/base-lookup",
+          "toffoli": 4719,
+          "clifford": 146205,
+          "peak": 148
+        },
+        {
+          "name": "sparse-alias/base-combine",
+          "toffoli": 32,
+          "clifford": 0,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/corrections",
+          "toffoli": 1591,
+          "clifford": 18821,
+          "peak": 119
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 3219,
+          "clifford": 66982,
+          "peak": 183
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 12,
+          "clifford": 78,
+          "peak": 180
+        },
+        {
+          "name": "current-label/metadata-measure",
+          "toffoli": 0,
+          "clifford": 24,
+          "peak": 178
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "current-label/residual-sign",
+          "toffoli": 4,
+          "clifford": 19,
+          "peak": 171
+        },
+        {
+          "name": "current-label/sign-measure",
+          "toffoli": 0,
+          "clifford": 14,
+          "peak": 167
+        },
+        {
+          "name": "spin/control-products-and-close",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 168
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 170
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 5,
+          "clifford": 21,
+          "peak": 169
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 170
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 277,
+          "clifford": 12639,
+          "peak": 139
+        }
+      ],
+      "configuration_sha256": "e20e6bbb711e00c958a2549b32f7331c0f94392ac31624c142ac760ab9a97483",
+      "generated_artifact_sha256": {
+        ".gates.xz": "34ad5b21defa808399d7a8e974a24c807f1a69507789a21aaa3a2e3b2d9cc34f",
+        ".ops.xz": "8f063f6460133a4d589308ad0829dd048ccb8804d9cf8e078d89f1a45154eb0f",
+        ".liveness.json.xz": "c01192b36abd412e9ccb69031f736fda493fda03911cc53c36d6432ae58d07db"
+      }
+    },
+    {
+      "id": "pau_single_q204_t8796",
+      "status": "PASS",
+      "text_sha256": "636b06f2eccfa89a1d6cb494476c01c01d957497122114f9e191afd036b9fe6b",
+      "toffoli": 8796,
+      "peak_total_qubits": 204,
+      "allocation_events": 31181,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 873,
+          "peak": 185
+        },
+        {
+          "name": "sparse-alias/base-lookup",
+          "toffoli": 4719,
+          "clifford": 146205,
+          "peak": 148
+        },
+        {
+          "name": "sparse-alias/base-combine",
+          "toffoli": 32,
+          "clifford": 0,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/corrections",
+          "toffoli": 1591,
+          "clifford": 18821,
+          "peak": 119
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 149,
+          "peak": 121
+        },
+        {
+          "name": "phase-label/lookup",
+          "toffoli": 1627,
+          "clifford": 47624,
+          "peak": 204
+        },
+        {
+          "name": "phase-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 187
+        },
+        {
+          "name": "phase-label/combine",
+          "toffoli": 28,
+          "clifford": 0,
+          "peak": 173
+        },
+        {
+          "name": "phase-pau/core",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 154
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 156
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 3,
+          "clifford": 14,
+          "peak": 154
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 156
+        },
+        {
+          "name": "phase-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 174
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 27,
+          "clifford": 164,
+          "peak": 117
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "33f3c76a9c018084456a97015bbc1bde7039875fd7f4873f911bbc580049ace3",
+      "generated_artifact_sha256": {
+        ".gates.xz": "62cf1fdcaf208cfde9f4402a833903960db1946813be4c8ae7ed98e7761d501f",
+        ".ops.xz": "ce4a53d4c49ac1bd236c67b8dce8866b97de1a863bf81a48c4bbfc1ac3cb4c16",
+        ".liveness.json.xz": "891cf547849cbe0dd02f9877fdbb89efc43554eb22a04cf7b5fd8fc69d10f6ed"
+      }
+    },
+    {
+      "id": "pau_single_q206_t6376",
+      "status": "PASS",
+      "text_sha256": "0dab5f8be92a46fa7fb961980f55bd4ada01e4ab6587ca8fa4eeb7ca62b1b9e3",
+      "toffoli": 6376,
+      "peak_total_qubits": 206,
+      "allocation_events": 23452,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9497,
+          "peak": 200
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 2477,
+          "clifford": 123996,
+          "peak": 205
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 94,
+          "clifford": 3,
+          "peak": 197
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 186,
+          "peak": 196
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 123,
+          "clifford": 2974,
+          "peak": 174
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 120,
+          "clifford": 171,
+          "peak": 172
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 126,
+          "peak": 167
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 1013,
+          "clifford": 17277,
+          "peak": 205
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 137,
+          "peak": 121
+        },
+        {
+          "name": "phase-label/lookup",
+          "toffoli": 1627,
+          "clifford": 47624,
+          "peak": 206
+        },
+        {
+          "name": "phase-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 189
+        },
+        {
+          "name": "phase-label/combine",
+          "toffoli": 28,
+          "clifford": 0,
+          "peak": 175
+        },
+        {
+          "name": "phase-pau/core",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 156
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 158
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 3,
+          "clifford": 14,
+          "peak": 156
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 158
+        },
+        {
+          "name": "phase-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 176
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 25,
+          "clifford": 158,
+          "peak": 115
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "e0d4fa803115f0adda253273cd434052e4b504b6bdced0cf2a75a0e7043f9197",
+      "generated_artifact_sha256": {
+        ".gates.xz": "1ae219ab1839b9baf1e70e8d4d2bb00face6ad7ce91de93f52268b32745e9a5b",
+        ".ops.xz": "b532ba996dcdf12df5ae4bf23d579861d09a33de0532a5220209f54c8d163fd8",
+        ".liveness.json.xz": "8fb484384e2653144046f7877e8c29d5847bb9e38d378e4ada01695dec3fadba"
+      }
+    },
+    {
+      "id": "pau_single_q274_t5253",
+      "status": "PASS",
+      "text_sha256": "7c28b39f455d9098a6876aa3f2ff03234f39dd6b2f59c51e206799193e9f072f",
+      "toffoli": 5253,
+      "peak_total_qubits": 274,
+      "allocation_events": 19489,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9497,
+          "peak": 264
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 1251,
+          "clifford": 95595,
+          "peak": 274
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 172,
+          "clifford": 12,
+          "peak": 266
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 336,
+          "peak": 264
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 616,
+          "clifford": 26480,
+          "peak": 233
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 131,
+          "clifford": 33,
+          "peak": 227
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 240,
+          "peak": 224
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 543,
+          "clifford": 16235,
+          "peak": 213
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "phase-label/lookup",
+          "toffoli": 1627,
+          "clifford": 47624,
+          "peak": 215
+        },
+        {
+          "name": "phase-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 198
+        },
+        {
+          "name": "phase-label/combine",
+          "toffoli": 28,
+          "clifford": 0,
+          "peak": 184
+        },
+        {
+          "name": "phase-pau/core",
+          "toffoli": 8,
+          "clifford": 104,
+          "peak": 165
+        },
+        {
+          "name": "spin/composed-permutation",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 167
+        },
+        {
+          "name": "spin/local-target",
+          "toffoli": 3,
+          "clifford": 14,
+          "peak": 165
+        },
+        {
+          "name": "spin/composed-inverse",
+          "toffoli": 123,
+          "clifford": 2600,
+          "peak": 167
+        },
+        {
+          "name": "phase-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "d49cb6c2a10ea6be074bfe04a55af284ad358c0ad2469cfd6eb664575acde260",
+      "generated_artifact_sha256": {
+        ".gates.xz": "71aa2a1b1f385e83aafd2d6fd3bb55c9c4f3384e2ad6d80e605812ddaa8b3e27",
+        ".ops.xz": "a5a52a161909189bf44c9aaed56e3727800ea0cd2b6f075f2ad3374b1b540be8",
+        ".liveness.json.xz": "275797be5bab4abae4fe0b702d86f9fcb8547808a5f3e2af089901dc88bd0f09"
+      }
+    },
+    {
+      "id": "pau_two_q204_t8813",
+      "status": "PASS",
+      "text_sha256": "383cd87770ee8caf6030d159a78038a9def69f62292ab527549e83d24219fbe4",
+      "toffoli": 8813,
+      "peak_total_qubits": 204,
+      "allocation_events": 31303,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 593,
+          "peak": 190
+        },
+        {
+          "name": "sparse-alias/base-lookup",
+          "toffoli": 4719,
+          "clifford": 146205,
+          "peak": 148
+        },
+        {
+          "name": "sparse-alias/base-combine",
+          "toffoli": 32,
+          "clifford": 0,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/corrections",
+          "toffoli": 1591,
+          "clifford": 18821,
+          "peak": 119
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 149,
+          "peak": 121
+        },
+        {
+          "name": "family-label/lookup-0",
+          "toffoli": 1627,
+          "clifford": 49146,
+          "peak": 204
+        },
+        {
+          "name": "family-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 187
+        },
+        {
+          "name": "family-label/combine-0",
+          "toffoli": 28,
+          "clifford": 0,
+          "peak": 173
+        },
+        {
+          "name": "family-pau/gauges",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "family-pau/merged-prefix-in",
+          "toffoli": 82,
+          "clifford": 1724,
+          "peak": 169
+        },
+        {
+          "name": "family-pau/mixed_or_small",
+          "toffoli": 64,
+          "clifford": 1434,
+          "peak": 197
+        },
+        {
+          "name": "family-pau/same_spin",
+          "toffoli": 50,
+          "clifford": 1118,
+          "peak": 201
+        },
+        {
+          "name": "family-pau/common-pair-out",
+          "toffoli": 78,
+          "clifford": 1716,
+          "peak": 192
+        },
+        {
+          "name": "family-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 174
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 27,
+          "clifford": 164,
+          "peak": 117
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "37340a0ae4055fc5ca2973e54fdd194c4c064e5a30d36c0460fabdecfff02ca4",
+      "generated_artifact_sha256": {
+        ".gates.xz": "793e305ac0934f3db49abf02da6d794bf8bc086b1505ed27c0354ac68f8f37ce",
+        ".ops.xz": "23ea9317f1e7d20aa8bdc81a0a5ac5860190b63b56bf747ca303f9e7fbb57293",
+        ".liveness.json.xz": "e42b834753d3e2afdf94d2574fa095934a152e2fd3b7c2b2ae48bebdb172f0f9"
+      }
+    },
+    {
+      "id": "pau_two_q206_t6393",
+      "status": "PASS",
+      "text_sha256": "0e59840bace0ad30db5dbc6c6a1fde8787d52e1859c9f32ede040019392cfb3e",
+      "toffoli": 6393,
+      "peak_total_qubits": 206,
+      "allocation_events": 23574,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9217,
+          "peak": 200
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 2477,
+          "clifford": 123996,
+          "peak": 205
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 94,
+          "clifford": 3,
+          "peak": 197
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 186,
+          "peak": 196
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 123,
+          "clifford": 2974,
+          "peak": 174
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 120,
+          "clifford": 171,
+          "peak": 172
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 126,
+          "peak": 167
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 1013,
+          "clifford": 17277,
+          "peak": 205
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 137,
+          "peak": 121
+        },
+        {
+          "name": "family-label/lookup-0",
+          "toffoli": 1627,
+          "clifford": 49146,
+          "peak": 206
+        },
+        {
+          "name": "family-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 189
+        },
+        {
+          "name": "family-label/combine-0",
+          "toffoli": 28,
+          "clifford": 0,
+          "peak": 175
+        },
+        {
+          "name": "family-pau/gauges",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "family-pau/merged-prefix-in",
+          "toffoli": 82,
+          "clifford": 1724,
+          "peak": 171
+        },
+        {
+          "name": "family-pau/mixed_or_small",
+          "toffoli": 64,
+          "clifford": 1434,
+          "peak": 199
+        },
+        {
+          "name": "family-pau/same_spin",
+          "toffoli": 50,
+          "clifford": 1118,
+          "peak": 203
+        },
+        {
+          "name": "family-pau/common-pair-out",
+          "toffoli": 78,
+          "clifford": 1716,
+          "peak": 194
+        },
+        {
+          "name": "family-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 176
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 25,
+          "clifford": 158,
+          "peak": 115
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "10f9b5cf52522b0519ea139af1a1e36c205b932e4601906724aac3add4c36141",
+      "generated_artifact_sha256": {
+        ".gates.xz": "75e8705786d6529845243ba1cb18d050dc969f319f9f5371c5be64b8f3255e95",
+        ".ops.xz": "76f9ce78babe969b45f0755ee4d5082cb4bf1777f058687502c77c63d1afc01f",
+        ".liveness.json.xz": "72e016244f538ef618056fa8d31eef76567e13aa7bb98c7d40bc9e178dd95a69"
+      }
+    },
+    {
+      "id": "pau_two_q274_t5270",
+      "status": "PASS",
+      "text_sha256": "1798b557bd31dec58b41ed0404b6d06b9407ad57ae7e512f25337224828309ea",
+      "toffoli": 5270,
+      "peak_total_qubits": 274,
+      "allocation_events": 19611,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9217,
+          "peak": 264
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 1251,
+          "clifford": 95595,
+          "peak": 274
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 172,
+          "clifford": 12,
+          "peak": 266
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 336,
+          "peak": 264
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 616,
+          "clifford": 26480,
+          "peak": 233
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 131,
+          "clifford": 33,
+          "peak": 227
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 240,
+          "peak": 224
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 543,
+          "clifford": 16235,
+          "peak": 213
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "family-label/lookup-0",
+          "toffoli": 1627,
+          "clifford": 49146,
+          "peak": 215
+        },
+        {
+          "name": "family-label/flags",
+          "toffoli": 17,
+          "clifford": 127,
+          "peak": 198
+        },
+        {
+          "name": "family-label/combine-0",
+          "toffoli": 28,
+          "clifford": 0,
+          "peak": 184
+        },
+        {
+          "name": "family-pau/gauges",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "family-pau/merged-prefix-in",
+          "toffoli": 82,
+          "clifford": 1724,
+          "peak": 180
+        },
+        {
+          "name": "family-pau/mixed_or_small",
+          "toffoli": 64,
+          "clifford": 1434,
+          "peak": 208
+        },
+        {
+          "name": "family-pau/same_spin",
+          "toffoli": 50,
+          "clifford": 1118,
+          "peak": 212
+        },
+        {
+          "name": "family-pau/common-pair-out",
+          "toffoli": 78,
+          "clifford": 1716,
+          "peak": 203
+        },
+        {
+          "name": "family-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "f8a4babb867278e448dc89eac65276ccb1cc757749b2379ad5be22670ac93cc8",
+      "generated_artifact_sha256": {
+        ".gates.xz": "07d46e195cfbf4cf1d68b83b35c0e24e117111527f769f12f80c4f240e3310af",
+        ".ops.xz": "200ede2acf82fb2a98d80dd2e98ad8d2190f037966d01511db692efd56ddb51b",
+        ".liveness.json.xz": "cc9679f8291cda797001ca8505e34fdfca9d58f8b14d01be9fd2ad4c854b5d03"
+      }
+    },
+    {
+      "id": "pau_two_q298_t4324",
+      "status": "PASS",
+      "text_sha256": "39fc6f333ad9ae560ddd1104b53c81b367b853b96e59575943c2372669302d9e",
+      "toffoli": 4324,
+      "peak_total_qubits": 298,
+      "allocation_events": 15533,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9331,
+          "peak": 288
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 1251,
+          "clifford": 106423,
+          "peak": 298
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 193,
+          "clifford": 12,
+          "peak": 290
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 378,
+          "peak": 288
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 314,
+          "clifford": 15144,
+          "peak": 267
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 181,
+          "clifford": 78,
+          "peak": 263
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 310,
+          "peak": 259
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 543,
+          "clifford": 16235,
+          "peak": 213
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "family-label/lookup-0",
+          "toffoli": 850,
+          "clifford": 44157,
+          "peak": 291
+        },
+        {
+          "name": "family-label/flags",
+          "toffoli": 22,
+          "clifford": 174,
+          "peak": 255
+        },
+        {
+          "name": "family-label/combine-0",
+          "toffoli": 85,
+          "clifford": 3,
+          "peak": 242
+        },
+        {
+          "name": "family-pau/gauges",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "family-pau/merged-prefix-in",
+          "toffoli": 82,
+          "clifford": 1724,
+          "peak": 181
+        },
+        {
+          "name": "family-pau/mixed_or_small",
+          "toffoli": 64,
+          "clifford": 1434,
+          "peak": 209
+        },
+        {
+          "name": "family-pau/same_spin",
+          "toffoli": 50,
+          "clifford": 1118,
+          "peak": 213
+        },
+        {
+          "name": "family-pau/common-pair-out",
+          "toffoli": 78,
+          "clifford": 1716,
+          "peak": 204
+        },
+        {
+          "name": "family-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "26c24d88f685cfd956eea445e44c04e96d502749b00b3b8da375d3b2b3bae5aa",
+      "generated_artifact_sha256": {
+        ".gates.xz": "7c2748175f373668f910504ad161619a982211c6fcf5f8e3fde6f8cf420673f1",
+        ".ops.xz": "5b8e93f3761ff15766f0e3581948299621d888c42a8edee87f756e3173aab989",
+        ".liveness.json.xz": "f0320945ee3a87761b7eed6b06ff2b2b83df87cb4960c2b6933c31c16c4970d1"
+      }
+    },
+    {
+      "id": "pau_two_q338_t3772",
+      "status": "PASS",
+      "text_sha256": "1a7bc1c49b47777edef61b728e86918212b46d725c46a126cf150d45de33cc30",
+      "toffoli": 3772,
+      "peak_total_qubits": 338,
+      "allocation_events": 13419,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9331,
+          "peak": 328
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 1251,
+          "clifford": 118977,
+          "peak": 338
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 228,
+          "clifford": 12,
+          "peak": 330
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 448,
+          "peak": 328
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "family-label/lookup-0",
+          "toffoli": 850,
+          "clifford": 44157,
+          "peak": 291
+        },
+        {
+          "name": "family-label/flags",
+          "toffoli": 22,
+          "clifford": 174,
+          "peak": 255
+        },
+        {
+          "name": "family-label/combine-0",
+          "toffoli": 85,
+          "clifford": 3,
+          "peak": 242
+        },
+        {
+          "name": "family-pau/gauges",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "family-pau/merged-prefix-in",
+          "toffoli": 82,
+          "clifford": 1724,
+          "peak": 181
+        },
+        {
+          "name": "family-pau/mixed_or_small",
+          "toffoli": 64,
+          "clifford": 1434,
+          "peak": 209
+        },
+        {
+          "name": "family-pau/same_spin",
+          "toffoli": 50,
+          "clifford": 1118,
+          "peak": 213
+        },
+        {
+          "name": "family-pau/common-pair-out",
+          "toffoli": 78,
+          "clifford": 1716,
+          "peak": 204
+        },
+        {
+          "name": "family-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "f77d454c23f021bcc52c2904684c2bc6e5cb0af21a7239e95e2bf2ca816128ab",
+      "generated_artifact_sha256": {
+        ".gates.xz": "85dd0dbcf1eb698feb7416236609fdc9574bf9debe0f6bf9ece8d8cdbbb4ce0a",
+        ".ops.xz": "8863dcce2eeebc54a5abd8582297822d0eb015f91a525955f70c9e2c6a6487d8",
+        ".liveness.json.xz": "93643aaeb92726d1dd6a9d057f645da8045844fd97a4859c2f4a9bee1bc40181"
+      }
+    },
+    {
+      "id": "pau_two_q593_t3420",
+      "status": "PASS",
+      "text_sha256": "96d1ea0993cd5451812be514fd645117c13ab6b0f7a694cfc9499f59a8030a70",
+      "toffoli": 3420,
+      "peak_total_qubits": 593,
+      "allocation_events": 11485,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 9331,
+          "peak": 584
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 636,
+          "clifford": 115889,
+          "peak": 593
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 491,
+          "clifford": 33,
+          "peak": 587
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 960,
+          "peak": 584
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 355,
+          "clifford": 17166,
+          "peak": 308
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 96,
+          "clifford": 0,
+          "peak": 296
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 297
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 384,
+          "peak": 296
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "family-label/lookup-0",
+          "toffoli": 850,
+          "clifford": 44157,
+          "peak": 291
+        },
+        {
+          "name": "family-label/flags",
+          "toffoli": 22,
+          "clifford": 174,
+          "peak": 255
+        },
+        {
+          "name": "family-label/combine-0",
+          "toffoli": 85,
+          "clifford": 3,
+          "peak": 242
+        },
+        {
+          "name": "family-pau/gauges",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "family-pau/merged-prefix-in",
+          "toffoli": 82,
+          "clifford": 1724,
+          "peak": 181
+        },
+        {
+          "name": "family-pau/mixed_or_small",
+          "toffoli": 64,
+          "clifford": 1434,
+          "peak": 209
+        },
+        {
+          "name": "family-pau/same_spin",
+          "toffoli": 50,
+          "clifford": 1118,
+          "peak": 213
+        },
+        {
+          "name": "family-pau/common-pair-out",
+          "toffoli": 78,
+          "clifford": 1716,
+          "peak": 204
+        },
+        {
+          "name": "family-label/repair",
+          "toffoli": 221,
+          "clifford": 6643,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "8d3f6b831188b79601227775ba2853d21a06c1903e19fd83967acbc0c9b3f686",
+      "generated_artifact_sha256": {
+        ".gates.xz": "6f33b9629302e4dac8c50d0b4ae376273716330c4fee2a97fbce8ceadd69e5cd",
+        ".ops.xz": "6155a483d38edf23d301c973dd5a75a549fe14b82581d6af991744384c1336e2",
+        ".liveness.json.xz": "faff5437a0f7394c87db35da18dc35056443af1f8cc05a0027423a1db6155b8e"
+      }
+    },
+    {
+      "id": "frame_extended_q201_t10388",
+      "status": "PASS",
+      "text_sha256": "93c5fc037f3e9a25254d4ab9228046f128876309a41d61bd8eb5e326f5dc20cc",
+      "toffoli": 10388,
+      "peak_total_qubits": 201,
+      "allocation_events": 30765,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/base-lookup",
+          "toffoli": 4719,
+          "clifford": 146205,
+          "peak": 148
+        },
+        {
+          "name": "sparse-alias/base-combine",
+          "toffoli": 32,
+          "clifford": 0,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 64,
+          "peak": 136
+        },
+        {
+          "name": "sparse-alias/corrections",
+          "toffoli": 1591,
+          "clifford": 18821,
+          "peak": 119
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "select-blk",
+          "toffoli": 136,
+          "clifford": 431,
+          "peak": 141
+        },
+        {
+          "name": "select-conj",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 129
+        },
+        {
+          "name": "select-pauli",
+          "toffoli": 3327,
+          "clifford": 60823,
+          "peak": 139
+        },
+        {
+          "name": "select-unconj",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 129
+        },
+        {
+          "name": "select-unblk",
+          "toffoli": 136,
+          "clifford": 438,
+          "peak": 141
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "f1c578b5fe240365fa7455de322d2abd3c4992897c90441a23d99cd4e5df4d1e",
+      "generated_artifact_sha256": {
+        ".gates.xz": "ed70c6b90c01ab74309523b19bb5eb45600267d67fc68bc2959deea3f9e5f57a",
+        ".ops.xz": "73b9321e9fe292d34937256e5889e1cfc61ac6996d698699eb1c05a2abc855b6",
+        ".liveness.json.xz": "9d8c6b300f951d223d04adf4fd6d7b1a1b439d385de0fcfa6b11493ae398be48"
+      }
+    },
+    {
+      "id": "frame_extended_q230_t7067",
+      "status": "PASS",
+      "text_sha256": "18c66d4e5ac62f721f811d8cf708f2d60d6c32c248c0d3d100cf73ad8bb4ae38",
+      "toffoli": 7067,
+      "peak_total_qubits": 230,
+      "allocation_events": 26985,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 8874,
+          "peak": 225
+        },
+        {
+          "name": "recycle-alias/base-lookup",
+          "toffoli": 2431,
+          "clifford": 126823,
+          "peak": 211
+        },
+        {
+          "name": "recycle-alias/base-combine",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/base-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 542,
+          "clifford": 16230,
+          "peak": 213
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 3219,
+          "clifford": 97513,
+          "peak": 230
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 12,
+          "clifford": 78,
+          "peak": 227
+        },
+        {
+          "name": "current-label/metadata-measure",
+          "toffoli": 0,
+          "clifford": 24,
+          "peak": 225
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "current-frame/open",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 215
+        },
+        {
+          "name": "current-frame/action",
+          "toffoli": 4,
+          "clifford": 928,
+          "peak": 217
+        },
+        {
+          "name": "current-frame/close",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 215
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 218,
+          "clifford": 6779,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "e6e47cf871445619b631ee036d55e2deaf197cc59a4b58fe55288c928ff6cb17",
+      "generated_artifact_sha256": {
+        ".gates.xz": "f0af218d2e32a011c7ad4759f30cd0d01dc11b11bbdef9a3438f2e835d11251a",
+        ".ops.xz": "ebbe128adc633eaf82fbe35716c7258151934577c93fd0f02e63433e10884999",
+        ".liveness.json.xz": "296cfd1b01843e47fa3a41e2a711da37d368e4877d51993336c2f1f4292a4982"
+      }
+    },
+    {
+      "id": "frame_extended_q290_t6694",
+      "status": "PASS",
+      "text_sha256": "b77176a44580c7a9e40deaf8257a6dca09a2f9064ff076aa84ecf576b5b893b3",
+      "toffoli": 6694,
+      "peak_total_qubits": 290,
+      "allocation_events": 25119,
+      "final_live_qubits": 72,
+      "phases": [
+        {
+          "name": "init",
+          "toffoli": 0,
+          "clifford": 8874,
+          "peak": 280
+        },
+        {
+          "name": "segmented-alias/base-0-lookup",
+          "toffoli": 1251,
+          "clifford": 102918,
+          "peak": 290
+        },
+        {
+          "name": "segmented-alias/base-0-combine",
+          "toffoli": 186,
+          "clifford": 12,
+          "peak": 282
+        },
+        {
+          "name": "segmented-alias/base-0-measure",
+          "toffoli": 0,
+          "clifford": 364,
+          "peak": 280
+        },
+        {
+          "name": "segmented-alias/base-1-lookup",
+          "toffoli": 616,
+          "clifford": 19206,
+          "peak": 203
+        },
+        {
+          "name": "segmented-alias/base-1-combine",
+          "toffoli": 101,
+          "clifford": 33,
+          "peak": 197
+        },
+        {
+          "name": "segmented-alias/base-1-measure",
+          "toffoli": 0,
+          "clifford": 180,
+          "peak": 194
+        },
+        {
+          "name": "recycle-alias/correction-lookup",
+          "toffoli": 543,
+          "clifford": 16235,
+          "peak": 213
+        },
+        {
+          "name": "recycle-alias/correction-combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "recycle-alias/correction-apply",
+          "toffoli": 97,
+          "clifford": 3,
+          "peak": 201
+        },
+        {
+          "name": "recycle-alias/correction-measure",
+          "toffoli": 0,
+          "clifford": 192,
+          "peak": 200
+        },
+        {
+          "name": "alias/retained-compare-select",
+          "toffoli": 32,
+          "clifford": 83,
+          "peak": 121
+        },
+        {
+          "name": "current-label/lookup",
+          "toffoli": 3219,
+          "clifford": 97513,
+          "peak": 230
+        },
+        {
+          "name": "current-label/flags",
+          "toffoli": 12,
+          "clifford": 78,
+          "peak": 227
+        },
+        {
+          "name": "current-label/metadata-measure",
+          "toffoli": 0,
+          "clifford": 24,
+          "peak": 225
+        },
+        {
+          "name": "current-label/combine",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "current-label/spare-measure",
+          "toffoli": 0,
+          "clifford": 0,
+          "peak": 0
+        },
+        {
+          "name": "current-frame/open",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 215
+        },
+        {
+          "name": "current-frame/action",
+          "toffoli": 4,
+          "clifford": 928,
+          "peak": 217
+        },
+        {
+          "name": "current-frame/close",
+          "toffoli": 77,
+          "clifford": 1636,
+          "peak": 215
+        },
+        {
+          "name": "current-label/joint-repair",
+          "toffoli": 218,
+          "clifford": 6779,
+          "peak": 185
+        },
+        {
+          "name": "alias/retained-restore",
+          "toffoli": 16,
+          "clifford": 131,
+          "peak": 120
+        },
+        {
+          "name": "current-alias/final-repair",
+          "toffoli": 245,
+          "clifford": 12637,
+          "peak": 201
+        }
+      ],
+      "configuration_sha256": "77d7313a5a27da005931cfdf7833d8bf7aa276c794b488dcb94641c43aaa190b",
+      "generated_artifact_sha256": {
+        ".gates.xz": "d9376b4f9ceac3d7a2aa7b0039354d8f879e23e32d1a7dc81929a0831e2011f2",
+        ".ops.xz": "e1ad5734e82c42bfabcaff929be5d26d1edc24c490e2e04e4f991469b3c46b7e",
+        ".liveness.json.xz": "2d52ae9e2f21a840991d377a47801242881032dfe18709a6b5f9a4c02fb60d70"
+      }
+    }
+  ],
+  "native": [
+    {
+      "id": "frame_released_q126_t14978",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "frame_paper_q145_t14479",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "frame_paper_q208_t14448",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "pau_two_q215_t5627",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "pau_single_q338_t3755",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "frame_extended_q338_t4411",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "frame_extended_q148_t10420",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "pau_single_q444_t3524",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "pau_single_q157_t11430",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "frame_extended_q472_t3807",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "frame_extended_q126_t14500",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "pau_single_q593_t3172",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "frame_extended_q593_t3440",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "frame_extended_q817_t3415",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "pau_single_q210_t5650",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "pau_single_q298_t4307",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "frame_extended_q205_t7970",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "frame_extended_q300_t4978",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "pau_single_q185_t10382",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "pau_single_q204_t8796",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "pau_single_q206_t6376",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "pau_single_q274_t5253",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "pau_two_q204_t8813",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "pau_two_q206_t6393",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "pau_two_q274_t5270",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "pau_two_q298_t4324",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "pau_two_q338_t3772",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "pau_two_q593_t3420",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "frame_extended_q201_t10388",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "frame_extended_q230_t7067",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    },
+    {
+      "id": "frame_extended_q290_t6694",
+      "status": "PASS",
+      "basis_inputs": 256,
+      "seed": 20261023,
+      "native_parser_operation_equality": true,
+      "strict_measurement_ledger": true,
+      "scope": "Both measurement outcomes algebraically on each tested basis input; input sampling does not prove all coherent input states.",
+      "all_rows": false
+    }
+  ],
+  "cores": {
+    "status": "PASS",
+    "cores": [
+      {
+        "kind": "single",
+        "status": "PASS",
+        "toffoli": 257,
+        "native_peak_qubits": 86,
+        "input_register_widths": {
+          "flags": 7,
+          "label": 29,
+          "system": 40
+        },
+        "qualtran_bloq_instances": 5385,
+        "cirq_operations": 4861,
+        "basis_inputs": 82104,
+        "measurement_cleanup": "strict algebraic ledger on tested inputs"
+      },
+      {
+        "kind": "two",
+        "status": "PASS",
+        "toffoli": 274,
+        "native_peak_qubits": 131,
+        "input_register_widths": {
+          "flags": 7,
+          "label": 28,
+          "system": 40
+        },
+        "qualtran_bloq_instances": 6474,
+        "cirq_operations": 5868,
+        "basis_inputs": 82104,
+        "measurement_cleanup": "strict algebraic ledger on tested inputs"
+      },
+      {
+        "kind": "frame",
+        "status": "PASS",
+        "toffoli": 158,
+        "native_peak_qubits": 153,
+        "input_register_widths": {
+          "index": 16,
+          "flags": 7,
+          "label": 86,
+          "system": 40
+        },
+        "qualtran_bloq_instances": 4145,
+        "cirq_operations": 4117,
+        "basis_inputs": 82104,
+        "measurement_cleanup": "strict algebraic ledger on tested inputs"
+      }
+    ],
+    "scope": "Every valid decoded row, zero and one random 40-bit input per row, for both native core and replay of actual Qualtran decomposition. Scalar phases factored into lookup are supplied separately. Not exhaustive over 2^40 system states or arbitrary invalid labels."
+  },
+  "qasm": [
+    {
+      "id": "pau_single_q210_t5650",
+      "status": "PASS",
+      "operations": 743443,
+      "parser_version": "1.0.1",
+      "export_sha256": "fd125e0e6e09ff16f412645f8b19f1560d54dfde2c0df7a24e9efdd4182f0a84",
+      "scope": "All statements parsed in complete-instruction chunks; exact gate/outcome sequence equality. No full-state simulation."
+    },
+    {
+      "id": "pau_two_q215_t5627",
+      "status": "PASS",
+      "operations": 745087,
+      "parser_version": "1.0.1",
+      "export_sha256": "bd4c9e58f296d2d8696f695d36401bb1f4382d12a78805f4a94b9e299da3043d",
+      "scope": "All statements parsed in complete-instruction chunks; exact gate/outcome sequence equality. No full-state simulation."
+    },
+    {
+      "id": "frame_extended_q338_t4411",
+      "status": "PASS",
+      "operations": 1269732,
+      "parser_version": "1.0.1",
+      "export_sha256": "50c9b9d39804de65b80b6b0e7ff9a26210d116e6d8034b52bd047b284563758c",
+      "scope": "All statements parsed in complete-instruction chunks; exact gate/outcome sequence equality. No full-state simulation."
+    }
+  ],
+  "source_sha256": {
+    "circuits.py": "137a510f93088953d3a4585df406565f1e6e743cf32da6fbaf9787f2b2a6de2c",
+    "configurations/frame_extended_q126_t14500.json": "9fe0ba5e737cbb022f0f21c5d1943cf00b3e1f73c39bc55890515e2a282bf27f",
+    "configurations/frame_extended_q148_t10420.json": "4a634b62e7866820f6408fb5eaf3742fdfedff788c0dcc6b8dfacf9052c80013",
+    "configurations/frame_extended_q201_t10388.json": "f1c578b5fe240365fa7455de322d2abd3c4992897c90441a23d99cd4e5df4d1e",
+    "configurations/frame_extended_q205_t7970.json": "dcecfb88478dfd5eed6c88202957fe45a2a056068cfdfaf52c902d1263dc9f10",
+    "configurations/frame_extended_q230_t7067.json": "e6e47cf871445619b631ee036d55e2deaf197cc59a4b58fe55288c928ff6cb17",
+    "configurations/frame_extended_q290_t6694.json": "77d7313a5a27da005931cfdf7833d8bf7aa276c794b488dcb94641c43aaa190b",
+    "configurations/frame_extended_q300_t4978.json": "408774d3a6d6c348cb8b8a07aab7ac18734e2340896df5611f74e0f8f460635a",
+    "configurations/frame_extended_q338_t4411.json": "c86efe4e3ba61d4fead6bcba57e9abc349874bdb5314701ca4eca9b6fb7a64c2",
+    "configurations/frame_extended_q472_t3807.json": "4bcc21f3d40a3ddad0f954e717bd3c2b4300846a642e57d65e1e6c6f4e28692d",
+    "configurations/frame_extended_q593_t3440.json": "60b0a92132a5adbed76417d3a519079ed74fd4fd34223115117dfa7e2a87bfc9",
+    "configurations/frame_extended_q817_t3415.json": "ec8beb5fd0f85e5d6290cc2d3fbaabbcf0e1ca2038c7f13271a299b3b5611457",
+    "configurations/frame_paper_q145_t14479.json": "77c8cc965fa534800d22b053c2c2676af1243d6b5cf4599be3589a713ccb0169",
+    "configurations/frame_paper_q208_t14448.json": "6246acdf6376b4adef810fa7921105aa7673ff974ee0d4eea93040d098ef496f",
+    "configurations/frame_released_q126_t14978.json": "e65a1205fdd4d5ae4152c8a389ba7f6fef63833b00016a97cb683b2920576c1a",
+    "configurations/pau_single_q157_t11430.json": "3e096e33c8c4ad0f406c9156081c2427cc3dca511eac963dde2b43f4aa3423a0",
+    "configurations/pau_single_q185_t10382.json": "e20e6bbb711e00c958a2549b32f7331c0f94392ac31624c142ac760ab9a97483",
+    "configurations/pau_single_q204_t8796.json": "33f3c76a9c018084456a97015bbc1bde7039875fd7f4873f911bbc580049ace3",
+    "configurations/pau_single_q206_t6376.json": "e0d4fa803115f0adda253273cd434052e4b504b6bdced0cf2a75a0e7043f9197",
+    "configurations/pau_single_q210_t5650.json": "9d47d02f4d144474bcd97024cbea208d59c9cbbaa52d8b1db85d750271775eca",
+    "configurations/pau_single_q274_t5253.json": "d49cb6c2a10ea6be074bfe04a55af284ad358c0ad2469cfd6eb664575acde260",
+    "configurations/pau_single_q298_t4307.json": "3975fbe4f982f02df5603a308086ed8e695e23e5a4a556b3e2172f1d9c35e9a1",
+    "configurations/pau_single_q338_t3755.json": "0b9844df1d9fd9e910231ec41f4783dbd3e4867244957e5fe1f095970f3dbb43",
+    "configurations/pau_single_q444_t3524.json": "e68efb5740b4a84f40c343357781ded9bfcc3ba0a87b944d40ce4a8e3e692139",
+    "configurations/pau_single_q593_t3172.json": "85add13898cfc9d41d810ef777f8ae27d835e41673a554671c303ae103042553",
+    "configurations/pau_two_q204_t8813.json": "37340a0ae4055fc5ca2973e54fdd194c4c064e5a30d36c0460fabdecfff02ca4",
+    "configurations/pau_two_q206_t6393.json": "10f9b5cf52522b0519ea139af1a1e36c205b932e4601906724aac3add4c36141",
+    "configurations/pau_two_q215_t5627.json": "3d2a67c6fdec2537948f313fcf80722ab0aa81bcdd7d26e2beab469d2a19cba4",
+    "configurations/pau_two_q274_t5270.json": "f8a4babb867278e448dc89eac65276ccb1cc757749b2379ad5be22670ac93cc8",
+    "configurations/pau_two_q298_t4324.json": "26c24d88f685cfd956eea445e44c04e96d502749b00b3b8da375d3b2b3bae5aa",
+    "configurations/pau_two_q338_t3772.json": "f77d454c23f021bcc52c2904684c2bc6e5cb0af21a7239e95e2bf2ca816128ab",
+    "configurations/pau_two_q593_t3420.json": "8d3f6b831188b79601227775ba2853d21a06c1903e19fd83967acbc0c9b3f686",
+    "data/reference.json.xz": "3d793a344e4d68067ffcd1d8279d2f6e7ee9e2b6290bcbfa9eec111ec9367f4a",
+    "generate.py": "5834e511284e8b1e6e4e7d3559ac07fcb60cab29aea43e47121cbeda9dab88b2",
+    "interfaces/core_emitters.py": "d49f21ac86319396aed3fcbfd46a87c422769bf53bbcf4c8fc4127b8ecbd486b",
+    "interfaces/openqasm.py": "a0c803c816273f1654da451bc15594e07c745b334f66b2049e725b5e727c347d",
+    "interfaces/qualtran_bloqs.py": "2ab84d230b60efcbe05a1f1ed49227f7314edf46118712983ae28b1bf5e48b6a",
+    "manifest.json": "847dba096d3e0159300813a5775428bfb1d2af002a4b2fb5e22b9d51e0317617",
+    "requirements-build.txt": "33823fcb47a78ad97ed820dcc9aae093c08ed3b861c17b80311d19bb72664d3f",
+    "requirements-interfaces.txt": "0991e321a5d95fc45325cd0745609471ecff02b4cf28ca028b528a4dedf19e1e",
+    "shared/adaptive_lookup.py": "496a44d9daeaeb63d0fecc1d1ab1f03d9efb4ee0f9667abaabc733aa81050d59",
+    "shared/address_order.py": "21c8ad6d5b902f7ef10c45b1c3dc70998e370dcd6db8d0375b0760e93a4dafb9",
+    "shared/basis_action_controls.py": "169e5f6366950b272c12dc033ea0d7c40d55f007841e92ac926079e286177240",
+    "shared/branch_pau.py": "b65a8c999e5c0a6eca88ceba42387c310779efbaafd03e2417a110a0273ac658",
+    "shared/circuit.py": "52def10a476f53fec2a8d6cb3e9722751e60fe22dcaf0f2f60f6f84c26645aef",
+    "shared/common.py": "323728f1048b6702108163a7585ed78d07e1c3c2d149c6d84ccf95db983845a8",
+    "shared/compact_families.py": "48180be2e2fa98e2050330e8d13dd7c55f97974cf22154f7d06cd21ca7222e9b",
+    "shared/composed_query.py": "508222f77a0bb86a38ea2ad440802a049f9c2d98749044511f3a400077a3dd9a",
+    "shared/consistent_query.py": "696c26966d2e893a20fedfe453fe3db9b693ee7dac9a705b5658add97243ff75",
+    "shared/cost_query.py": "3a113c7e31a2f1c7dc8d9aad56e18b8b396c645829a98e6b64d53fd18c0dbc53",
+    "shared/data/correction_tree.json": "f511694effe7ee4167b98fb45262b9fe3c1a555b5029d1b020ad758d785e6b87",
+    "shared/exact_monomials.py": "246bc432a764d448a9edf898f7c1e7303dd6ca0507e38d7ffe18de679cfe2a3e",
+    "shared/family_layouts.py": "b190ab693f339796c08ea340375594a03e86b752d976e0b22776e1e3dbfe9c3d",
+    "shared/family_overlay.py": "c8df03de2aa6042c8c819cf530d94332563ded0425a868e55aa2e83d2e6a67bf",
+    "shared/family_pau.py": "4d6bb6b44148be19886963c34316515e52aa5352f237e52587bf65d697689458",
+    "shared/frame_mask_space.py": "c15124445f474b078fe5b0975636206002153bc9dd7f60272d006467ac7e158b",
+    "shared/frame_paper.py": "c6ba850b090803983de14d7a119c7a5a172cda39a4882c595426161a36a74b23",
+    "shared/multiframe.py": "dc447b29699f941d4f2bd1e82fe8681e23eb0b2a8093fdb123e80b8bfabd297d",
+    "shared/pau_banked.py": "435190495600a055a64ef02cf6da571529cc301f90312aa2c761fb883367d34b",
+    "shared/pau_composed.py": "c078d9ffcb548127a2084a5331daa0df966bc42e2480458a2d2d7f8eda503310",
+    "shared/pau_decode.py": "80676d33fbd65833c04abf33ef00a4d8e5571bd424f552a306a5340fd78ba744",
+    "shared/pau_even_action.py": "ff7474f088ab3c60eda4419ddbcdb298fd4f4d9b142f46889a4db6a53b7f22d6",
+    "shared/pau_grouped.py": "12cb1df1e30a137d4bf274a929a51b2bd66d43cffb877eed129867a02a73462d",
+    "shared/pau_orbit.py": "c0242197e3010763e04d1dbaa02e8a6d9e509156fc8c189dcd6256b2e2035126",
+    "shared/pau_permutation_core.py": "65d7efc8488bb7a0a5c4e284cba2a0f8936b2c83318cfca59bc38f5a814df25e",
+    "shared/pau_recycle.py": "2f4f23134de5fbe3c57b71314ff1bfe7679ad113b7a0ddc33455b50d7b321561",
+    "shared/pau_spin.py": "ceff6f7542ed5ea7c258f9d5a6132c1cdbb23ca306c518b070b2567bacfd0c56",
+    "shared/pau_tq.py": "f786834a0474597863c6cea67aa6da7cac61d8810376382e237e18a8217d464d",
+    "shared/pau_wide.py": "97a0539ad6c7b3012f4197c9a0c117d976b9a233cee391422ca7326d36ce530f",
+    "shared/permuted_lookup.py": "cb087e55e53ecc8734af607d4fd508f71466f97b1c1d5f9adc7b044a944b3af4",
+    "shared/phase_pau.py": "2d402d603cee386ba3d248f01f91aef16997dfd41f9fc29154b1c33549c931fa",
+    "shared/phase_query.py": "83b6763aec95c622d4f199d6b0348d5c34578989b89664420d57b5de531a4b2f",
+    "shared/plane_bank.py": "979b49edac6fc11ff998f4e37a7fe7a83e9a3308a338f5b22e07c34378099869",
+    "shared/refined_repair.py": "054e9e73fcfd55f8fbdcda9dc4c852b0825496d276e66dea709cb6223f0cdfa1",
+    "shared/retained_compare.py": "f1358545012be81459f5c691a53e83c61b545df53bea7d8c23f6c9705781e6b7",
+    "shared/reuse_action_controls.py": "171cb2e409f9bf44df50ffbc770e8a6f2b65f17e15993ec5fe945843e58a601d",
+    "shared/reuse_family_core.py": "05fa06e0c9c53e69e36f1fdd676a63e5ff7268341c0c5358145ebc1e82e47f44",
+    "shared/reuse_query.py": "5010cd0a898e51cdfa754839c493dfee5c1022f9ec39ee6b13b4e1d93e48d28d",
+    "shared/routing.py": "5d3405f3eb69dac71265d4881d0d46fcc8098660ac8ee95335d368aa29ee5399",
+    "shared/segmented_alias.py": "5f924e3258491869e2165a19525702ba05db6a932f1ec9f130c4b987e2308c4d",
+    "shared/segmented_query.py": "b669dcfab589c80bc1a478ec0368cfa480e3a4e973d7dd7a7b4731b91070f13b",
+    "shared/sparse_payload_lookup.py": "5984dbe9dd949694cd5ccad64b39bae8b9fe2ab577803b1f0ba79b5988e36728",
+    "shared/tradeoff.py": "1b1c468e0a87756ef604bd70079fbf25560d5e6a676d3484f8dd41761ea7d1c6",
+    "shared/unary_repair.py": "13f828a62322cfd62616d455415a4cec94377eee0207493d71d8fe226c07c970",
+    "upstream/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "upstream/tasks/chemistry-fe2s2/alias_sched.py": "f95bae4960be66a1e065c9ec2db40bae796265c12c037fbe8304e8a602213316",
+    "upstream/tasks/chemistry-fe2s2/circuits/_shared/baseline.py": "8c88f89e2fe730b75af65572b57c87a56580b72045a99de3b502c7163e70f08f",
+    "upstream/tasks/chemistry-fe2s2/circuits/discovered/circuit.py": "c93b9d5fa020a7cb91b3f6d30fdcb8727e1e22a6c7771eb391194d2c0f5c9795",
+    "upstream/tasks/chemistry-fe2s2/circuits/discovered/constants.json": "d7de726f28ba76e5eaa936f58509d93ab3f5694fb582d039839f5a5e7157b31a",
+    "upstream/tasks/chemistry-fe2s2/contract.json": "65d605ebc6bdb8ea94371a0fdfa18a1e21c51cecff76a752da42365e8f168da2",
+    "upstream/tasks/chemistry-fe2s2/data/fcidump.xz": "c8a67ecffe780d966a6f6c49ec585605f5dfa9a1202e5e8d25330a96ab110900",
+    "upstream/tasks/chemistry-fe2s2/data/masks.json.xz": "7be7d493b9cb96f77cfddac45aaad56cbb2aa611bed62acf7976e6bc3d71ec3c",
+    "upstream/tasks/chemistry-fe2s2/data/table.json.xz": "697c26ee8d452daed7ba299936d981c35362c9232334b49c1c30765951b14d3b",
+    "upstream/tasks/chemistry-fe2s2/grader.py": "7a3c935cedf42d955e189157c1a42134ad9a0ed92f3eb841bced4b5b7991f330",
+    "upstream/tasks/chemistry-fe2s2/reference.py": "61cc9972e487603fdbc2b1f98193c7f5a33bb16faf59ddf35c07e902c6fcec0b",
+    "upstream/tools/eval.py": "297fd3f0e17f85b1120dd3daacf3ea87d8e5a680e59baeb188a0d48f0d514a62",
+    "upstream/uncompute/README.md": "2459ef12592a87ec8732a593b7796b7ddf91c19c697d4637d1e17acc3a911bff",
+    "upstream/uncompute/__init__.py": "746fa96c6e127dcf1ec01c6390271eb522248cc3e0d8bda12371ccb916f3d39e",
+    "upstream/uncompute/_simfast.py": "174f2039daaff11434f59a536ab980ffa6e0093e6ab133ba783e56fd2a8ad01c",
+    "upstream/uncompute/_tapefast.py": "23178b4b0be62df5a77b62aee44805e228b36f54df467847bcac90acb5188c9a",
+    "upstream/uncompute/bennett.py": "d82a243a2c183cd7ace211d13804445fcde0ff5213b6908247053035201c8570",
+    "upstream/uncompute/builder.py": "8f850c36b04dd23c901c1029798fc96537f19922211eceab2fefc5d6fd8c91a5",
+    "upstream/uncompute/classical.py": "c05c9e7a84a69e3ad0590b972642dcb30c2c29ca2613a821c82d09d53556ba62",
+    "upstream/uncompute/compact.py": "bb35392be0e557a7819acac2f29673049304b84997183602adeb5b794b21a3c5",
+    "upstream/uncompute/evalcore/__init__.py": "1ea037df00ecd37efba4d15dbf864373e58d75b5b9169da175171b307805d51f",
+    "upstream/uncompute/evalcore/_kernel.c": "96c216bd442178fb651a9b83162796d30945bedac0ea6dc80aa030cb131d3a3e",
+    "upstream/uncompute/evalcore/compact_reader.py": "ba4e531c7c7ff4dc55166107fadb6c7947ff439c98028d71973dc405397b5520",
+    "upstream/uncompute/evalcore/executor.py": "9825c41d690f31ce6b3f17ce7f95665d48f245f9daea5eb6568659907ce8e17b",
+    "upstream/uncompute/evalcore/kernel.py": "5e026f15b482f5e212ea189ab90295e7db5dec28144839bb9c1c6381f2dcd64a",
+    "upstream/uncompute/evalcore/loader.py": "39c9914f6778dab28de45deee499e942bf1fa4951d19077ac2bd501362a20324",
+    "upstream/uncompute/evalcore/protocol.py": "6526ba2551dc93f13da58a2e35d0b9acf929aa3e35a4603254e3352caa89d7cf",
+    "upstream/uncompute/evalcore/report.py": "2d7558b21440443188528f142114d570b3b231232780b28c5afa97aff276ad8d",
+    "upstream/uncompute/evalcore/task.py": "507844009d66e74c191ddce510d4cb71c3939dbc2311dd01279fdd0fc284a68f",
+    "upstream/uncompute/evalcore/util.py": "8f2c4cb7e12023469a1fabdd0b5ca16e6bae370d91e509f88ae8212bd6c1d8ac",
+    "upstream/uncompute/gadgets/README.md": "007a6204423670f67a09249e120dd27b8ae86c11ad8dec52ae1faf9b182ea4bb",
+    "upstream/uncompute/gadgets/__init__.py": "ce5ccbcf60126a58e48284d09af4a13179faea408ab760cf41a284f029202841",
+    "upstream/uncompute/gadgets/arith.py": "1141bd12c0712c5cc2da56a7201e6b42a7ce7ca110bbaf55e94b9d99b467c30e",
+    "upstream/uncompute/gadgets/gf_tower.py": "ebc8fb73be560576d32a9ea502992ee5ab42370e847e631fcc1d192bf18ba072",
+    "upstream/uncompute/gadgets/linear.py": "d0b89d494ae63ec28e8bac6f33b344c11aaaab378d0cec81683b1a5743ed25d3",
+    "upstream/uncompute/gadgets/qrom.py": "c2d6bea7178cd0fbe5744fbea33801a41f336725a9d85619b871ed7ea7ba972c",
+    "upstream/uncompute/gadgets/wires.py": "4c0e7a979e884ee1d5c3ef2e74100868348b0dd212212df3ad72c3d60d0f9aa3",
+    "upstream/uncompute/ops.py": "2f4862c9cbafa5e3b51b5df36007674d5939ad81250a15310da3413c36d6c5af",
+    "upstream/uncompute/sim.py": "3437096bea97fae75d34eb9b96373fb9febc4b8ecac9635ae6469b3ce93cb848",
+    "upstream/uncompute/testing/__init__.py": "3ef7e750b6f7f41fb7aa750a7e0efc2e421c31405e76c7edb1fd9631d16e8f3f",
+    "verification/check_cores.py": "c375f45a621bb99cd60fe8a5cb48d4a7a4bd3807f5005d997f327afe9fab93a9",
+    "verification/check_instrument.py": "ea5d7ec35506d9be2997ac79653ce6078eb09a84c8a783e120b71c8d5ce53e7f",
+    "verification/check_native.py": "d950c18d2a0ea9cc66a228dfa9e32aeb05ba54e19e00bd78db892b4f61bfe2a6",
+    "verification/check_primitives.py": "416a29da988ba78897b1462e3e75a46b79e12569ad5403cad0ed47a5aeba68e9",
+    "verification/check_qasm.py": "3b9511b5ac409c7ba3501af174ed12e5e9bf38c453e37290f02e63d5a466fad0",
+    "verification/check_reference.py": "724860651dc57fb4e73cf4d0f2ad6b5000f6af340c76e00658a062de3ca19d83",
+    "verification/core_checks.json": "1d71813e897f7307b164c2ea04131b3b97956628e0ae551297fea039bf0f930d",
+    "verification/run.py": "33f70b2587c2d484dd5df05598dedf6797d190142cfb9429a1581464355a1dc5",
+    "verification/summarize.py": "404ba12d2649e93b41d6f49c3d0a6592f979b23f4f78953d506012050b768d0a"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "engine": "frame_paper",
+  "parameters": {
+    "log_window": 4,
+    "repair_hold": 38,
+    "lookup_hold": 22
+  },
+  "id": "frame_released_q126_t14978",
+  "expected": {
+    "toffoli": 14978,
+    "peak_total_qubits": 126,
+    "text_sha256": "be539b15c1667f81301e37ad70160904996817a3376c63001b2fa4f07ad76736",
+    "operation_count": 473498
+  }
+}

@@ -1,16 +1,17 @@
 # Fe₂S₂ benchmark
 
-This benchmark applies [Summer–Jamet PAU](https://arxiv.org/abs/2610.03686)
-to the Li–Chan Fe₂S₂ Hamiltonian on 40 system qubits. PAU routes a selected
+This benchmark applies [permute–act–unpermute (PAU)](https://arxiv.org/abs/2610.03686)
+to the [Li–Chan Fe₂S₂ Hamiltonian](https://github.com/zhendongli2008/Active-space-model-for-Iron-Sulfur-Clusters)
+on 40 system qubits. PAU routes a selected
 term's active modes to a four-mode target, applies its local Pauli action,
 and reverses the routing. Single- and two-family implementations explore
 the tradeoff between Toffoli count and peak logical qubits.
 
 The [circuits](circuits/) folder contains 31 decomposed gate programs,
-pinned reference data, a resource counter and a sampled simulator.
-Frame SELECT, studied on the same instance by
-[Gu et al.](https://arxiv.org/abs/2610.22367), supplies the comparison method.
-This is a subsequent application of the PAU framework.
+pinned reference data, modular Python generators, a resource counter and a
+sampled simulator. Each published point has an explicit configuration. The
+collection covers the PAU constructions and comparison circuits on the same
+instance. Fe₂S₂ extends the case studies of the PAU paper.
 
 ## Forty modes: one- and two-family PAU cores
 
@@ -60,6 +61,14 @@ Use `--shots` and `--seed` to change sampling; `--report /path/report.json`
 saves a new report. See [circuit verification](circuits/README.md#verification)
 for the recorded full-suite results and the limits of these checks.
 
+## Rebuild and inspect the circuits
+
+The [reproduction guide](circuits/REPRODUCE.md) covers generation, native
+upstream evaluation and OpenQASM 3 export. The [interfaces](circuits/interfaces/)
+also provide decomposable Qualtran SELECT cores and full dynamic Cirq streams.
+The [verification guide](circuits/verification/) separates fresh checks from
+historical full-suite runs and states the coverage of each test.
+
 ## Resource boundary
 
 Each program implements one pinned 41,052-term **alias–SELECT–unlookup** query:
@@ -70,21 +79,22 @@ Uniform preparation, reflection, QPE and an additional external control are
 excluded.
 
 The best-product single-family PAU in this snapshot uses **5,650 Toffolis ×
-210 qubits = 1,186,500**. The released Frame SELECT reference uses
-14,978 × 126 = 1,887,228. These are tested implementations, not a proof of
-global optimality. This release contains frozen gate programs; it does not
-rerun the optimization search or derive the molecular integrals.
+210 qubits = 1,186,500**. These are tested implementations, not a proof of
+global optimality. The release contains frozen gate programs and generators
+that reproduce them exactly; it does not rerun the optimization search or
+derive the molecular integrals.
 
-## Acknowledgments and comparison
+## Comparison
 
-We thank Li and Chan for the Hamiltonian integral data and Gu et al. for
-Frame SELECT and the reused benchmark code and tables. Both optimized methods
-receive applicable decoder, alias, lookup, comparator, workspace and cleanup
-optimizations, retuned for their interfaces and space budgets. The comparison
-covers each SELECT architecture **with its data loading and cleanup**. Shared
-machinery is credited equally wherever used. The released reference and
-paper-method points retain their narrower optimization scope.
+Frame SELECT, used for this same Fe₂S₂ instance in the recent work of
+[Gu et al.](https://arxiv.org/abs/2610.22367), is included as a comparison.
+The release contains its published implementation, tuning within the paper's
+methods, and an optimized variant.
 
-[NOTICE.md](circuits/NOTICE.md) records specific reuse, method references and
-licenses. [references.bib](references.bib) provides the citations in BibTeX.
+Both optimized architectures receive applicable alias, decoder and cleanup
+optimizations, retuned for their interfaces and space budgets. Comparisons
+include data loading and cleanup as well as the SELECT core.
+
+Method references, reused code/data and licenses are documented in
+[NOTICE.md](circuits/NOTICE.md), with citations in [references.bib](references.bib).
 Code is covered by the repository's Apache-2.0 license.

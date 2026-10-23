@@ -1,0 +1,125 @@
+{
+  "engine": "composed",
+  "alias": {
+    "family": "pau",
+    "alias_mode": "shared",
+    "log_alias": 2,
+    "log_correction": 0,
+    "alias_hold": 14,
+    "select_mode": "banked",
+    "flag_mode": "shared",
+    "log_label": 1,
+    "label_hold": 14,
+    "label_low": 6,
+    "label_window": 6,
+    "label_repair_hold": 7,
+    "alias_low": 2,
+    "alias_window": 7,
+    "alias_repair_hold": 8,
+    "padding": "high",
+    "partition": 0,
+    "lookup_plan": {
+      "base": {
+        "order": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          3,
+          2,
+          1,
+          0
+        ],
+        "hold": 11,
+        "kind": "adaptive",
+        "exact": 6,
+        "sparse_payload": true
+      },
+      "correction": {
+        "order": [
+          9,
+          10,
+          12,
+          11,
+          8,
+          13,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          0,
+          1
+        ],
+        "hold": 13,
+        "kind": "adaptive",
+        "exact": 12,
+        "sparse_payload": true
+      },
+      "label": {
+        "order": [
+          0,
+          9,
+          10,
+          6,
+          11,
+          12,
+          15,
+          14,
+          13,
+          8,
+          7,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "hold": 11
+      }
+    }
+  },
+  "selector": {
+    "engine": "branch_pau",
+    "configuration": {
+      "scheme": "spin_split",
+      "shared_pair": true,
+      "decode_mode": "joint",
+      "padding": "high",
+      "partition": 0,
+      "log_label": 1,
+      "label_hold": 14,
+      "label_low": 6,
+      "label_window": 6,
+      "label_repair_hold": 7,
+      "pooled_actions": true,
+      "action_basis": true
+    },
+    "interface": "family"
+  },
+  "lookup_holds": {},
+  "cost_tree": false,
+  "retained_borrows": 16,
+  "alias_repair": {
+    "low": 2,
+    "window": 7,
+    "hold": 8
+  },
+  "select_repair": {
+    "low": 6,
+    "window": 6,
+    "hold": 7
+  },
+  "id": "pau_two_q215_t5627",
+  "expected": {
+    "toffoli": 5627,
+    "peak_total_qubits": 215,
+    "text_sha256": "858efe6d12da6beea3f53fe953f65aaaef42def4f7ec0f7f6ce589e4afd41a94",
+    "operation_count": 745087
+  }
+}

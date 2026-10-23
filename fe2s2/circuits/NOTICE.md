@@ -26,6 +26,13 @@ retune its permitted parameters. The optimized Frame SELECT and PAU programs
 include subsequent implementation changes. The portable reader, counter and
 smoke runner were written for this export.
 
+The release also includes modular scientific emitters, standalone point
+configurations, format adapters and additional verification code. The vendored
+builder, simulator, chemistry grader, tables and released reference under
+`upstream/` retain their upstream source and license. Adapted benchmark
+machinery in `shared/` is credited in its README. The generators reproduce
+the frozen programs; the new interfaces do not change their resource counts.
+
 ## Shared method references
 
 - [Babbush et al., arXiv:1805.03662](https://arxiv.org/abs/1805.03662): coherent alias sampling.

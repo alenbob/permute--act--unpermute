@@ -1,0 +1,112 @@
+{
+  "engine": "composed",
+  "alias": {
+    "family": "pau",
+    "alias_mode": "sparse",
+    "log_alias": 1,
+    "log_correction": 0,
+    "alias_hold": 14,
+    "select_mode": "banked",
+    "flag_mode": "separate",
+    "log_label": 0,
+    "label_hold": 14,
+    "label_low": 6,
+    "label_window": 5,
+    "label_repair_hold": 8,
+    "alias_low": 2,
+    "alias_window": 6,
+    "alias_repair_hold": 9,
+    "padding": "high",
+    "partition": 0,
+    "lookup_plan": {
+      "label": {
+        "order": [
+          11,
+          15,
+          14,
+          12,
+          13,
+          10,
+          9,
+          5,
+          8,
+          7,
+          6,
+          0,
+          4,
+          2,
+          3,
+          1
+        ],
+        "hold": 6
+      }
+    }
+  },
+  "selector": {
+    "engine": "composed_query",
+    "configuration": {
+      "family": "pau",
+      "alias_mode": "sparse",
+      "log_alias": 1,
+      "log_correction": 0,
+      "alias_hold": 14,
+      "select_mode": "banked",
+      "flag_mode": "separate",
+      "log_label": 0,
+      "label_hold": 14,
+      "label_low": 6,
+      "label_window": 5,
+      "label_repair_hold": 8,
+      "alias_low": 2,
+      "alias_window": 6,
+      "alias_repair_hold": 9,
+      "padding": "high",
+      "partition": 0,
+      "lookup_plan": {
+        "label": {
+          "order": [
+            11,
+            15,
+            14,
+            12,
+            13,
+            10,
+            9,
+            5,
+            8,
+            7,
+            6,
+            0,
+            4,
+            2,
+            3,
+            1
+          ],
+          "hold": 6
+        }
+      }
+    },
+    "interface": "legacy",
+    "multiframe": false
+  },
+  "lookup_holds": {},
+  "cost_tree": false,
+  "retained_borrows": 1,
+  "alias_repair": {
+    "low": 2,
+    "window": 6,
+    "hold": 9
+  },
+  "select_repair": {
+    "low": 6,
+    "window": 5,
+    "hold": 8
+  },
+  "id": "pau_single_q157_t11430",
+  "expected": {
+    "toffoli": 11430,
+    "peak_total_qubits": 157,
+    "text_sha256": "3156db96b60c625eb88df348567b25e0426fc1ae901b82efd0bb74af510eed4e",
+    "operation_count": 549804
+  }
+}

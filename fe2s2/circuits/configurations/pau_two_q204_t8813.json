@@ -1,0 +1,85 @@
+{
+  "engine": "composed",
+  "alias": {
+    "family": "pau",
+    "alias_mode": "sparse",
+    "log_alias": 1,
+    "log_correction": 0,
+    "alias_hold": 14,
+    "select_mode": "banked",
+    "flag_mode": "separate",
+    "log_label": 0,
+    "label_hold": 14,
+    "label_low": 6,
+    "label_window": 5,
+    "label_repair_hold": 8,
+    "alias_low": 2,
+    "alias_window": 6,
+    "alias_repair_hold": 9,
+    "padding": "high",
+    "partition": 0,
+    "lookup_plan": {
+      "label": {
+        "order": [
+          11,
+          15,
+          14,
+          12,
+          13,
+          10,
+          9,
+          5,
+          8,
+          7,
+          6,
+          0,
+          4,
+          2,
+          3,
+          1
+        ],
+        "hold": 6
+      }
+    }
+  },
+  "selector": {
+    "engine": "branch_pau",
+    "configuration": {
+      "scheme": "spin_split",
+      "shared_pair": true,
+      "decode_mode": "joint",
+      "padding": "high",
+      "partition": 0,
+      "log_label": 1,
+      "label_hold": 14,
+      "label_low": 6,
+      "label_window": 6,
+      "label_repair_hold": 7,
+      "pooled_actions": true,
+      "action_basis": true
+    },
+    "interface": "family"
+  },
+  "retained_borrows": 5,
+  "lookup_holds": {
+    "family-label/lookup-0": 12
+  },
+  "alias_repair": {
+    "low": 2,
+    "window": 7,
+    "hold": 8
+  },
+  "select_repair": {
+    "low": 6,
+    "window": 6,
+    "hold": 7
+  },
+  "cost_tree": false,
+  "id": "pau_two_q204_t8813",
+  "expected": {
+    "toffoli": 8813,
+    "peak_total_qubits": 204,
+    "text_sha256": "383cd87770ee8caf6030d159a78038a9def69f62292ab527549e83d24219fbe4",
+    "operation_count": 542852
+  }
+}

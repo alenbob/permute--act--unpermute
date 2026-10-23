@@ -1,0 +1,265 @@
+{
+  "engine": "composed",
+  "alias": {
+    "base_slices": [
+      {
+        "offset": 0,
+        "width": 27,
+        "log_bank": 3,
+        "hold": 14,
+        "order": [
+          10,
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "offset": 27,
+        "width": 5,
+        "log_bank": 5,
+        "hold": 14,
+        "order": [
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      }
+    ],
+    "family": "frame",
+    "alias_mode": "shared",
+    "log_alias": 2,
+    "log_correction": 0,
+    "alias_hold": 14,
+    "select_mode": "banked",
+    "flag_mode": "shared",
+    "log_label": 1,
+    "label_hold": 14,
+    "label_low": 6,
+    "label_window": 6,
+    "label_repair_hold": 7,
+    "alias_low": 2,
+    "alias_window": 7,
+    "alias_repair_hold": 8,
+    "padding": "high",
+    "partition": 0,
+    "lookup_plan": {
+      "base": {
+        "order": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          3,
+          2,
+          1,
+          0
+        ],
+        "hold": 11
+      },
+      "correction": {
+        "order": [
+          9,
+          10,
+          12,
+          11,
+          13,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          0,
+          1
+        ],
+        "hold": 13
+      },
+      "label": {
+        "order": [
+          0,
+          12,
+          10,
+          11,
+          15,
+          14,
+          6,
+          13,
+          9,
+          8,
+          7,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "hold": 10
+      }
+    }
+  },
+  "selector": {
+    "engine": "segmented_query",
+    "configuration": {
+      "base_slices": [
+        {
+          "offset": 0,
+          "width": 27,
+          "log_bank": 3,
+          "hold": 14,
+          "order": [
+            10,
+            9,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "offset": 27,
+          "width": 5,
+          "log_bank": 5,
+          "hold": 14,
+          "order": [
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0
+          ]
+        }
+      ],
+      "family": "frame",
+      "alias_mode": "shared",
+      "log_alias": 2,
+      "log_correction": 0,
+      "alias_hold": 14,
+      "select_mode": "banked",
+      "flag_mode": "shared",
+      "log_label": 1,
+      "label_hold": 14,
+      "label_low": 6,
+      "label_window": 6,
+      "label_repair_hold": 7,
+      "alias_low": 2,
+      "alias_window": 7,
+      "alias_repair_hold": 8,
+      "padding": "high",
+      "partition": 0,
+      "lookup_plan": {
+        "base": {
+          "order": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            3,
+            2,
+            1,
+            0
+          ],
+          "hold": 11
+        },
+        "correction": {
+          "order": [
+            9,
+            10,
+            12,
+            11,
+            13,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            0,
+            1
+          ],
+          "hold": 13
+        },
+        "label": {
+          "order": [
+            0,
+            12,
+            10,
+            11,
+            15,
+            14,
+            6,
+            13,
+            9,
+            8,
+            7,
+            5,
+            4,
+            3,
+            2,
+            1
+          ],
+          "hold": 10
+        }
+      }
+    },
+    "interface": "legacy",
+    "multiframe": true
+  },
+  "lookup_holds": {
+    "segmented-alias/base-0-lookup": 10,
+    "segmented-alias/base-1-lookup": 8,
+    "recycle-alias/correction-lookup": 13,
+    "current-label/lookup": 11
+  },
+  "cost_tree": true,
+  "retained_borrows": 1,
+  "alias_repair": {
+    "low": 2,
+    "window": 7,
+    "hold": 8
+  },
+  "select_repair": {
+    "low": 6,
+    "window": 6,
+    "hold": 7
+  },
+  "id": "frame_extended_q300_t4978",
+  "expected": {
+    "toffoli": 4978,
+    "peak_total_qubits": 300,
+    "text_sha256": "a7f0325085ef9eb9f904fedcdb2c3e29944883d92c37ad9461199fa41d1d55be",
+    "operation_count": 1572290
+  }
+}

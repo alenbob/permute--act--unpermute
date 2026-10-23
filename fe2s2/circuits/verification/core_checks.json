@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "cores": [
+    {
+      "kind": "single",
+      "status": "PASS",
+      "toffoli": 257,
+      "native_peak_qubits": 86,
+      "input_register_widths": {
+        "flags": 7,
+        "label": 29,
+        "system": 40
+      },
+      "qualtran_bloq_instances": 5385,
+      "cirq_operations": 4861,
+      "basis_inputs": 82104,
+      "measurement_cleanup": "strict algebraic ledger on tested inputs"
+    },
+    {
+      "kind": "two",
+      "status": "PASS",
+      "toffoli": 274,
+      "native_peak_qubits": 131,
+      "input_register_widths": {
+        "flags": 7,
+        "label": 28,
+        "system": 40
+      },
+      "qualtran_bloq_instances": 6474,
+      "cirq_operations": 5868,
+      "basis_inputs": 82104,
+      "measurement_cleanup": "strict algebraic ledger on tested inputs"
+    },
+    {
+      "kind": "frame",
+      "status": "PASS",
+      "toffoli": 158,
+      "native_peak_qubits": 153,
+      "input_register_widths": {
+        "index": 16,
+        "flags": 7,
+        "label": 86,
+        "system": 40
+      },
+      "qualtran_bloq_instances": 4145,
+      "cirq_operations": 4117,
+      "basis_inputs": 82104,
+      "measurement_cleanup": "strict algebraic ledger on tested inputs"
+    }
+  ],
+  "scope": "Every valid decoded row, zero and one random 40-bit input per row, for both native core and replay of actual Qualtran decomposition. Scalar phases factored into lookup are supplied separately. Not exhaustive over 2^40 system states or arbitrary invalid labels."
+}

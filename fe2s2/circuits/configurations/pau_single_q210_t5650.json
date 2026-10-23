@@ -1,0 +1,127 @@
+{
+  "engine": "composed",
+  "alias": {
+    "family": "pau",
+    "alias_mode": "shared",
+    "log_alias": 2,
+    "log_correction": 0,
+    "alias_hold": 14,
+    "select_mode": "banked",
+    "flag_mode": "shared",
+    "log_label": 1,
+    "label_hold": 14,
+    "label_low": 6,
+    "label_window": 6,
+    "label_repair_hold": 7,
+    "alias_low": 2,
+    "alias_window": 7,
+    "alias_repair_hold": 8,
+    "padding": "high",
+    "partition": 0,
+    "lookup_plan": {
+      "base": {
+        "order": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          3,
+          2,
+          1,
+          0
+        ],
+        "hold": 10,
+        "kind": "adaptive",
+        "exact": 6,
+        "sparse_payload": true
+      },
+      "correction": {
+        "order": [
+          9,
+          10,
+          12,
+          11,
+          8,
+          13,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          0,
+          1
+        ],
+        "hold": 10,
+        "kind": "adaptive",
+        "exact": 12,
+        "sparse_payload": true
+      },
+      "label": {
+        "order": [
+          0,
+          9,
+          10,
+          6,
+          11,
+          12,
+          15,
+          14,
+          13,
+          8,
+          7,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "hold": 11
+      }
+    }
+  },
+  "selector": {
+    "engine": "reuse_query",
+    "configuration": {
+      "scheme": "common_phase",
+      "shared_pair": false,
+      "decode_mode": "joint",
+      "padding": "high",
+      "partition": 0,
+      "log_label": 1,
+      "label_hold": 14,
+      "label_low": 6,
+      "label_window": 6,
+      "label_repair_hold": 7
+    },
+    "interface": "family"
+  },
+  "lookup_holds": {
+    "recycle-alias/base-lookup": 10,
+    "recycle-alias/correction-lookup": 10,
+    "phase-label/lookup": 12
+  },
+  "cost_tree": true,
+  "retained_borrows": 11,
+  "alias_repair": {
+    "low": 2,
+    "window": 7,
+    "hold": 8
+  },
+  "select_repair": {
+    "low": 6,
+    "window": 6,
+    "hold": 7
+  },
+  "id": "pau_single_q210_t5650",
+  "expected": {
+    "toffoli": 5650,
+    "peak_total_qubits": 210,
+    "text_sha256": "ecbc4919ca4a67b9b3a004c355c1fb51594cf4ee71f14510fa56114138a517be",
+    "operation_count": 743443
+  }
+}

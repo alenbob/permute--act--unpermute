@@ -1,0 +1,62 @@
+{
+  "engine": "composed",
+  "alias": {
+    "family": "frame",
+    "alias_mode": "ordered",
+    "log_alias": 0,
+    "log_correction": 0,
+    "alias_hold": 14,
+    "select_mode": "released",
+    "flag_mode": "shared",
+    "log_label": 3,
+    "label_hold": 14,
+    "label_low": 6,
+    "label_window": 6,
+    "label_repair_hold": 14,
+    "alias_low": 2,
+    "alias_window": 5,
+    "alias_repair_hold": 10,
+    "padding": "high",
+    "partition": 0
+  },
+  "selector": {
+    "engine": "consistent_query",
+    "configuration": {
+      "family": "frame",
+      "alias_mode": "ordered",
+      "log_alias": 0,
+      "log_correction": 0,
+      "alias_hold": 14,
+      "select_mode": "released",
+      "flag_mode": "shared",
+      "log_label": 3,
+      "label_hold": 14,
+      "label_low": 6,
+      "label_window": 6,
+      "label_repair_hold": 14,
+      "alias_low": 2,
+      "alias_window": 5,
+      "alias_repair_hold": 10,
+      "padding": "high",
+      "partition": 0
+    },
+    "interface": "legacy",
+    "multiframe": true
+  },
+  "lookup_holds": {},
+  "cost_tree": false,
+  "retained_borrows": 1,
+  "alias_repair": {
+    "low": 2,
+    "window": 5,
+    "hold": 10
+  },
+  "select_repair": null,
+  "id": "frame_extended_q126_t14500",
+  "expected": {
+    "toffoli": 14500,
+    "peak_total_qubits": 126,
+    "text_sha256": "4e501b5146c3edc7c8068e0e3790545fa243751d6a9f8069a10764cd6a88db5a",
+    "operation_count": 420791
+  }
+}

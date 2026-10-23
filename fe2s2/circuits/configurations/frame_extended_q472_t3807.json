@@ -1,0 +1,180 @@
+{
+  "engine": "composed",
+  "alias": {
+    "family": "frame",
+    "alias_mode": "shared",
+    "log_alias": 3,
+    "log_correction": 1,
+    "alias_hold": 14,
+    "select_mode": "banked",
+    "flag_mode": "shared",
+    "log_label": 2,
+    "label_hold": 14,
+    "label_low": 6,
+    "label_window": 6,
+    "label_repair_hold": 7,
+    "alias_low": 2,
+    "alias_window": 7,
+    "alias_repair_hold": 8,
+    "padding": "high",
+    "partition": 0,
+    "lookup_plan": {
+      "base": {
+        "order": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          2,
+          1,
+          0
+        ],
+        "hold": 10
+      },
+      "correction": {
+        "order": [
+          9,
+          11,
+          8,
+          10,
+          7,
+          12,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "hold": 12
+      },
+      "label": {
+        "order": [
+          0,
+          1,
+          9,
+          10,
+          11,
+          12,
+          15,
+          14,
+          13,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2
+        ],
+        "hold": 11
+      }
+    }
+  },
+  "selector": {
+    "engine": "composed_query",
+    "configuration": {
+      "family": "frame",
+      "alias_mode": "shared",
+      "log_alias": 3,
+      "log_correction": 1,
+      "alias_hold": 14,
+      "select_mode": "banked",
+      "flag_mode": "shared",
+      "log_label": 2,
+      "label_hold": 14,
+      "label_low": 6,
+      "label_window": 6,
+      "label_repair_hold": 7,
+      "alias_low": 2,
+      "alias_window": 7,
+      "alias_repair_hold": 8,
+      "padding": "high",
+      "partition": 0,
+      "lookup_plan": {
+        "base": {
+          "order": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            2,
+            1,
+            0
+          ],
+          "hold": 10
+        },
+        "correction": {
+          "order": [
+            9,
+            11,
+            8,
+            10,
+            7,
+            12,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0
+          ],
+          "hold": 12
+        },
+        "label": {
+          "order": [
+            0,
+            1,
+            9,
+            10,
+            11,
+            12,
+            15,
+            14,
+            13,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2
+          ],
+          "hold": 11
+        }
+      }
+    },
+    "interface": "legacy",
+    "multiframe": true
+  },
+  "lookup_holds": {},
+  "cost_tree": false,
+  "retained_borrows": 1,
+  "alias_repair": {
+    "low": 2,
+    "window": 7,
+    "hold": 8
+  },
+  "select_repair": {
+    "low": 6,
+    "window": 6,
+    "hold": 7
+  },
+  "id": "frame_extended_q472_t3807",
+  "expected": {
+    "toffoli": 3807,
+    "peak_total_qubits": 472,
+    "text_sha256": "b20f62f6a0caa05281c5036888cb6de6b77cf75db878e2fc52f3ec0e57b5577c",
+    "operation_count": 1302183
+  }
+}

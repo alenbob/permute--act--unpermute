@@ -1,0 +1,85 @@
+{
+  "engine": "composed",
+  "alias": {
+    "family": "pau",
+    "alias_mode": "sparse",
+    "log_alias": 1,
+    "log_correction": 0,
+    "alias_hold": 14,
+    "select_mode": "banked",
+    "flag_mode": "separate",
+    "log_label": 0,
+    "label_hold": 14,
+    "label_low": 6,
+    "label_window": 5,
+    "label_repair_hold": 8,
+    "alias_low": 2,
+    "alias_window": 6,
+    "alias_repair_hold": 9,
+    "padding": "high",
+    "partition": 0,
+    "lookup_plan": {
+      "label": {
+        "order": [
+          11,
+          15,
+          14,
+          12,
+          13,
+          10,
+          9,
+          5,
+          8,
+          7,
+          6,
+          0,
+          4,
+          2,
+          3,
+          1
+        ],
+        "hold": 6
+      }
+    }
+  },
+  "selector": {
+    "engine": "consistent_query",
+    "configuration": {
+      "family": "frame",
+      "alias_mode": "ordered",
+      "log_alias": 0,
+      "log_correction": 0,
+      "alias_hold": 14,
+      "select_mode": "released",
+      "flag_mode": "shared",
+      "log_label": 3,
+      "label_hold": 14,
+      "label_low": 6,
+      "label_window": 6,
+      "label_repair_hold": 14,
+      "alias_low": 2,
+      "alias_window": 5,
+      "alias_repair_hold": 10,
+      "padding": "high",
+      "partition": 0
+    },
+    "interface": "legacy",
+    "multiframe": true
+  },
+  "retained_borrows": 16,
+  "lookup_holds": {},
+  "alias_repair": {
+    "low": 2,
+    "window": 7,
+    "hold": 8
+  },
+  "select_repair": null,
+  "cost_tree": false,
+  "id": "frame_extended_q201_t10388",
+  "expected": {
+    "toffoli": 10388,
+    "peak_total_qubits": 201,
+    "text_sha256": "93c5fc037f3e9a25254d4ab9228046f128876309a41d61bd8eb5e326f5dc20cc",
+    "operation_count": 497720
+  }
+}

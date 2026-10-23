@@ -1,0 +1,161 @@
+{
+  "engine": "composed",
+  "alias": {
+    "base_slices": [
+      {
+        "offset": 0,
+        "width": 24,
+        "log_bank": 3,
+        "hold": 14,
+        "order": [
+          10,
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "offset": 24,
+        "width": 8,
+        "log_bank": 4,
+        "hold": 14,
+        "order": [
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      }
+    ],
+    "family": "pau",
+    "alias_mode": "shared",
+    "log_alias": 2,
+    "log_correction": 0,
+    "alias_hold": 14,
+    "select_mode": "banked",
+    "flag_mode": "separate",
+    "log_label": 2,
+    "label_hold": 14,
+    "label_low": 6,
+    "label_window": 6,
+    "label_repair_hold": 7,
+    "alias_low": 2,
+    "alias_window": 7,
+    "alias_repair_hold": 8,
+    "padding": "high",
+    "partition": 0,
+    "lookup_plan": {
+      "base": {
+        "order": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          3,
+          2,
+          1,
+          0
+        ],
+        "hold": 11
+      },
+      "correction": {
+        "order": [
+          9,
+          10,
+          12,
+          11,
+          13,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          0,
+          1
+        ],
+        "hold": 13
+      },
+      "label": {
+        "order": [
+          0,
+          1,
+          15,
+          14,
+          11,
+          10,
+          9,
+          13,
+          12,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2
+        ],
+        "hold": 8
+      }
+    }
+  },
+  "selector": {
+    "engine": "phase_pau",
+    "configuration": {
+      "scheme": "common_phase",
+      "shared_pair": false,
+      "decode_mode": "joint",
+      "padding": "high",
+      "partition": 0,
+      "log_label": 1,
+      "label_hold": 14,
+      "label_low": 6,
+      "label_window": 6,
+      "label_repair_hold": 7
+    },
+    "interface": "family"
+  },
+  "retained_borrows": 16,
+  "lookup_holds": {
+    "segmented-alias/base-0-lookup": 10,
+    "segmented-alias/base-1-lookup": 9,
+    "recycle-alias/correction-lookup": 13,
+    "phase-label/lookup": 12
+  },
+  "alias_repair": {
+    "low": 2,
+    "window": 7,
+    "hold": 8
+  },
+  "select_repair": {
+    "low": 6,
+    "window": 6,
+    "hold": 7
+  },
+  "cost_tree": true,
+  "id": "pau_single_q274_t5253",
+  "expected": {
+    "toffoli": 5253,
+    "peak_total_qubits": 274,
+    "text_sha256": "7c28b39f455d9098a6876aa3f2ff03234f39dd6b2f59c51e206799193e9f072f",
+    "operation_count": 1331190
+  }
+}

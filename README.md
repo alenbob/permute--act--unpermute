@@ -1,12 +1,9 @@
 # Permute–act–unpermute
 
-Code and reproducibility material for the permute–act–unpermute (PAU) framework:
+From
 
 **[Efficient Block Encoding of Structured Hamiltonians by Separating Where and What](https://arxiv.org/abs/2610.03686)**
-
 Alessandro Summer and François Jamet
-
-[Read on arXiv](https://arxiv.org/abs/2610.03686) · [Paper PDF](https://arxiv.org/pdf/2610.03686)
 
 PAU separates **where** a Hamiltonian term acts from **what** it applies.
 A permutation network tailored to the support geometry—such as nearest-neighbour

@@ -58,7 +58,28 @@ results, not a global optimality claim. The package reproduces this frozen
 circuit and video snapshot; it does not rerun the optimization search or
 derive the molecular integrals from first principles.
 
-See [NOTICE.md](circuits/NOTICE.md) for scientific attribution and upstream
-code/data credits. Code is covered by the repository's Apache-2.0 license;
+## Acknowledgments and comparison
+
+Both optimized implementations use the same Fe₂S₂ Hamiltonian and benchmark,
+and both receive the applicable decoder, alias-sampling, lookup, comparator,
+workspace and cleanup optimizations, retuned for their respective interfaces
+and space budgets. The PAU points implement Summer–Jamet PAU; the optimized
+Frame SELECT points implement the architecture of Gu et al. Their resource
+difference therefore compares these two SELECT architectures together with
+their associated data-loading and cleanup requirements. Shared implementation
+machinery is credited equally for both wherever it is used.
+
+We acknowledge Summer and Jamet for the PAU framework; Gu, Kemeny, Yelin and
+Lukin for Frame SELECT, the released benchmark, and the reused preprocessing
+and implementation machinery; and Li and Chan for the Hamiltonian integral
+data. The shared alias-sampling, lookup and measurement-based cleanup methods
+retain the references listed in [NOTICE.md](circuits/NOTICE.md). The Fe₂S₂ PAU
+implementations are subsequent applications of the PAU framework.
+
+The released Frame SELECT reference and paper-method points retain their
+original optimization scope. Comparisons against them also include the
+additional implementation improvements applied to the experimental series.
+
+Code is covered by the repository's Apache-2.0 license;
 Rubik retains its bundled SIL Open Font License. The third-party logos retain
 their owners' rights and identify the compared methods.

@@ -150,4 +150,7 @@ come from [Gu et al., arXiv:2610.22367](https://arxiv.org/abs/2610.22367) and it
 `64b5a13aa249f1360846657392e6c66817b26d0f`. Integral data originate with
 [Li and Chan](https://github.com/zhendongli2008/Active-space-model-for-Iron-Sulfur-Clusters).
 The Fe₂S₂ PAU results are a subsequent application, not results already
-reported in the original PAU paper. See `NOTICE.md` for the shared-method credits.
+reported in the original PAU paper. See the
+[acknowledgments and comparison](../README.md#acknowledgments-and-comparison)
+for the shared optimization treatment, and `NOTICE.md` for the method and
+code/data credits.

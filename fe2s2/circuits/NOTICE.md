@@ -1,4 +1,4 @@
-# Attribution and upstream notices
+# Attribution and provenance
 
 The original Fe₂S₂ benchmark implementation, task data and circuit-model
 infrastructure are from **Andi Gu, Alek H. Kemeny, Susanne F. Yelin and Mikhail
@@ -6,15 +6,14 @@ D. Lukin**, *Discovering state-of-the-art quantum circuits with large language
 models*, arXiv:2610.22367, and https://github.com/andigu/uncompute, pinned at
 commit `64b5a13aa249f1360846657392e6c66817b26d0f`. That upstream code is released
 under Apache License 2.0; its license is reproduced without changes in
-`LICENSES/Apache-2.0.txt`. This export preserves attribution for the upstream
-material and does not claim independent authorship of reused methods or data.
+`LICENSES/Apache-2.0.txt`.
 
-The gate programs are normalized, readable exports. The reference frame
-program follows the released implementation; the circles retune its permitted
-workspace/window parameters. The experimental frame and PAU programs include
-subsequent implementation changes and should not be represented as unmodified
-upstream results. The portable text reader, counter and smoke runner were
-written for this export; they are not the upstream evaluator.
+The gate programs are modified, normalized text exports. The reference frame
+program follows the released implementation; the paper-method programs retune
+its permitted workspace/window parameters. The optimized Frame SELECT and PAU
+programs include subsequent implementation changes. The portable reader,
+counter and smoke runner were written for this export. Their verification
+scope is documented in the accompanying README files.
 
 **Scientific contributions and reuse**
 
@@ -36,6 +35,6 @@ written for this export; they are not the upstream evaluator.
 The additional Fe₂S₂ work composes PAU permutations, encodes local actions,
 splits support/action families and tunes the shared alias/decoder/comparator/
 cleanup toolkit for both architectures. These application results postdate
-the original PAU paper. The measured resource differences include the label
-loading and cleanup required by each architecture; they do not isolate a
-core-only advantage or allocate scientific credit by gate fractions.
+the original PAU paper. See the [acknowledgments and comparison](../README.md#acknowledgments-and-comparison)
+for the shared optimization treatment and the scope of the architectural
+comparison.

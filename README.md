@@ -1,7 +1,6 @@
 # Permute–act–unpermute
 
 From
-
 **[Efficient Block Encoding of Structured Hamiltonians by Separating Where and What](https://arxiv.org/abs/2610.03686)**
 Alessandro Summer and François Jamet
 

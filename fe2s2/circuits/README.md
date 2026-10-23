@@ -1,26 +1,14 @@
 # Fe₂S₂ circuits
 
-PAU implementations for the 40-qubit Fe₂S₂ Hamiltonian, with a common
-four-mode action core or two support/action families. The programs cover
-different workspace budgets and include Frame SELECT comparison circuits.
-See the [benchmark overview](../README.md) for the methods and references.
-
-This package contains **31 exact, fully decomposed gate programs**: all 24
-points in the video, including the released reference, plus seven two-family
-PAU comparisons from the wider figure. It is a frozen gate-level
-release: the programs already contain the data lookups, alias decision,
-SELECT, measurement feed-forward and cleanup. They are not resource formulas
-or black-box circuit placeholders.
-
-The small `circuits.py` reader, resource counter and simulator need **Python
-3.10 or newer, with no third-party packages and no network access**. The circuit
-programs are compressed plain text; `emit` prints their complete readable code.
-The high-level circuit generators and optimization-search history are not
-included in this essential export.
+**31 fully decomposed gate programs** for the 40-qubit Fe₂S₂ benchmark:
+single- and two-family PAU, plus Frame SELECT comparisons. Each includes
+alias sampling, SELECT, measurement feed-forward and cleanup.
+The compressed plain-text programs are frozen exports; high-level generators
+and optimization-search history are not included.
 
 ## Run
 
-From this directory, using your Python 3.10+ interpreter:
+Python 3.10+; standard library only. From this directory:
 
 ```sh
 python circuits.py list
@@ -28,51 +16,28 @@ python circuits.py check
 python circuits.py smoke --shots 64
 ```
 
-Inspect or test one circuit:
+For one circuit:
 
 ```sh
-python circuits.py show pau_single_q210_t5650 --limit 80
 python circuits.py emit pau_single_q210_t5650 > pau_single.gates
 python circuits.py check pau_single_q210_t5650
 python circuits.py smoke pau_single_q210_t5650 --shots 256 --seed 42
 ```
 
-`check` reads the actual gate program, verifies its hashes, counts CCX/CCZ,
-counts Clifford operations, checks the occupied qubit range, and reconciles the
-phase ledger. `smoke` additionally checks sampled alias boundary cases, system
-outputs, global signs, clean resets and final ancillas with randomly sampled
-measurement records. Checking all programs can take several minutes.
+`check` verifies program hashes, counts gates and occupied qubits, and
+reconciles the phase ledger. `smoke` tests sampled alias decisions, system
+outputs, signs and clean ancillas with sampled measurement records.
+`emit` prints the complete program; [FORMAT.md](FORMAT.md) defines its gates.
 
-## Connect the code to the video
+| Circuit ID prefix | Construction |
+|---|---|
+| `pau_single` | PAU with one common four-mode action core |
+| `pau_two` | PAU with two support/action families |
+| `frame_released` | Released Frame SELECT reference |
+| `frame_paper` | Frame SELECT tuned within the paper's methods |
+| `frame_extended` | Optimized Frame SELECT |
 
-The current video contains **24 points including the released reference**.
-All 24 have complete gate programs here. Seven extra two-family PAU programs
-are included from the wider figure; they are not displayed in the current video.
-The exact mapping is in [`../video/plot_data.json`](../video/plot_data.json).
-Run `python ../video/check_data.py --recount` to check every video point against
-the gates, independently of the displayed numbers.
-
-| Video marker | ID prefix | Construction |
-|---|---|---|
-| Salmon cross | `frame_released` | Released Frame SELECT implementation |
-| Salmon hollow circles | `frame_paper` | Frame SELECT using the paper's methods |
-| Salmon filled diamonds | `frame_extended` | Frame SELECT with shared optimizations |
-| Yellow hollow squares | `pau_single` | Summer–Jamet PAU with a common routed-action core |
-| Not displayed | `pau_two` | Two-family PAU comparison circuits |
-
-The yellow rectangle ends at `pau_single_q210_t5650`: 5,650 Toffolis × 210
-total qubits = 1,186,500. The released salmon rectangle ends at
-`frame_released_q126_t14978`: 14,978 × 126 = 1,887,228. These are complete
-alias–SELECT–unlookup costs, not costs of the system-register core alone.
-
-The frozen `manifest.json` retains its original blue/red figure style fields
-and 31-point description so that existing evidence hashes remain valid.
-Those historical color and marker fields do not describe the video's palette.
-Circuit IDs, gate programs, resource counts and recorded test scopes are unchanged.
-
-## What the circuits do
-
-The boundary map is
+## Circuit contract
 
 ```text
 |i>_16 |coin>_16 |x>_40
@@ -83,72 +48,45 @@ phase = coefficient_sign[selected] XOR half_Y_parity[selected]
         XOR parity(x AND Z_or_Y_mask[selected])
 ```
 
-The row range is `0 <= i < 41052`; other row addresses are outside the
-benchmark contract. The system input ranges over all 40-bit basis states,
-including both parity sectors. The finite-precision alias table, signs and
-normalization are pinned in the reference-data hashes. The Hamiltonian is the
-Li–Chan (30-electron, 20-orbital) Fe₂S₂ instance after the benchmark's
-`|coefficient| >= 1e-4` truncation, with the identity term removed and 16-bit
-alias precision.
+Valid rows are `0 <= i < 41052`; the contract covers all 40-bit system inputs
+in both parity sectors. The Li–Chan instance has 30 electrons in 20 spatial
+orbitals, with `|coefficient| >= 1e-4` truncation, the identity term removed
+and 16-bit alias precision. Reference hashes pin the table, signs and normalization.
 
-The common logical stages are:
+The circuit loads alias data, selects a term, decodes its controls, applies
+the system operation, then restores the address and cleans the workspace.
+PAU uses **permute → local action → unpermute**; Frame SELECT uses
+**σ† → representative Pauli R → σ**. Two-family PAU splits the routed action
+into separate support cases with the same external contract.
 
-1. Load/combine alias data, compare the coin and select a term address.
-2. Decode the selected term into the architecture's control payload.
-3. Apply the system operation. PAU executes **permute → local action →
-   unpermute**, routing active modes to a fixed four-mode target. Frame SELECT
-   executes **σ† → representative Pauli R → σ**. The two-family PAU uses
-   separate support/action cases while preserving the same boundary map.
-4. Erase the payload, restore the input address, uncompute the alias decision
-   and repair all measurement-induced phases.
+Resources use CCX + CCZ Toffoli equivalents and total peak qubits, including
+the 40-qubit system. Measurement-conditioned Clifford corrections remain
+Clifford. The exported occupied-wire range matches the emitter's recorded
+peak, but allocation/free events are not retained, so this does not independently
+prove a minimal lifetime schedule. Phase costs may aggregate repeated visits;
+phase peaks cannot be added. See the [resource boundary](../README.md#resource-boundary).
 
-The phase ledger is a cost breakdown, not a gate-offset map: named phases may
-be revisited and their counters aggregated. Phase peaks cannot be added.
+## Verification
 
-## Resource convention and verification scope
+The following exact source streams passed the full upstream test suite:
 
-The reported count is **CCX + CCZ Toffoli equivalents**, not a count of T gates.
-Temporary logical AND computation costs one such gate; its measurement-based
-uncomputation uses HMR and outcome-conditioned Clifford corrections. Clifford
-counts are included separately. The calculation assumes the same abstract
-connectivity and logical gate model for all programs; physical routing and
-error correction are not added here.
+| PAU circuit | Tested shots | Report |
+|---|---:|---|
+| `pau_single_q210_t5650` | 18,419,194 | [JSON](full_suite/pau_single_q210_t5650.json) |
+| `pau_single_q593_t3172` | 18,419,191 | [JSON](full_suite/pau_single_q593_t3172.json) |
 
-Space includes the **40 system qubits**, 16 address qubits, 16 coin qubits and
-live workspace. The original emitter reused qubit IDs; this export independently
-checks that `max used qubit ID + 1` matches its recorded peak-live count. The
-gate stream does not retain allocation/free events and does not independently
-prove the minimal lifetime schedule. The product is Toffoli count × peak total
-logical qubits, **not depth, elapsed time or integrated spacetime volume**.
+Both reports have zero wrong-output, wrong-sign, dirty-qubit and failed-shot
+counters. Their `h_ops` hashes match the manifest's `original_gate_stream_sha256`;
+`conversion_checks.json` records operation-by-operation preservation in this
+text format. These are existing full-suite runs, not new runs during packaging.
+Other circuits retain their recorded full/subset scope; optimized rows have
+82,104 all-row comparator-boundary checks and up to 65,536 native probes.
 
-Uniform state preparation, reflection, QPE and an additional external control
-are outside this boundary. Both experimental methods use applicable shared
-alias, lookup, comparator, workspace and cleanup optimizations, retuned for
-their different interfaces. Improvements over the released cross therefore
-include compilation improvements as well as the choice of SELECT architecture.
+`manifest.json` and `checks.json` retain the original export's evidence and
+style fields. The supplementary reports above extend that historical record.
+`../release_checks.json` records the current package recount and sampled checks.
+Finite tests do not certify every quantum input or measurement outcome.
 
-`recorded_validation` preserves the prior full-suite/subset distinction for
-each exact source program. These historical tests were **not rerun in full**
-when packaging. `checks.json` records the original export checks and smoke tests;
-`../release_checks.json` records fresh checks for this public package. These
-checks do not certify all inputs or all measurement outcomes. Neither the tests
-nor the finite optimization search establishes a global optimum.
-
-`conversion_checks.json` separately records an operation-by-operation comparison
-against the original programs using the upstream reference parser. This checks
-that the text export preserves the complete gate sequence and register mapping.
-
-## Files and provenance
-
-- `circuits.py`: portable reader, resource checker and sampled basis-state simulator.
-- `circuits/*.gates.xz`: complete, decomposed circuit programs; see `FORMAT.md`.
-- `manifest.json`: point mapping, hashes, phase resources and prior test scope.
-- `data/reference.json.xz`: pinned alias words and Pauli-action masks.
-- `checks.json`: original resource and smoke-test results for this export.
-- `conversion_checks.json`: exact gate-sequence preservation checks.
-- `NOTICE.md` and `LICENSES/Apache-2.0.txt`: scientific attribution and upstream licensing.
-
-See the
-[acknowledgments and comparison](../README.md#acknowledgments-and-comparison)
-for the shared optimization treatment. [NOTICE.md](NOTICE.md) records the
-method references, data sources, specific code reuse and pinned source revision.
+`circuits.py` is the reader, counter and simulator; `data/reference.json.xz`
+holds the alias words and Pauli masks. The [benchmark overview](../README.md)
+sets the comparison scope; [NOTICE.md](NOTICE.md) records code/data attribution.

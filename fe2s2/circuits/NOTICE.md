@@ -12,6 +12,8 @@ Alek H. Kemeny, Susanne F. Yelin and Mikhail D. Lukin,
 arXiv:2610.22367](https://arxiv.org/abs/2610.22367), and
 [andigu/uncompute](https://github.com/andigu/uncompute/tree/64b5a13aa249f1360846657392e6c66817b26d0f),
 pinned at commit `64b5a13aa249f1360846657392e6c66817b26d0f`.
+The paper's authors are affiliated with Harvard, Anthropic and QuEra;
+the comparison-figure logos are not a complete list of author affiliations.
 Reuse includes term ordering, frame partitions and representatives, sign/gauge
 and permutation data, the alias table, and lookup-walk/comparator/repair
 machinery, used by both implementations where applicable. The upstream code
@@ -31,5 +33,5 @@ smoke runner were written for this export.
 - [Gidney, arXiv:1709.06648](https://arxiv.org/abs/1709.06648): temporary logical ANDs and measurement-based cleanup.
 - [Babbush et al., arXiv:2603.28846](https://arxiv.org/abs/2603.28846): the kickmix circuit model used by the benchmark.
 
-The [benchmark README](../README.md#acknowledgments-and-comparison) describes
-the common optimization treatment and the scope of the comparison.
+[BibTeX entries](../references.bib) are provided for these sources. Logos remain
+the property of their owners; their inclusion does not imply endorsement.

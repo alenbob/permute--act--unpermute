@@ -1,14 +1,33 @@
 {
   "status": "PASS",
   "circuit_count": 31,
-  "video_point_count": 24,
+  "plotted_point_count": 24,
   "sampled_inputs_per_circuit": 256,
   "seed": 20261023,
-  "scope": "Exact gate hashes and resource recounts, phase-ledger checks, video-point linkage, and sampled basis-state/measurement-record checks. Not an exhaustive semantic certificate or a proof of minimal space.",
-  "checked_release_files": 0,
+  "scope": "Exact gate hashes and resource recounts, phase-ledger checks, point-data and recorded full-suite report linkage, and sampled basis-state/measurement-record checks. Not an exhaustive semantic certificate or a proof of minimal space.",
+  "checked_release_files": 50,
+  "recorded_full_suite": {
+    "status": "PASS",
+    "scope": "Recorded full-suite report/hash linkage; no new full-suite run.",
+    "reports": [
+      {
+        "id": "pau_single_q210_t5650",
+        "shots": 18419194,
+        "report_sha256": "c4f8ca71e53c334974076941b243844aa8ae54549249bf01b2839b9729de7e8d",
+        "original_gate_stream_sha256": "4a990bcbfe1b1564f42bd72a54742e7974b519b62c40e52e5ff7db3502f9d253"
+      },
+      {
+        "id": "pau_single_q593_t3172",
+        "shots": 18419191,
+        "report_sha256": "b0d806c8a84702fb0235ebf40e555831cbf8e0626ee60806894d877315e3d8bd",
+        "original_gate_stream_sha256": "cd575bac2ffd43923e6f36e3eb49489bffb864d8a60480662fbc424ce301f24d"
+      }
+    ]
+  },
   "circuit_manifest_sha256": "847dba096d3e0159300813a5775428bfb1d2af002a4b2fb5e22b9d51e0317617",
   "checker_sha256": "137a510f93088953d3a4585df406565f1e6e743cf32da6fbaf9787f2b2a6de2c",
-  "plot_data_sha256": "7a47bc05fae9777d82aae3795e661f51d2cc0cb270865a40d7a8c89169879f5b",
+  "data_checker_sha256": "622076182365900d61662efe55f4540e85257d6dfe940446f721d11f581800d8",
+  "plot_data_sha256": "289fc0c5d12580ac078a79275abe98da560701a71a3e54716d67de5c39d7d6cd",
   "results": [
     {
       "resources": {

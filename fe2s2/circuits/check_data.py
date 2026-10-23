@@ -1,4 +1,4 @@
-"""Link every displayed video point to its complete gate program."""
+"""Link every displayed point to its complete gate program."""
 from pathlib import Path
 import argparse
 import hashlib
@@ -6,11 +6,43 @@ import importlib.util
 import json
 
 HERE = Path(__file__).resolve().parent
-CIRCUITS = HERE.parent / 'circuits'
+CIRCUITS = HERE
+
+
+def check_full_suite_reports():
+    """Join the two supplementary upstream reports to the frozen source streams.
+
+    This checks recorded evidence; it does not rerun the upstream suite.
+    """
+    manifest = json.loads((CIRCUITS / 'manifest.json').read_text())
+    records = {p['id']: p for p in manifest['circuits']}
+    expected = {'pau_single_q210_t5650': 18419194,
+                'pau_single_q593_t3172': 18419191}
+    paths = {p.stem: p for p in (CIRCUITS / 'full_suite').glob('*.json')}
+    assert paths.keys() == expected.keys(), 'Supplementary report inventory'
+    results = []
+    for circuit_id, shots in expected.items():
+        path = paths[circuit_id]
+        report = json.loads(path.read_text())
+        record = records[circuit_id]
+        assert report['verdict'] == 'OK' and report['fail'] is None, circuit_id
+        assert report['h_ops'] == record['original_gate_stream_sha256'], circuit_id
+        for counter in ['wrong_output_shots', 'wrong_sign_shots', 'dirty_qubits', 'failed_shots']:
+            assert report['counters'][counter] == 0, (circuit_id, counter)
+        for field, key in [('toffoli', 'toffoli'), ('qubits', 'peak_total_qubits'),
+                           ('tq_cost', 'toffoli_times_peak'), ('ops', 'operation_count'),
+                           ('clifford', 'clifford')]:
+            assert report['metrics'][field] == record[key], (circuit_id, field)
+        assert report['metrics']['shots'] == shots, circuit_id
+        results.append(dict(id=circuit_id, shots=shots,
+                            report_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+                            original_gate_stream_sha256=report['h_ops']))
+    return dict(status='PASS', scope='Recorded full-suite report/hash linkage; no new full-suite run.',
+                reports=results)
 
 
 def check_data(recount=False):
-    data = json.loads((HERE / 'plot_data.json').read_text())
+    data = json.loads((HERE.parent / 'video/plot_data.json').read_text())
     path = CIRCUITS / 'manifest.json'
     assert hashlib.sha256(path.read_bytes()).hexdigest() == data['circuit_manifest_sha256']
     manifest = json.loads(path.read_text())
@@ -52,4 +84,5 @@ if __name__ == '__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--recount',action='store_true',help='Read every displayed gate program and recount resources.')
     args=parser.parse_args()
-    print(json.dumps(check_data(args.recount),indent=2))
+    print(json.dumps(dict(point_data=check_data(args.recount),
+                          full_suite=check_full_suite_reports()),indent=2))

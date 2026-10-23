@@ -28,7 +28,6 @@ The [Fe₂S₂ benchmark](fe2s2/) applies PAU to a molecular Hamiltonian and
 explores Toffoli–qubit tradeoffs with single- and multiple-family constructions.
 
 - [Fe₂S₂ circuits and resource checks](fe2s2/circuits/)
-- [Fe₂S₂ resource-plot video](fe2s2/video/)
 - [Run the Fe₂S₂ reproduction](fe2s2/)
 
 Each benchmark documents its problem instance, comparison methods, resource

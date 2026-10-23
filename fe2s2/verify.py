@@ -35,20 +35,23 @@ def main():
             assert path.is_file() and hashlib.sha256(path.read_bytes()).hexdigest()==digest,name
             checked_files+=1
     circuits=load('frozen_circuits',ROOT/'circuits/circuits.py')
-    link=load('video_link',ROOT/'video/check_data.py')
+    link=load('point_link',ROOT/'circuits/check_data.py')
     point_map=link.check_data()
+    full_suite=link.check_full_suite_reports()
     results=[]
     for point in circuits.manifest()['circuits']:
         counts=circuits.resources(point)
         semantic=circuits.smoke(point,args.shots,args.seed)
         results.append(dict(resources=counts,smoke=semantic))
         print(f"PASS {point['id']}: {counts['toffoli']} Toffoli, {counts['peak_total_qubits']} qubits; {args.shots} sampled inputs",flush=True)
-    summary=dict(status='PASS',circuit_count=len(results),video_point_count=point_map['displayed_points'],
+    summary=dict(status='PASS',circuit_count=len(results),plotted_point_count=point_map['displayed_points'],
         sampled_inputs_per_circuit=args.shots,seed=args.seed,
-        scope='Exact gate hashes and resource recounts, phase-ledger checks, video-point linkage, and sampled basis-state/measurement-record checks. Not an exhaustive semantic certificate or a proof of minimal space.',
+        scope='Exact gate hashes and resource recounts, phase-ledger checks, point-data and recorded full-suite report linkage, and sampled basis-state/measurement-record checks. Not an exhaustive semantic certificate or a proof of minimal space.',
         checked_release_files=checked_files,
+        recorded_full_suite=full_suite,
         circuit_manifest_sha256=hashlib.sha256((ROOT/'circuits/manifest.json').read_bytes()).hexdigest(),
         checker_sha256=hashlib.sha256((ROOT/'circuits/circuits.py').read_bytes()).hexdigest(),
+        data_checker_sha256=hashlib.sha256((ROOT/'circuits/check_data.py').read_bytes()).hexdigest(),
         plot_data_sha256=hashlib.sha256((ROOT/'video/plot_data.json').read_bytes()).hexdigest(),results=results)
     if args.report:
         args.report.write_text(json.dumps(summary,indent=2)+'\n')

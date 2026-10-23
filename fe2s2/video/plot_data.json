@@ -337,6 +337,6 @@
   },
   "display_policy": "The exact PAU rectangle endpoint replaces the nearby overlapping display representative; multiple-family points are omitted from this video.",
   "boundary": "Pinned 41,052-term alias--SELECT--unlookup; 40 system qubits, 16 row bits, 16 coin bits. Original alias precision, signs and normalization. Initial uniform preparation, reflection, QPE and additional external control excluded.",
-  "validation_scope": "Frozen rows retain their original full/subset scope. Every new row has 82,104 all-row comparator-boundary checks and up to 65,536 unchanged upstream native probes. Full 18,419,296-shot schedules were not rerun for the new rows. No global optimality claim.",
+  "validation_scope": "PAU q210/t5650 and q593/t3172 passed the full upstream suite with 18,419,194 and 18,419,191 tested shots respectively and zero error counters; original reports are in ../circuits/full_suite/ and their operation-stream hashes match the frozen manifest. Other points retain their recorded full/subset scope. Optimized rows have 82,104 all-row comparator-boundary checks and up to 65,536 native probes. Finite tests are not an exhaustive semantic certificate or a global optimality proof.",
   "circuit_manifest_sha256": "847dba096d3e0159300813a5775428bfb1d2af002a4b2fb5e22b9d51e0317617"
 }

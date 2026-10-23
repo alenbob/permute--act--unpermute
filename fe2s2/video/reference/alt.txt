@@ -1,1 +1,0 @@
-Animated plot of Toffoli count versus peak logical qubits for one Fe₂S₂ Hamiltonian query; rectangle area = Toffolis × qubits. Versus the released Frame SELECT circuit (Gu et al.), our best permute act unpermute circuit uses 62% fewer Toffolis and 67% more qubits: a 37% smaller product, and about 20% below optimized Frame SELECT.

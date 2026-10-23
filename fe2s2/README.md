@@ -12,6 +12,39 @@ Frame SELECT, studied on the same instance by
 [Gu et al.](https://arxiv.org/abs/2610.22367), supplies the comparison method.
 This is a subsequent application of the PAU framework.
 
+## Forty modes: one- and two-family PAU cores
+
+Both cores act on the same 40-mode system and collect active modes into four
+target slots. Read left to right; a slash and number denote a wire bundle.
+The inputs are already loaded labels and generator flags: alias sampling,
+table lookup and label cleanup are outside these drawings. Yellow marks
+routing, blue marks the local action, and green marks control preparation
+and erasure.
+
+### One family: a common routed-action core
+
+[![One-family PAU: prepare controls, route to four targets, act, unroute and erase controls.](assets/pau_single_core.png)](assets/pau_single_core.png)
+
+- **Routing controls:** decode the compact label with `Dλ` and compute the
+  pair-selection predicates.
+- **Single PAU:** `Π` routes the selected modes to the four targets;
+  `P_act` applies the signed local Pauli mask; `Π†` restores the mode ordering.
+  Different term types share this core, with identity action on padding modes.
+- **Clean controls:** erase the pair predicates and reverse the label decoding.
+
+### Two families: specialized actions with shared routing
+
+[![Two-family PAU: shared routing, mixed-spin or small-support action, same-spin action, then shared restoration.](assets/pau_two_family_core.png)](assets/pau_two_family_core.png)
+
+- **Shared prefix:** `D_shared` prepares reusable controls and `Π_shared`
+  performs the common part of the routing once.
+- **Family A and family B:** A handles mixed-spin or small-support terms;
+  B handles three- and four-mode same-spin terms. Each has its own
+  route → act → unroute sequence. Family controls enable the appropriate
+  action on the same system and target slots.
+- **Restore shared:** undo the common routing and erase the cached controls.
+  The two families reuse workspace and do not require separate preparations.
+
 ## Run the checks
 
 With Python 3.10+ and no third-party dependencies, from this directory:

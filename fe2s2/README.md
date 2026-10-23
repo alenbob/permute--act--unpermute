@@ -63,7 +63,7 @@ for the recorded full-suite results and the limits of these checks.
 
 ## Rebuild and inspect the circuits
 
-The [reproduction guide](circuits/REPRODUCE.md) covers generation, native
+The [circuit guide](circuits/README.md#rebuild-a-circuit) covers generation, native
 upstream evaluation and OpenQASM 3 export. The [interfaces](circuits/interfaces/)
 also provide decomposable Qualtran SELECT cores and full dynamic Cirq streams.
 The [verification guide](circuits/verification/) separates fresh checks from
@@ -95,6 +95,6 @@ Both optimized architectures receive applicable alias, decoder and cleanup
 optimizations, retuned for their interfaces and space budgets. Comparisons
 include data loading and cleanup as well as the SELECT core.
 
-Method references, reused code/data and licenses are documented in
-[NOTICE.md](circuits/NOTICE.md), with citations in [references.bib](references.bib).
+See [references and credits](circuits/README.md#references-and-credits)
+and [BibTeX citations](references.bib).
 Code is covered by the repository's Apache-2.0 license.

@@ -1,66 +1,83 @@
 # Fe₂S₂ circuits
 
-Executable single- and two-family PAU implementations for the 40-qubit Fe₂S₂
-benchmark, with Frame SELECT comparison circuits. The collection contains
-**31 fully decomposed gate programs**, each including alias sampling, SELECT,
-measurement feed-forward and cleanup.
-The compressed plain-text programs are frozen exports. Modular Python
-generators and explicit point configurations reproduce them exactly; the
-optimization-search history is not included.
+Single- and two-family PAU implementations for the 40-qubit Fe₂S₂ benchmark,
+with Frame SELECT comparison circuits: **31 decomposed programs**, including
+alias sampling, SELECT, measurement feed-forward and cleanup.
 
-## Run
+## Quick start
 
-Python 3.10+; standard library only. From this directory:
+From this directory, with Python 3.10+ and no extra packages:
 
 ```sh
 python circuits.py list
 python circuits.py check
-python circuits.py smoke --shots 64
-```
-
-For one circuit:
-
-```sh
-python circuits.py emit pau_single_q210_t5650 > pau_single.gates
-python circuits.py check pau_single_q210_t5650
 python circuits.py smoke pau_single_q210_t5650 --shots 256 --seed 42
 ```
 
-`check` verifies program hashes, counts gates and occupied qubits, and
-reconciles the phase ledger. `smoke` tests sampled alias decisions, system
-outputs, signs and clean ancillas with sampled measurement records.
-`emit` prints the complete program; [FORMAT.md](FORMAT.md) defines its gates.
+`check` verifies hashes, resource counts and phase ledgers; `smoke` tests
+sampled outputs, signs and clean ancillas. To inspect a complete program:
+
+```sh
+python circuits.py emit pau_single_q210_t5650 > pau_single.gates
+```
+
+[FORMAT.md](FORMAT.md) defines the gates. The video and its point data are in
+[`../video/`](../video/).
+
+## Rebuild a circuit
+
+Use Python 3.11 and the pinned dependencies:
+
+```sh
+python -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements-build.txt
+python generate.py pau_single_q210_t5650
+python verification/check_native.py pau_single_q210_t5650
+```
+
+Substitute any ID in [configurations/](configurations/). The generator builds
+from the table and configuration, then checks exact agreement with the frozen
+gate sequence. It writes four files to ignored `output/`:
+
+- `.gates.xz`: readable gate program.
+- `.ops.xz`: native binary program for the evaluator.
+- `.liveness.json.xz`: allocation/free trace and replayed peak.
+- `.json`: per-stage costs and source/configuration hashes.
+
+The scientific emitters are in [shared/](shared/). Configurations capture the
+chosen tradeoff points; the optimization-search history is not included.
+
+## Implementations
 
 | Circuit ID prefix | Construction |
 |---|---|
-| `pau_single` | PAU with one common four-mode action core |
-| `pau_two` | PAU with two support/action families |
+| `pau_single` | One common four-mode action core, with composed mode permutations and pair routers |
+| `pau_two` | Mixed-spin/small-support and same-spin families, sharing routing and controls |
 | `frame_released` | Released Frame SELECT reference |
-| `frame_paper` | Frame SELECT tuned within the paper's methods |
-| `frame_extended` | Optimized Frame SELECT |
+| `frame_paper` | The same SELECT with its existing unlookup window and workspace retuned |
+| `frame_extended` | Frame SELECT with shared alias, decoder and cleanup optimizations |
 
-## Rebuild and use other interfaces
+PAU executes **permute → local action → unpermute**. Frame SELECT executes
+**σ† → representative Pauli R → σ**. In two-family PAU, both conditional
+sandwiches execute coherently and their full costs are counted.
 
-See [REPRODUCE.md](REPRODUCE.md) for the commands and pinned dependencies.
+## Qualtran, Cirq and OpenQASM
 
-| Directory | Purpose |
-|---|---|
-| [configurations](configurations/) | One complete recipe per published point |
-| [shared](shared/) | Alias, lookup, routing, action and cleanup emitters |
-| [pau_single](pau_single/) / [pau_multiple](pau_multiple/) | PAU construction guides |
-| [frame_released](frame_released/) / [frame_paper](frame_paper/) / [frame_optimized](frame_optimized/) | Frame SELECT construction guides |
-| [upstream](upstream/README.release.md) | Pinned native builder, simulator and evaluator |
-| [interfaces](interfaces/) | Qualtran cores, Cirq dynamic queries and OpenQASM 3 |
-| [verification](verification/) | Independent checks and source-linked reports |
+```sh
+python -m pip install -r requirements-interfaces.txt
+python interfaces/openqasm.py pau_single_q210_t5650
+python verification/check_qasm.py pau_single_q210_t5650
+python verification/check_cores.py
+```
 
-`generate.py` emits both readable and upstream-native streams, an allocation
-trace and a report. It checks the regenerated gate sequence against the frozen
-hash without using the frozen program to synthesize the circuit. OpenQASM 3
-exports preserve measurement and classical feed-forward. Qualtran provides
-connected decompositions of the three SELECT cores; complete dynamic queries
-are exposed as Cirq operation streams rather than unitary Qualtran bloqs.
+The [interfaces guide](interfaces/) shows how to use the three decomposable
+Qualtran SELECT cores and complete dynamic Cirq queries. OpenQASM 3 exports
+include measurement, classical XOR and feed-forward; decompress `.qasm.xz`
+with `xz -dc`. Qualtran cores and complete queries have different boundaries,
+specified in that guide.
 
-## Circuit contract
+## Circuit contract and resources
 
 ```text
 |i>_16 |coin>_16 |x>_40
@@ -71,53 +88,57 @@ phase = coefficient_sign[selected] XOR half_Y_parity[selected]
         XOR parity(x AND Z_or_Y_mask[selected])
 ```
 
-Valid rows are `0 <= i < 41052`; the contract covers all 40-bit system inputs
-in both parity sectors. The Li–Chan instance has 30 electrons in 20 spatial
-orbitals, with `|coefficient| >= 1e-4` truncation, the identity term removed
-and 16-bit alias precision. Reference hashes pin the table, signs and normalization.
+Valid rows are `0 <= i < 41052`, with all 40-bit system inputs in both parity
+sectors. The instance has 30 electrons in 20 spatial orbitals, a coefficient
+threshold of `1e-4`, no identity term, and 16-bit alias precision. The address
+and coin are restored and all workspace is cleaned.
 
-The circuit loads alias data, selects a term, decodes its controls, applies
-the system operation, then restores the address and cleans the workspace.
-PAU uses **permute → local action → unpermute**; Frame SELECT uses
-**σ† → representative Pauli R → σ**. Two-family PAU splits the routed action
-into separate support cases with the same external contract.
-
-Resources use CCX + CCZ Toffoli equivalents and total peak qubits, including
-the 40-qubit system. Measurement-conditioned Clifford corrections remain
-Clifford. The frozen export's occupied-wire range matches the recorded
-peak. Regeneration also emits and independently replays allocation/free events,
-checking the peak and final live boundary. This does not prove a minimal
-lifetime schedule. Phase costs may aggregate repeated visits;
-phase peaks cannot be added. See the [resource boundary](../README.md#resource-boundary).
+Resources count **CCX + CCZ Toffoli equivalents** and peak total logical
+qubits, including the 40 system qubits. Measurement-conditioned Clifford
+corrections remain Clifford. Allocation traces check the live peak; stage
+counts add, stage peaks do not. Abstract all-to-all connectivity is assumed.
+Uniform preparation, reflection, QPE and an additional external control are
+outside this alias–SELECT–unlookup boundary. The Toffoli–qubit product is not
+depth or physical runtime.
 
 ## Verification
 
-The [fresh release report](verification/release_verification.json) records
-exact regeneration and native parser/semantic checks for all 31 circuits,
-all-row checks of the three actual Qualtran core decompositions, and official
-OpenQASM-parser checks of three complete representative queries. The
-[verification guide](verification/README.md) states the precise coverage and
-limits; these checks do not replace the historical full-suite reports below.
+The [release report](verification/release_verification.json) records exact
+regeneration of all 31 circuits, 256 native strict-ledger basis inputs per
+query, two system inputs for every term row of each Qualtran core, and parser
+and operation checks of three complete OpenQASM exports. The
+[verification guide](verification/) gives the commands and precise coverage.
+Finite input tests are not exhaustive quantum-state verification.
 
-The following exact source streams passed the full upstream test suite:
+These two programs also have recorded full-suite runs, with zero failures:
 
-| PAU circuit | Tested shots | Report |
+| Circuit | Tested inputs | Report |
 |---|---:|---|
 | `pau_single_q210_t5650` | 18,419,194 | [JSON](full_suite/pau_single_q210_t5650.json) |
 | `pau_single_q593_t3172` | 18,419,191 | [JSON](full_suite/pau_single_q593_t3172.json) |
 
-Both reports have zero wrong-output, wrong-sign, dirty-qubit and failed-shot
-counters. Their `h_ops` hashes match the manifest's `original_gate_stream_sha256`;
-`conversion_checks.json` records operation-by-operation preservation in this
-text format. These are existing full-suite runs, not new runs during packaging.
-Other circuits retain their recorded full/subset scope; optimized rows have
-82,104 all-row comparator-boundary checks and up to 65,536 native probes.
+Those are historical runs linked to the exact source-stream hashes. To run
+the full evaluator on a regenerated circuit (about 18.4 million probes):
 
-`manifest.json` and `checks.json` retain the original export's evidence and
-style fields. The supplementary reports above extend that historical record.
-`../release_checks.json` records the current package recount and sampled checks.
-Finite tests do not certify every quantum input or measurement outcome.
+```sh
+python upstream/tools/eval.py chemistry-fe2s2 \
+  --ops output/pau_single_q210_t5650.ops.xz --jobs 2 --out output/full-grader
+```
 
-`circuits.py` is the reader, counter and simulator; `data/reference.json.xz`
-holds the alias words and Pauli masks. The [benchmark overview](../README.md)
-sets the comparison scope; [NOTICE.md](NOTICE.md) records code/data attribution.
+An optional C kernel accelerates this: run `make kernel PYTHON=/path/to/python`
+from `upstream/`. The package-wide check is `python ../verify.py`.
+
+## References and credits
+
+PAU follows [Summer–Jamet](https://arxiv.org/abs/2610.03686); the Hamiltonian
+data are from [Li–Chan](https://github.com/zhendongli2008/Active-space-model-for-Iron-Sulfur-Clusters).
+The Frame SELECT comparison and reused benchmark code/data come from
+[Gu et al.](https://arxiv.org/abs/2610.22367) and
+[uncompute](https://github.com/andigu/uncompute/tree/64b5a13aa249f1360846657392e6c66817b26d0f).
+Reuse includes term/frame and sign tables, alias data and lookup/comparator/
+cleanup machinery. These support both optimized architectures; the added
+emitters, adapters and checks implement the extensions in this release.
+
+[references.bib](../references.bib) also credits the alias-sampling, lookup and
+temporary-AND methods. Code is Apache-2.0; the [repository license](../../LICENSE)
+and [vendored license](upstream/LICENSE) are retained.

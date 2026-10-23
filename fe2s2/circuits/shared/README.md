@@ -28,4 +28,4 @@ The release adaptation removes experiment drivers and historical bookkeeping,
 resolves prior configurations into standalone JSON, and retains scientific
 emission functions. Exact regenerated operation hashes check that these
 packaging changes preserve the frozen programs. Original upstream files under
-`../upstream/` retain their license and source text. See `../NOTICE.md`.
+`../upstream/` retain their license and source text. See [references and credits](../README.md#references-and-credits).
